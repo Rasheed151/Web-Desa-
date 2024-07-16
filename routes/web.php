@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DataUmumController;
 /*
@@ -14,5 +15,7 @@ use App\Http\Controllers\DataUmumController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('dashboard');
 });
+
+Route::get('/dashboard', [HomeController::class, 'index']);
