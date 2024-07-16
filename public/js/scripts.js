@@ -1,26 +1,41 @@
-/*!
-    * Start Bootstrap - SB Admin v7.0.7 (https://startbootstrap.com/template/sb-admin)
-    * Copyright 2013-2023 Start Bootstrap
-    * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-sb-admin/blob/master/LICENSE)
-    */
-    // 
-// Scripts
-// 
+const dropdownButtons = document.querySelectorAll('.dropdown-btn');
+        dropdownButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                this.classList.toggle('active');
+                const dropdownContent = this.nextElementSibling;
 
-window.addEventListener('DOMContentLoaded', event => {
+                if (dropdownContent.style.maxHeight) {
+                    dropdownContent.style.maxHeight = null;
+                } else {
+                    dropdownContent.style.maxHeight = dropdownContent.scrollHeight + "px";
+                }
 
-    // Toggle the side navigation
-    const sidebarToggle = document.body.querySelector('#sidebarToggle');
-    if (sidebarToggle) {
-        // Uncomment Below to persist sidebar toggle between refreshes
-        // if (localStorage.getItem('sb|sidebar-toggle') === 'true') {
-        //     document.body.classList.toggle('sb-sidenav-toggled');
-        // }
-        sidebarToggle.addEventListener('click', event => {
-            event.preventDefault();
-            document.body.classList.toggle('sb-sidenav-toggled');
-            localStorage.setItem('sb|sidebar-toggle', document.body.classList.contains('sb-sidenav-toggled'));
+                // Mengatur tinggi navbar untuk menyesuaikan dengan konten
+                const navbar = document.querySelector('.navbar');
+                navbar.style.height = 'auto'; // Biarkan navbar menyesuaikan tinggi
+            });
         });
-    }
 
-});
+        const navbar = document.querySelector('.navbar');
+        navbar.classList.add('show'); // Pastikan navbar muncul secara default
+
+        document.getElementById('toggle-navbar').addEventListener('click', function() {
+            if (navbar.classList.contains('show')) {
+                navbar.classList.remove('show'); // Sembunyikan navbar
+                setTimeout(() => {
+                    navbar.style.display = 'none'; // Hapus display setelah animasi
+                }, 500); // Sesuaikan dengan durasi transisi CSS
+            } else {
+                navbar.style.display = 'block'; // Tampilkan navbar
+                setTimeout(() => {
+                    navbar.classList.add('show'); // Tambahkan kelas untuk efek transisi
+                }, 10); // Beri sedikit jeda agar transisi berlaku
+            }
+        });
+
+        function showLogoutPopup() {
+            const confirmation = confirm("Apakah Anda yakin ingin log out?");
+            if (confirmation) {
+                alert("Anda telah log out.");
+            }
+        }
