@@ -12,7 +12,6 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('data_pka', function (Blueprint $table) {
-            $table->id();
             $table->integer('nomor');
             $table->string('nama');
             $table->string('ttl');
@@ -23,6 +22,7 @@ return new class extends Migration
             $table->integer('npwp');
             $table->integer('no_sk_pka');
             $table->timestamp('tanggal_sk_pka')->nullable();
+            $table->timestamps(); // Created at and updated at timestamps
         });
     }
 

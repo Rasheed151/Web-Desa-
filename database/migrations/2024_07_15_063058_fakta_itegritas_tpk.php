@@ -11,17 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('data_pemasok', function (Blueprint $table) {
+        Schema::create('fakta_integritas_tpk', function (Blueprint $table) {
             $table->id();
-            $table->string('nama');
-            $table->string('gender');
-            $table->string('ttl');
-            $table->integer('NIK');
-            $table->text('alamat_rumah');
-            $table->string('nama_toko');
-            $table->text('alamat_toko');
-            $table->integer('npwp');
-            $table->integer('nib');
+            $table->date('tanggal'); // Tanggal/Bulan/Tahun
+            $table->string('peran'); // Ketua/Sekretaris/Anggota
+            $table->string('nomor_identitas'); // Nomor Identitas
+            $table->string('alamat'); // Alamat
+            $table->string('bertindak_untuk'); // Bertindak untuk dan atas nama
             $table->timestamps(); // Created at and updated at timestamps
         });
     }
@@ -31,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('data_pemasok');
+        Schema::dropIfExists('fakta_integritas_tpk');
     }
 };

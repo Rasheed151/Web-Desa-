@@ -12,7 +12,6 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('data_aparat', function (Blueprint $table) {
-            $table->id();
             $table->integer('nomor');
             $table->string('nama_lengkap');
             $table->string('gender');
@@ -22,6 +21,7 @@ return new class extends Migration
             $table->integer('npwp');
             $table->integer('no_hp');
             $table->string('jabatan');
+            $table->timestamps(); // Created at and updated at timestamps
         });
     }
 
