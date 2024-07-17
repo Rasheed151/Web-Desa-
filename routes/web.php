@@ -31,6 +31,6 @@ Route::get('/data_umum', [DataUmumController::class, 'create'])->name('create');
 Route::post('/data_umum', [DataUmumController::class, 'store'])->name('store');
 Route::get('/dashboard', [DataUmumController::class, 'count']);
 
-Route::get('/data_aparat/create', [DataAparatController::class, 'create'])->name('creatt');
+Route::get('/data_aparat', [DataAparatController::class, 'create'])->name('create');
 Route::post('/data_aparat', [DataAparatController::class, 'simpan'])->name('simpan');
 
