@@ -16,7 +16,7 @@ use App\Http\Controllers\DataUmumController;
 */
 
 Route::get('/', function () {
-    return view('layouts');
+    return view('dashboard');
 });
 
 Route::get('/dashboard', [HomeController::class, 'index']);
