@@ -77,11 +77,11 @@
 
     <footer class="footer">
         <div class="footer-content">
-            <p>&copy; 2024 Nama Perusahaan. Semua hak dilindungi.</p>
+            <p>&copy; 2024 Klipaa. Semua hak dilindungi.</p>
             <ul class="footer-links">
-                <li><a href="#">Tentang Kami</a></li>
+                <li><a href="https://klipaa.com/">Tentang Kami</a></li>
                 <li><a href="#">Kebijakan Privasi</a></li>
-                <li><a href="#">Kontak</a></li>
+                <li><a href=" https://wa.me/+6282298769699">Kontak</a></li>
             </ul>
         </div>
     </footer>
