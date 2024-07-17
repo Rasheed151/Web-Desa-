@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>Dashboard - Web Desa</title>
-        <link href="css/styles.css" rel="stylesheet" />
-    </head>
-    <body>
-    <div class="top-navbar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+<body>
+<div class="top-navbar">
         <button class="toggle-navbar" id="toggle-navbar" style="background: none; border: none; cursor: pointer;">
             <img src="img/icon-toggle.png" alt="Toggle Navbar" style="width: 45px; height: 45px;">
         </button>
@@ -77,14 +78,14 @@
 
     <footer class="footer">
         <div class="footer-content">
-            <p>&copy; 2024 Klipaa. Semua hak dilindungi.</p>
+            <p>&copy; 2024 Nama Perusahaan. Semua hak dilindungi.</p>
             <ul class="footer-links">
-                <li><a href="https://klipaa.com/">Tentang Kami</a></li>
+                <li><a href="#">Tentang Kami</a></li>
                 <li><a href="#">Kebijakan Privasi</a></li>
-                <li><a href=" https://wa.me/+6282298769699">Kontak</a></li>
+                <li><a href="#">Kontak</a></li>
             </ul>
         </div>
     </footer>
-        <script src="js/scripts.js"></script>
-    </body>
+    <script src="js/scripts.js"></script>
+</body>
 </html>

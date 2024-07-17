@@ -11,4 +11,25 @@ class HomeController extends Controller
         $datas = DataUmum::all();
         return view('layouts',compact('datas'));
     }
+
+    public function count()
+    {
+        $jumlahLaporan = DataUmum::count();
+        return view('dashboard', compact('jumlahLaporan'));
+    }
+    public function umum(){
+        return view('data_umum');
+    }
+    public function aparatur(){
+        return view('data_aparatur');
+    }
+    public function pka(){
+        return view('PKA');
+    }
+    public function tpk(){
+        return view('timPelaksana');
+    }
+    public function pmsk(){
+        return view('pemasok');
+    }
 }

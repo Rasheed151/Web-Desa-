@@ -17,11 +17,12 @@ return new class extends Migration
             $table->string('npwp');
             $table->integer('kode_desa');
             $table->string('kepala_desa');
-            $table->integer('no_perbub_pjb');
+            $table->bigInteger('no_perbub_pjb');
             $table->timestamp('tanggal_perbub_pjb')->nullable();
-            $table->integer('no_keputusan_dpa');
+            $table->bigInteger('no_keputusan_dpa');
             $table->timestamp('tanggal_keputusan_dpa')->nullable();
             $table->string('email')->unique();
+            $table->timestamps();
         });
     }
 

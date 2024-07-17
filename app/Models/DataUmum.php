@@ -10,6 +10,7 @@ class DataUmum extends Model
     use HasFactory;
 
     protected $table = 'data_umum';
+    public $timestamps = false;
 
     protected $fillable = [
         'tempat_desa',
