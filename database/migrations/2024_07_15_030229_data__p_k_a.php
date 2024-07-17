@@ -12,6 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('data_pka', function (Blueprint $table) {
+            $table->id();
             $table->integer('nomor');
             $table->string('nama');
             $table->string('ttl');

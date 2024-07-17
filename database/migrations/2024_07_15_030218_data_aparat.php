@@ -12,6 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('data_aparat', function (Blueprint $table) {
+            $table->id();
             $table->integer('nomor');
             $table->string('nama_lengkap');
             $table->string('gender');
