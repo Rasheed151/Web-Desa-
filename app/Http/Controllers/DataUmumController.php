@@ -38,6 +38,15 @@ class DataUmumController extends Controller
         return view('dashboard', compact('jumlahLaporan'));
     }
 
+    public function index()
+    {
+        // Ambil semua data dari tabel data_umum
+        $data_umum = DataUmum::all();
+        
+        // Kirim data ke view
+        return view('data_umum', compact('data_umum'));
+    }
+
 
    
 }
