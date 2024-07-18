@@ -7,8 +7,7 @@
     <link href="css/styles.css" rel="stylesheet" />
     @yield('styles')
 </head>
-<body>
-<div class="top-navbar">
+<body>    <div class="top-navbar">
         <button class="toggle-navbar" id="toggle-navbar" style="background: none; border: none; cursor: pointer;">
             <img src="img/icon-toggle.png" alt="Toggle Navbar" style="width: 45px; height: 45px;">
         </button>
@@ -19,14 +18,14 @@
         </div>
     </div>
 
-    <div class="navbar">
+    <div class="navbar" id="navbar">
         <div class="navbar-content">
             <button class="dropdown-btn">
                 <img src="img/entri.png" alt="Home Icon"> Entri data umum
             </button>
             <div class="dropdown-container">
-                <a href="/data_umum">Umum Desa</a>
-                <a href="/data_aparat">Aparatur Desa</a>
+                <a href="#Data Umum Desa">Umum Desa</a>
+                <a href="#Data Aparatur Desa">Aparatur Desa</a>
                 <a href="#Data Pelaksanaan Kegiatan Anggaran(PKA)">PKA</a>
                 <a href="#Data Tim Pelaksana Kegiatan">Tim Pelaksana Kegiatan</a>
                 <a href="#Data Pemasok">Penyedia</a>

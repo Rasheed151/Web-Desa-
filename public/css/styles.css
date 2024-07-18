@@ -23,7 +23,6 @@ body {
 
 .top-navbar h2 {
   margin-left: 20px;
-  
 }
 
 .profile {
@@ -60,15 +59,12 @@ body {
   max-height: calc(100% - 50px); /* Batasi tinggi maksimal */
   overflow-y: auto; /* Izinkan scroll */
   z-index: 1000;
-  display: block; /* Navbar muncul secara default */
-  transform: translateX(-100%); /* Mulai dari luar layar */
-  opacity: 0; /* Transparansi awal */
-  transition: transform 0.5s ease, opacity 0.5s ease;
+
+  transition: transform 0.5s ease;
 }
 
-.navbar.show {
-  transform: translateX(0); /* Geser ke posisi normal */
-  opacity: 1; /* Transparansi penuh */
+.navbar.hide {
+  transform: translateX(-100%); /* Geser ke posisi normal */
 }
 
 .navbar-content {
@@ -139,7 +135,7 @@ color: white; /* Warna teks */
 text-align: center; /* Pusatkan teks */
 padding: 20px; /* Jarak dalam footer */
 
-margin-top: 400px; /* Pindahkan footer ke bawah */
+margin-top: 450px; /* Pindahkan footer ke bawah */
 }
 
 .footer-links {

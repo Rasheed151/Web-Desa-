@@ -1,41 +1,20 @@
-const dropdownButtons = document.querySelectorAll('.dropdown-btn');
-        dropdownButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                this.classList.toggle('active');
-                const dropdownContent = this.nextElementSibling;
+const navbar = document.getElementById('navbar');
+const toggleNavbar = document.getElementById('toggle-navbar');
+const content = document.querySelector('.content');
 
-                if (dropdownContent.style.maxHeight) {
-                    dropdownContent.style.maxHeight = null;
-                } else {
-                    dropdownContent.style.maxHeight = dropdownContent.scrollHeight + "px";
-                }
 
-                // Mengatur tinggi navbar untuk menyesuaikan dengan konten
-                const navbar = document.querySelector('.navbar');
-                navbar.style.height = 'auto'; // Biarkan navbar menyesuaikan tinggi
-            });
-        });
+toggleNavbar.addEventListener('click', function() {
+    navbar.classList.toggle('hide');
+    if (navbar.classList.contains('hide')) {
+        content.style.marginLeft = '0';
+    } else {
+        content.style.marginLeft = '250px';
+    }
+});
 
-        const navbar = document.querySelector('.navbar');
-        navbar.classList.add('show'); // Pastikan navbar muncul secara default
-
-        document.getElementById('toggle-navbar').addEventListener('click', function() {
-            if (navbar.classList.contains('show')) {
-                navbar.classList.remove('show'); // Sembunyikan navbar
-                setTimeout(() => {
-                    navbar.style.display = 'none'; // Hapus display setelah animasi
-                }, 500); // Sesuaikan dengan durasi transisi CSS
-            } else {
-                navbar.style.display = 'block'; // Tampilkan navbar
-                setTimeout(() => {
-                    navbar.classList.add('show'); // Tambahkan kelas untuk efek transisi
-                }, 10); // Beri sedikit jeda agar transisi berlaku
-            }
-        });
-
-        function showLogoutPopup() {
-            const confirmation = confirm("Apakah Anda yakin ingin log out?");
-            if (confirmation) {
-                alert("Anda telah log out.");
-            }
-        }
+function showLogoutPopup() {
+    const confirmation = confirm("Apakah Anda yakin ingin log out?");
+    if (confirmation) {
+        alert("Anda telah log out.");
+    }
+}
