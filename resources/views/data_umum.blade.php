@@ -73,6 +73,50 @@
         border-color: #3b5bbf;
     }
 
+    .container-show {
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin: 0 auto;
+        max-width: 1000px;
+        width: calc(100% - 40px);
+    }
+
+    .container-show h2 {
+        text-align: left;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    .table {
+        width: 100%;
+        margin-top: 20px;
+        border-collapse: collapse;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .table th,
+    .table td {
+        padding: 10px;
+        border: 1px solid #ccc;
+        text-align: left;
+    }
+
+    .table th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+    }
+
+    .table td {
+        background-color: #ffffff;
+    }
+
+    .table tbody tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
     @media (max-width: 768px) {
         .form-label, .form-control {
             font-size: 14px;
@@ -152,8 +196,52 @@
                 <input type="email" name="email" class="form-control" required>
             </div>
 
-            <button type="submit" class="btn btn-primary">Create Data Umum</button>
+            <button type="submit" class="btn btn-primary">Masukan Data</button>
         </form>
     </div>
 </div>
+
+<h1 class="mb-4">Data Umum</h1>
+
+<div class="container-show">
+    
+
+    @if ($data_umum->isEmpty())
+        <p>No data available.</p>
+    @else
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Tempat Desa</th>
+                    <th>Alamat Kantor</th>
+                    <th>NPWP</th>
+                    <th>Kode Desa</th>
+                    <th>Kepala Desa</th>
+                    <th>No Perbub PJB</th>
+                    <th>Tanggal Perbub PJB</th>
+                    <th>No Keputusan DPA</th>
+                    <th>Tanggal Keputusan DPA</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($data_umum as $data)
+                    <tr>
+                        <td>{{ $data->tempat_desa }}</td>
+                        <td>{{ $data->alamat_kantor }}</td>
+                        <td>{{ $data->npwp }}</td>
+                        <td>{{ $data->kode_desa }}</td>
+                        <td>{{ $data->kepala_desa }}</td>
+                        <td>{{ $data->no_perbub_pjb }}</td>
+                        <td>{{ $data->tanggal_perbub_pjb }}</td>
+                        <td>{{ $data->no_keputusan_dpa }}</td>
+                        <td>{{ $data->tanggal_keputusan_dpa }}</td>
+                        <td>{{ $data->email }}</td>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
+    @endif
+</div>
+
 @endsection

@@ -29,6 +29,7 @@ Route::get('/penyedia', [HomeController::class, 'pmsk']);
 
 Route::get('/data_umum', [DataUmumController::class, 'create'])->name('create');
 Route::post('/data_umum', [DataUmumController::class, 'store'])->name('store');
+Route::get('/data_umum', [DataUmumController::class, 'index'])->name('data_umum.index');
 Route::get('/dashboard', [DataUmumController::class, 'count']);
 
 Route::get('/data_aparat', [DataAparatController::class, 'create'])->name('create');
