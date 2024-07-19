@@ -10,6 +10,7 @@
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         margin-left: 0;
+        width: auto;
     }
 
     h1 {
@@ -74,34 +75,24 @@
     }
 
     .container-show {
+        margin-top: 20px;
         padding: 20px;
-        background-color: #ffffff;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        margin: 0 auto;
-        max-width: 1000px;
-        width: calc(100% - 40px);
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 8px;
     }
 
-    .container-show h2 {
-        text-align: left;
-        color: #333;
-        margin-bottom: 20px;
-    }
-
+    /* Table */
     .table {
         width: 100%;
-        margin-top: 20px;
         border-collapse: collapse;
-        border-radius: 10px;
-        overflow: hidden;
+        margin-top: 20px;
     }
 
-    .table th,
-    .table td {
-        padding: 10px;
-        border: 1px solid #ccc;
-        text-align: left;
+    .table th, .table td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
     }
 
     .table th {
@@ -110,22 +101,17 @@
     }
 
     .table td {
-        background-color: #ffffff;
+        background-color: #fff;
     }
 
-    .table tbody tr:nth-child(even) {
-        background-color: #f9f9f9;
+    /* No Data Message */
+    .no-data {
+        margin-top: 20px;
+        text-align: center;
+        font-style: italic;
+        color: #888;
     }
 
-    @media (max-width: 768px) {
-        .form-label, .form-control {
-            font-size: 14px;
-        }
-
-        .btn-primary {
-            font-size: 16px;
-        }
-    }
 </style>
 @endsection
 
