@@ -24,8 +24,8 @@
                 <img src="img/entri.png" alt="Home Icon"> Entri data umum
             </button>
             <div class="dropdown-container">
-                <a href="/dataUmum">Umum Desa</a>
-                <a href="/data_aparat">Aparatur Desa</a>
+                <a href="#Data Umum Desa">Umum Desa</a>
+                <a href="#Data Aparatur Desa">Aparatur Desa</a>
                 <a href="#Data Pelaksanaan Kegiatan Anggaran(PKA)">PKA</a>
                 <a href="#Data Tim Pelaksana Kegiatan">Tim Pelaksana Kegiatan</a>
                 <a href="#Data Pemasok">Penyedia</a>

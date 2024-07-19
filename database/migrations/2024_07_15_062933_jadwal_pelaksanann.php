@@ -11,19 +11,19 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('jadwal_pelaksanaan', function (Blueprint $table) {
-            $table->id();
+        Schema::create('jadwal_pelaksanaan_swa', function (Blueprint $table) {
+            $table->increments('id');
             $table->integer('no'); // Nomor
-            $table->string('nama_pekerjaan_kegiatan'); // Nama Pekerjaan/Kegiatan
-            $table->string('ketua_tpk'); // Ketua TPK
-            $table->string('sekretaris_tpk'); // Sekretaris TPK
-            $table->string('anggota_tpk'); // Anggota TPK
-            $table->string('jumlah_waktu'); // Jumlah Waktu
-            $table->date('waktu_pelaksanaan_dari'); // Waktu Pelaksanaan dari
-            $table->date('waktu_pelaksanaan_sampai'); // Waktu Pelaksanaan s/d
-            $table->decimal('nilai_pekerjaan', 15, 2); // Nilai Pekerjaan
-            $table->string('nama_kasi_kaur'); // Nama Kasi/Kaur
-            $table->string('jabatan_kasi_kaur'); // Jabatan Kasi/Kaur
+            $table->string('namaKegiatan'); // Nama Pekerjaan/Kegiatan
+            $table->string('ketuaTpk'); // Ketua TPK
+            $table->string('sekTpk'); // Sekretaris TPK
+            $table->string('anggotaTpk'); // Anggota TPK
+            $table->string('jmlhWaktu'); // Jumlah Waktu
+            $table->date('wktPelaksanaanDari'); // Waktu Pelaksanaan dari
+            $table->date('wktPelaksanaanSampai'); // Waktu Pelaksanaan s/d
+            $table->decimal('nlaiPekerjaan', 15, 2); // Nilai Pekerjaan
+            $table->string('namaKasi'); // Nama Kasi/Kaur
+            $table->string('jabatanKasi'); // Jabatan Kasi/Kaur
             $table->string('lokasi'); // Lokasi
             $table->timestamps(); // Created at and updated at timestamps
         });

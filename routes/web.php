@@ -1,11 +1,11 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\DataController;
 use App\Http\Controllers\DataAparatController;
+use App\Http\Controllers\PkaController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DataUmumController;
-use App\Models\DataUmum;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,10 +31,9 @@ Route::get('/penyedia', [HomeController::class, 'pmsk']);
 
 Route::get('/dataUmum', [DataUmumController::class, 'create'])->name('create');
 Route::post('/dataUmum', [DataUmumController::class, 'store'])->name('store');
-Route::get('/dataUmum', [DataUmumController::class, 'index'])->name('dataUmum.index');
+Route::get('/dataUmum', [DataUmumController::class, 'index'])->name('data_umum.index');
 Route::get('/dashboard', [DataUmumController::class, 'count']);
 
 Route::get('/data_aparat', [DataAparatController::class, 'create'])->name('create');
 Route::post('/data_aparat', [DataAparatController::class, 'simpan'])->name('simpan');
-Route::get('/data_aparat', [DataAparatController::class, 'index'])->name('data_aparat.index');
 

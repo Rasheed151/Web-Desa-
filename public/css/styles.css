@@ -138,10 +138,24 @@ padding: 20px; /* Jarak dalam footer */
 margin-top: 450px; /* Pindahkan footer ke bawah */
 }
 
+<<<<<<< HEAD
+#layoutError {
+  display: flex;  
+  flex-direction: column;
+  min-height: 100vh;
+}
+#layoutError #layoutError_content {
+  min-width: 0;
+  flex-grow: 1;
+}
+#layoutError #layoutError_footer {
+  min-width: 0;
+=======
 .footer-links {
   list-style: none; /* Hapus bullet list */
   padding: 0; /* Hapus padding */
   margin: 10px 0 0; /* Margin atas */
+>>>>>>> a9d1edc6b41b190d35edc705549f475606920dea
 }
 
 .footer-links li {

@@ -11,23 +11,23 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('hps', function (Blueprint $table) {
-            $table->id();
-            $table->integer('no_keg'); // Nomor Kegiatan
+        Schema::create('hps_swa', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('noKeg'); // Nomor Kegiatan
             $table->string('kegiatan'); // Kegiatan
             $table->string('lokasi'); // Lokasi
-            $table->string('id_hps'); // ID HPS
-            $table->string('nama_barang_jasa'); // Nama Barang/Jasa
+            $table->string('namaKasi'); // Nama Kasi/Kaur
+            $table->string('jabatanKasi'); // Jabatan Kasi/Kaur
+            $table->string('idHps'); // ID HPS
+            $table->string('namaBarjas'); // Nama Barang/Jasa
             $table->text('spesifikasi'); // Spesifikasi
             $table->string('kode'); // Kode
             $table->decimal('koefisien', 10, 2); // Koefisien
             $table->decimal('volume', 10, 2); // Volume
             $table->string('satuan'); // Satuan
-            $table->decimal('harga_satuan', 15, 2); // Harga Satuan Rp
-            $table->decimal('jumlah_harga', 15, 2); // Jumlah Harga Rp
+            $table->decimal('hargaSatuan', 15, 2); // Harga Satuan Rp
+            $table->decimal('jmlhHarga', 15, 2); // Jumlah Harga Rp
             $table->string('jenis'); // Jenis
-            $table->string('nama_kasi_kaur'); // Nama Kasi/Kaur
-            $table->string('jabatan_kasi_kaur'); // Jabatan Kasi/Kaur
             $table->timestamps(); // Created at and updated at timestamps
         });
     }
