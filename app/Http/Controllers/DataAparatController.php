@@ -18,10 +18,10 @@ class DataAparatController extends Controller
             'nama_lengkap' => 'required|string|max:255',
             'gender' => 'required|string|max:255',
             'ttl' => 'required|string|max:255',
-            'NIK' => 'required|digits:16', // Assuming NIK is 16 digits
+            'kepala_desa' => 'required|integer',
             'alamat' => 'required|string',
-            'npwp' => 'required|digits:15', // Assuming NPWP is 15 digits
-            'no_hp' => 'required|digits_between:10,15', // Assuming phone number is between 10 and 15 digits
+            'npwp' => 'required|integer',
+            'no_hp' => 'required|integer',
             'jabatan' => 'required|string|max:255',
         ]);
 
@@ -29,5 +29,4 @@ class DataAparatController extends Controller
 
         return redirect('data_aparat')->with('success', 'Data umum created successfully.');
     }
-
 }

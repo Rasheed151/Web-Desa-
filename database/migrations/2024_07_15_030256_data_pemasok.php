@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('data_pemasok', function (Blueprint $table) {
+        Schema::create('dataPenyedia', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
             $table->string('gender');
@@ -20,7 +20,6 @@ return new class extends Migration
             $table->text('alamat_rumah');
             $table->string('nama_toko');
             $table->text('alamat_toko');
-            $table->string('no_hp');
             $table->integer('npwp');
             $table->integer('nib');
             $table->timestamps(); // Created at and updated at timestamps

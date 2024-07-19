@@ -12,14 +12,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('data_aparat', function (Blueprint $table) {
-            $table->increments('nomor');
+            $table->integer('nomor');
             $table->string('nama_lengkap');
             $table->string('gender');
             $table->string('ttl');
             $table->bigInteger('NIK');
             $table->text('alamat');
-            $table->bigInteger('npwp');
-            $table->bigInteger('no_hp');
+            $table->integer('npwp');
+            $table->integer('no_hp');
             $table->string('jabatan');
             $table->timestamps(); // Created at and updated at timestamps
         });

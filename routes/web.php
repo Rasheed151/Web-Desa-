@@ -5,6 +5,7 @@ use App\Http\Controllers\DataController;
 use App\Http\Controllers\DataAparatController;
 use App\Http\Controllers\PkaController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DataUmumController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,19 +22,18 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', [HomeController::class, 'index']);
-Route::get('/data-umum', [HomeController::class, 'umum']);
+Route::get('/dataUmum', [HomeController::class, 'umum']);
 Route::get('/data-aparatur', [HomeController::class, 'aparatur']);
 Route::get('/PKA', [HomeController::class, 'pka']);
 Route::get('/tim-pelaksana', [HomeController::class, 'tpk']);
 Route::get('/penyedia', [HomeController::class, 'pmsk']);
 
 
-Route::get('/data_umum', [DataController::class, 'create'])->name('create');
-Route::post('/data_umum', [DataController::class, 'store'])->name('store');
-Route::get('/dashboard', [DataController::class, 'count']);
+Route::get('/dataUmum', [DataUmumController::class, 'create'])->name('create');
+Route::post('/dataUmum', [DataUmumController::class, 'store'])->name('store');
+Route::get('/dataUmum', [DataUmumController::class, 'index'])->name('data_umum.index');
+Route::get('/dashboard', [DataUmumController::class, 'count']);
 
 Route::get('/data_aparat', [DataAparatController::class, 'create'])->name('create');
 Route::post('/data_aparat', [DataAparatController::class, 'simpan'])->name('simpan');
-
-Route::post('/saveAs', [PkaController::class, 'store'])->name('save');
 
