@@ -11,21 +11,21 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('ahs', function (Blueprint $table) {
-            $table->id();
-            $table->string('no_hps'); // No HPS
+        Schema::create('ahs_swa', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('no_keg'); // No Keg
+            $table->string('noHps'); // No HPS
+            $table->string('pekerjaan'); // Pekerjaan
+            $table->string('lokasi'); // Lokasi
+            $table->string('namaKasi'); // Nama Kasi/Kaur
+            $table->string('jabatanKasi'); // Jabatan Kasi/Kaur
             $table->string('kegiatan'); // Kegiatan
             $table->string('kode'); // Kode
             $table->string('satuan'); // Satuan
             $table->decimal('koefisien', 10, 2); // Koefisien
-            $table->decimal('harga_satuan', 15, 2); // Harga Satuan Rp
-            $table->decimal('jumlah_harga', 15, 2); // Jumlah Harga
+            $table->decimal('hargaSatuan', 15, 2); // Harga Satuan Rp
+            $table->decimal('jmlhHarga', 15, 2); // Jumlah Harga
             $table->string('jenis'); // Jenis
-            $table->integer('no_keg'); // No Keg
-            $table->string('pekerjaan'); // Pekerjaan
-            $table->string('lokasi'); // Lokasi
-            $table->string('nama_kasi_kaur'); // Nama Kasi/Kaur
-            $table->string('jabatan_kasi_kaur'); // Jabatan Kasi/Kaur
             $table->timestamps(); // Created at and updated at timestamps
         });
     }

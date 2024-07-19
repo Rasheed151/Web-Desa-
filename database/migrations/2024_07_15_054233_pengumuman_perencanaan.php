@@ -12,20 +12,20 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('pengumuman_pengadaan', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->integer('no'); // Nomor
-            $table->string('nama_kegiatan'); // Nama Kegiatan
-            $table->decimal('nilai_pengadaan', 15, 2); // Nilai Pengadaan
-            $table->string('cara_pengadaan'); // Cara Pengadaan
+            $table->string('namaKegiatan'); // Nama Kegiatan
+            $table->decimal('nilaiPengadaan', 15, 2); // Nilai Pengadaan
+            $table->string('caraPengadaan'); // Cara Pengadaan
             $table->string('volume'); // Volume
             $table->string('satuan'); // Satuan
-            $table->string('nama_tpk'); // Nama TPK
-            $table->string('lokasi_kegiatan'); // Lokasi Kegiatan
-            $table->date('tanggal_mulai'); // Tanggal Mulai
-            $table->date('tanggal_selesai'); // Tanggal Selesai
-            $table->string('jangka_waktu_selama'); // Jangka Waktu Selama
-            $table->string('waktu_pelaksanaan'); // Waktu Pelaksanaan
-            $table->date('tanggal_pengumuman'); // Tanggal Pengumuman
+            $table->string('namaTpk'); // Nama TPK
+            $table->string('lksKegiatan'); // Lokasi Kegiatan
+            $table->date('tglMulai'); // Tanggal Mulai
+            $table->date('tglSelesai'); // Tanggal Selesai
+            $table->string('jangkaWaktu'); // Jangka Waktu Selama
+            $table->string('wktuPelaksanaan'); // Waktu Pelaksanaan
+            $table->date('tglPengumuman'); // Tanggal Pengumuman
             $table->timestamps(); // Created at and updated at timestamps
         });
     }

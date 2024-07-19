@@ -24,97 +24,66 @@
                 <img src="img/entri.png" alt="Home Icon"> Entri data umum
             </button>
             <div class="dropdown-container">
-                <a href="#Data Umum Desa">Umum Desa</a>
-                <a href="#Data Aparatur Desa">Aparatur Desa</a>
+                <a href="/data_umum">Umum Desa</a>
+                <a href="/data_aparat">Aparatur Desa</a>
                 <a href="#Data Pelaksanaan Kegiatan Anggaran(PKA)">PKA</a>
                 <a href="#Data Tim Pelaksana Kegiatan">Tim Pelaksana Kegiatan</a>
                 <a href="#Data Pemasok">Penyedia</a>
             </div>
-            <div id="layoutSidenav_content">
-                <main>
-                    <div class="container-fluid px-4">
-                        <h1 class="mt-4">Dashboard</h1>
-                        <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item active">Front Page</li>
-                        </ol>
-                        <div class="row">
-                        @if(isset($jumlahLaporan))
-                        <div class="col-xl-3 col-md-6">
-                            <div class="card bg-primary text-white mb-4">
-                                <div class="card-body"><h3>Jumlah Data</h3></div>
-                                <div class="card-footer d-flex align-items-center justify-content-between">
-                                    <p class="small text-white stretched-link" href="#">{{ $jumlahLaporan }}</p>
-                                    <div class="small text-white"></div>
-                                </div>
-                            </div>
-                        </div>
-                        @endif
 
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-warning text-white mb-4">
-                                    <div class="card-body"><h3>Warning Card</h3></div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-success text-white mb-4">
-                                    <div class="card-body"><h3>Success Card</h3></div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-danger text-white mb-4">
-                                    <div class="card-body"><h3>Danger Card</h3></div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <!-- <div class="col-xl-6">
-                                <div class="card mb-4">
-                                    <div class="card-header">
-                                        <i class="fas fa-chart-area me-1"></i>
-                                        Area Chart Example
-                                    </div>
-                                    <div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas></div>
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="card mb-4">
-                                    <div class="card-header">
-                                        <i class="fas fa-chart-bar me-1"></i>
-                                        Bar Chart Example
-                                    </div>
-                                    <div class="card-body"><canvas id="myBarChart" width="100%" height="40"></canvas></div>
-                                </div>
-                            </div> -->
-                        </div>
-                        
-                        @yield('content')
-
-                </main>
-                <footer class="py-4 bg-light mt-auto">
-                    <div class="container-fluid px-4">
-                        <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Web Dessa 2024</div>
-                            <div>
-                                <a href="#">Privacy Policy</a>
-                                &middot;
-                                <a href="#">Terms &amp; Conditions</a>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
+            <button class="dropdown-btn">
+                <img src="img/perencanaan.png" alt="Services Icon"> Tahap perencanaan
+            </button>
+            <div class="dropdown-container">
+                <a href="#services1">Berita Acara</a>
+                <a href="#services2">RKP Desa</a>
+                <a href="#services3">Pengumuman Perencanaan</a>
             </div>
+
+            <button class="dropdown-btn">
+                <img src="img/persiapan.png" alt="Services Icon"> Tahap persiapan
+            </button>
+            <div class="dropdown-container">
+                <a href="#about1">Secara Swakelola</a>
+                <a href="#about2">Melalui Penyedia</a>
+            </div>
+
+            <button class="dropdown-btn">
+                <img src="img/pelaksanaan.png" alt="Services Icon"> Tahap pelaksanaan
+            </button>
+            <div class="dropdown-container">
+                <a href="#contact1">Secara Swakelola</a>
+                <a href="#contact2">Melalui Pembelian Langsung</a>
+                <a href="#contact3">Melalui Pembelian Penawaran</a>
+                <a href="#contact4">Melalui Lelang</a>
+            </div>
+
+            <button class="dropdown-btn">
+                <img src="img/pelaporan.png" alt="Services Icon"> Pelaporan & Serah terima
+            </button>
+            <div class="dropdown-container">
+                <a href="#contact1">Contact 1</a>
+                <a href="#contact2">Contact 2</a>
+                <a href="#contact3">Contact 3</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        @yield('content')
+        <form>
+            
+        </form>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Nama Perusahaan. Semua hak dilindungi.</p>
+            <ul class="footer-links">
+                <li><a href="#">Tentang Kami</a></li>
+                <li><a href="#">Kebijakan Privasi</a></li>
+                <li><a href="#">Kontak</a></li>
+            </ul>
         </div>
     </footer>
     <script src="js/scripts.js"></script>

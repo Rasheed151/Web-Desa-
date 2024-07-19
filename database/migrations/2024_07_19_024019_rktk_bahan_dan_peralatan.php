@@ -11,21 +11,21 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('data_pengadaan_swa', function (Blueprint $table) {
+        Schema::create('rktk_bahan_dan_peralatan_swa', function (Blueprint $table) {
             $table->increments('id');
-            $table->date('tanggal'); // Tanggal/Bulan/Tahun
-            $table->string('noSurat'); // Nomor Surat
-            $table->string('perihal'); // Perihal
-            $table->string('kegiatan'); // Kegiatan
-            $table->string('lokasi'); // Lokasi
-            $table->string('noPerbup'); // Nomor Perbup ttg Pengadaan Barjas di Desa
-            $table->string('namaKasi'); // Nama Kasi/Kaur
+            $table->string('pekerjaan'); // Tanggal/Bulan/Tahun
+            $table->string('jenis'); // Nomor Surat
+            $table->string('kegiatan'); // Perihal
+            $table->string('kode'); // Kegiatan
+            $table->string('satuan'); // Lokasi
+            $table->string('koefisien'); // Nomor Perbup ttg Pengadaan Barjas di Desa
+            $table->string('volume'); // Nama Kasi/Kaur
             $table->string('jabatanKasi'); // Jabatan Kasi/Kaur
             $table->string('noDpa'); // Nomor SK DPA
             $table->date('tgglDpa'); // Tanggal SK DPA
             $table->timestamps(); // Created at and updated at timestamps
         });
-    }
+    }   
 
     /**
      * Reverse the migrations.

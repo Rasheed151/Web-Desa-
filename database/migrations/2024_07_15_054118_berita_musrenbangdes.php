@@ -12,28 +12,28 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('berita_murbangdes', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->integer('no'); // Nomor
             $table->date('date'); // Tanggal
             $table->time('jam'); // Jam
             $table->string('tempat'); // Tempat
-            $table->text('membahas_kegiatan'); // Membahas Kegiatan
-            $table->string('ketua_bpd'); // Ketua BPD
-            $table->string('wakil_masyarakat'); // Wakil Masyarakat
-            $table->string('pimpinan_rapat'); // Pimpinan Rapat
+            $table->text('bahasKegiatan'); // Membahas Kegiatan
+            $table->string('ketuaBpd'); // Ketua BPD
+            $table->string('wklMasyarakat'); // Wakil Masyarakat
+            $table->string('pimpinanRapat'); // Pimpinan Rapat
             $table->string('notulen'); // Notulen
-            $table->string('narasumber_1')->nullable(); // Narasumber 1
-            $table->string('narasumber_1_dari')->nullable(); // Narasumber 1 dari
-            $table->string('narasumber_2')->nullable(); // Narasumber 2
-            $table->string('narasumber_2_dari')->nullable(); // Narasumber 2 dari
-            $table->string('narasumber_3')->nullable(); // Narasumber 3
-            $table->string('narasumber_3_dari')->nullable(); // Narasumber 3 dari
-            $table->string('narasumber_4')->nullable(); // Narasumber 4
-            $table->string('narasumber_4_dari')->nullable(); // Narasumber 4 dari
-            $table->string('narasumber_5')->nullable(); // Narasumber 5
-            $table->string('narasumber_5_dari')->nullable(); // Narasumber 5 dari
-            $table->text('materi_pembahasan'); // Materi Pembahasan
-            $table->text('kesepakatan_akhir'); // Kesepakatan Akhir dari Musrenbangdes
+            $table->string('ns1')->nullable(); // Narasumber 1
+            $table->string('ns1Dari')->nullable(); // Narasumber 1 dari
+            $table->string('ns2')->nullable(); // Narasumber 2
+            $table->string('ns2Dari')->nullable(); // Narasumber 2 dari
+            $table->string('ns3')->nullable(); // Narasumber 3
+            $table->string('ns3Dari')->nullable(); // Narasumber 3 dari
+            $table->string('ns4')->nullable(); // Narasumber 4
+            $table->string('ns4Dari')->nullable(); // Narasumber 4 dari
+            $table->string('ns5')->nullable(); // Narasumber 5
+            $table->string('ns5Dari')->nullable(); // Narasumber 5 dari
+            $table->text('materiPembahasan'); // Materi Pembahasan
+            $table->text('kesepakatanAkhir'); // Kesepakatan Akhir dari Musrenbangdes
             $table->timestamps(); // Created at and updated at timestamps
         });
     }

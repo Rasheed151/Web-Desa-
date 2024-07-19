@@ -118,7 +118,6 @@
 @section('content')
 <h1 class="mb-4">Create Data Umum</h1>
 
-<<<<<<< HEAD
                 <div class="row">
                     @if(isset($jumlahLaporan))
                     <div class="col-xl-3 col-md-6">
@@ -141,9 +140,6 @@
         </div>
     @endif
 
-=======
-<div class="container">
->>>>>>> a9d1edc6b41b190d35edc705549f475606920dea
     @if ($errors->any())
         <div class="alert alert-danger">
             <ul>

@@ -11,18 +11,18 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('spesifikasi_teknis', function (Blueprint $table) {
-            $table->id();
-            $table->string('no_keg'); // No Keg
-            $table->string('no_id_hps'); // No ID HPS
+        Schema::create('spesifikasi_teknis_swa', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('noKeg'); // No Keg
+            $table->string('noHps'); // No ID HPS
             $table->string('kegiatan'); // Kegiatan
-            $table->text('spesifikasi_1'); // Spesifikasi**
-            $table->text('spesifikasi_2'); // Spesifikasi*
-            $table->string('kegiatan_pekerjaan'); // Kegiatan Pekerjaan
-            $table->string('lokasi'); // Lokasi
-            $table->string('kasi_kaur'); // Kasi/Kaur
-            $table->string('nama_kasi_kaur'); // Nama Kasi/Kaur
             $table->string('jenis'); // Jenis
+            $table->string('pekerjaan'); // Kegiatan Pekerjaan
+            $table->string('lokasi'); // Lokasi
+            $table->text('spek1'); // Spesifikasi**
+            $table->text('spek2'); // Spesifikasi*
+            $table->string('namaKasi'); // Kasi/Kaur
+            $table->string('jabatanKasi'); // Nama Kasi/Kaur
             $table->timestamps(); // Created at and updated at timestamps
         });
     }

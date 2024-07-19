@@ -12,22 +12,22 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('rkp_desa', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->integer('no'); // Nomor
-            $table->date('tanggal_bulan_tahun'); // Tanggal Bulan Tahun
+            $table->date('TBL'); // Tanggal Bulan Tahun
             $table->string('bidang'); // Bidang
-            $table->string('sub_bidang'); // Sub Bidang
-            $table->string('jenis_kegiatan'); // Jenis Kegiatan
-            $table->string('lokasi_kegiatan'); // Lokasi Kegiatan
+            $table->string('subBidang'); // Sub Bidang
+            $table->string('jnsKegiatan'); // Jenis Kegiatan
+            $table->string('lksKegiatan'); // Lokasi Kegiatan
             $table->string('volume'); // Volume
-            $table->string('sasaran_penerima_manfaat'); // Sasaran/Penerima Manfaat
-            $table->string('waktu_pelaksanaan'); // Waktu Pelaksanaan
-            $table->decimal('jumlah_biaya', 15, 2); // Jumlah Biaya (Rp)
-            $table->string('sumber_biaya'); // Sumber Biaya
+            $table->string('sasaran'); // Sasaran/Penerima Manfaat
+            $table->string('wktuPelaksanaan'); // Waktu Pelaksanaan
+            $table->decimal('jmlhBiaya', 15, 2); // Jumlah Biaya (Rp)
+            $table->string('smbrBiaya'); // Sumber Biaya
             $table->boolean('swakelola')->default(false); // Swakelola
-            $table->boolean('kerjasama_antar_desa')->default(false); // Kerjasama Antar Desa
-            $table->boolean('kerjasama_pihak_ketiga')->default(false); // Kerjasama Pihak Ketiga
-            $table->string('rencana_pelaksana_kegiatan'); // Rencana Pelaksana Kegiatan
+            $table->boolean('krjsmaAndes')->default(false); // Kerjasama Antar Desa
+            $table->boolean('krjsmaPitig')->default(false); // Kerjasama Pihak Ketiga
+            $table->string('rncnaPegiat'); // Rencana Pelaksana Kegiatan
             $table->timestamps(); // Created at and updated at timestamps
         });
     }
