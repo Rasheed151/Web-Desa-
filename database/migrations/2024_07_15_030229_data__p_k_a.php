@@ -11,17 +11,18 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('data_pka', function (Blueprint $table) {
+        Schema::create('dataPka', function (Blueprint $table) {
+            $table->id();
             $table->integer('nomor');
             $table->string('nama');
             $table->string('ttl');
             $table->integer('NIK');
             $table->string('jabatan');
-            $table->string('no_hp');
+            $table->string('noHp');
             $table->text('alamat');
             $table->integer('npwp');
-            $table->integer('no_sk_pka');
-            $table->timestamp('tanggal_sk_pka')->nullable();
+            $table->integer('noSkPka');
+            $table->timestamp('tanggalSkPka')->nullable();
             $table->timestamps(); // Created at and updated at timestamps
         });
     }

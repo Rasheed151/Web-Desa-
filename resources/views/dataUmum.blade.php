@@ -16,7 +16,7 @@
     h1 {
         color: #333;
         /* margin-bottom: 20px; */
-        margin-left: 0;
+        margin-right: 70%;
     }
 
     .alert-danger {
@@ -133,48 +133,48 @@
         <form action="{{ route('store') }}" method="POST">
             @csrf
             <div class="mb-3">
-                <label for="tempat_desa" class="form-label">Tempat Desa:</label>
-                <input type="text" name="tempat_desa" class="form-control" required>
+                <label for="tempatDesa" class="form-label">Tempat Desa:</label>
+                <input type="text" name="tempatDesa" class="form-control" required="" placeholder="Provinsi,Kabupateb,Kecamatan,Desa">
             </div>
 
             <div class="mb-3">
-                <label for="alamat_kantor" class="form-label">Alamat Kantor:</label>
-                <textarea name="alamat_kantor" class="form-control" rows="3" required></textarea>
+                <label for="alamatKantor" class="form-label">Alamat Kantor:</label>
+                <textarea name="alamatKantor" class="form-control" rows="3" required></textarea>
             </div>
 
             <div class="mb-3">
                 <label for="npwp" class="form-label">NPWP:</label>
-                <input type="text" name="npwp" class="form-control" required>
+                <input type="text" name="npwp" class="form-control" required="">
             </div>
 
             <div class="mb-3">
-                <label for="kode_desa" class="form-label">Kode Desa:</label>
-                <input type="number" name="kode_desa" class="form-control" required>
+                <label for="kodeDesa" class="form-label">Kode Desa:</label>
+                <input type="number" name="kodeDesa" class="form-control" required>
             </div>
 
             <div class="mb-3">
-                <label for="kepala_desa" class="form-label">Kepala Desa:</label>
-                <input type="text" name="kepala_desa" class="form-control" required>
+                <label for="kepalaDesa" class="form-label">Kepala Desa:</label>
+                <input type="text" name="kepalaDesa" class="form-control" required>
             </div>
 
             <div class="mb-3">
-                <label for="no_perbub_pjb" class="form-label">No Perbub PJB:</label>
-                <input type="number" name="no_perbub_pjb" class="form-control" required>
+                <label for="noPerbubPjb" class="form-label">No Perbub PJB:</label>
+                <input type="number" name="noPerbubPjb" class="form-control" required>
             </div>
 
             <div class="mb-3">
-                <label for="tanggal_perbub_pjb" class="form-label">Tanggal Perbub PJB:</label>
-                <input type="date" name="tanggal_perbub_pjb" class="form-control">
+                <label for="tanggalPerbubPjb" class="form-label">Tanggal Perbub PJB:</label>
+                <input type="date" name="tanggalPerbubPjb" class="form-control">
             </div>
 
             <div class="mb-3">
-                <label for="no_keputusan_dpa" class="form-label">No Keputusan DPA:</label>
-                <input type="number" name="no_keputusan_dpa" class="form-control" required>
+                <label for="noKeputusanDpa" class="form-label">No Keputusan DPA:</label>
+                <input type="number" name="noKeputusanDpa" class="form-control" required>
             </div>
 
             <div class="mb-3">
-                <label for="tanggal_keputusan_dpa" class="form-label">Tanggal Keputusan DPA:</label>
-                <input type="date" name="tanggal_keputusan_dpa" class="form-control">
+                <label for="tanggalKeputusanDpa" class="form-label">Tanggal Keputusan DPA:</label>
+                <input type="date" name="tanggalKeputusanDpa" class="form-control">
             </div>
 
             <div class="mb-3">
@@ -192,7 +192,7 @@
 <div class="container-show">
     
 
-    @if ($data_umum->isEmpty())
+    @if ($dataUmum->isEmpty())
         <p>No data available.</p>
     @else
         <table class="table table-bordered">
@@ -211,17 +211,17 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($data_umum as $data)
+                @foreach ($dataUmum as $data)
                     <tr>
-                        <td>{{ $data->tempat_desa }}</td>
-                        <td>{{ $data->alamat_kantor }}</td>
+                        <td>{{ $data->tempatDesa }}</td>
+                        <td>{{ $data->alamatKantor }}</td>
                         <td>{{ $data->npwp }}</td>
-                        <td>{{ $data->kode_desa }}</td>
-                        <td>{{ $data->kepala_desa }}</td>
-                        <td>{{ $data->no_perbub_pjb }}</td>
-                        <td>{{ $data->tanggal_perbub_pjb }}</td>
-                        <td>{{ $data->no_keputusan_dpa }}</td>
-                        <td>{{ $data->tanggal_keputusan_dpa }}</td>
+                        <td>{{ $data->kodeDesa }}</td>
+                        <td>{{ $data->kepalaDesa }}</td>
+                        <td>{{ $data->noPerbubPjb }}</td>
+                        <td>{{ $data->tanggalPerbubPjb }}</td>
+                        <td>{{ $data->noKeputusanDpa }}</td>
+                        <td>{{ $data->tanggalKeputusanDpa }}</td>
                         <td>{{ $data->email }}</td>
                     </tr>
                 @endforeach

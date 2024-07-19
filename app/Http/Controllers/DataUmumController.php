@@ -9,27 +9,27 @@ class DataUmumController extends Controller
 {
     public function create()
     {
-        return view('data_umum');
+        return view('dataUmum');
     }
 
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'tempat_desa' => 'required|string|max:255',
-            'alamat_kantor' => 'required|string',
+            'tempatDesa' => 'required|string|max:255',
+            'alamatKantor' => 'required|string',
             'npwp' => 'required|string|max:255',
-            'kode_desa' => 'required|integer',
-            'kepala_desa' => 'required|string|max:255',
-            'no_perbub_pjb' => 'required|integer',
-            'tanggal_perbub_pjb' => 'nullable|date',
-            'no_keputusan_dpa' => 'required|integer',
-            'tanggal_keputusan_dpa' => 'nullable|date',
-            'email' => 'required|email|unique:data_umum,email',
+            'kodeDesa' => 'required|integer',
+            'kepalaDesa' => 'required|string|max:255',
+            'noPerbubPjb' => 'required|integer',
+            'tanggalPerbubPjb' => 'nullable|date',
+            'noKeputusanDpa' => 'required|integer',
+            'tanggalKeputusanDpa' => 'nullable|date',
+            'email' => 'required|email|unique:dataUmum,email',
         ]);
 
         DataUmum::create($validated);
 
-        return redirect('data_umum')->with('success', 'Data umum created successfully.');
+        return redirect('dataUmum')->with('success', 'Data umum created successfully.');
     }
 
     public function count()
@@ -41,12 +41,10 @@ class DataUmumController extends Controller
     public function index()
     {
         // Ambil semua data dari tabel data_umum
-        $data_umum = DataUmum::all();
+        $dataUmum = DataUmum::all();
         
         // Kirim data ke view
-        return view('data_umum', compact('data_umum'));
+        return view('dataUmum', compact('dataUmum'));
     }
 
-
-   
 }

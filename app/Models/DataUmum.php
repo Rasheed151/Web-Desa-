@@ -9,19 +9,19 @@ class DataUmum extends Model
 {
     use HasFactory;
 
-    protected $table = 'data_umum';
+    protected $table = 'dataUmum';
     public $timestamps = false;
 
     protected $fillable = [
-        'tempat_desa',
-        'alamat_kantor',
+        'tempatDesa',
+        'alamatKantor',
         'npwp',
-        'kode_desa',
-        'kepala_desa',
-        'no_perbub_pjb',
-        'tanggal_perbub_pjb',
-        'no_keputusan_dpa',
-        'tanggal_keputusan_dpa',
+        'kodeDesa',
+        'kepalaDesa',
+        'noPerbubPjb',
+        'tanggalPerbubPjb',
+        'noKeputusanDpa',
+        'tanggalKeputusanDpa',
         'email',
     ];
 }

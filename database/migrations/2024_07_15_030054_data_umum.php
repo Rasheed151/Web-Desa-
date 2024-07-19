@@ -11,16 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('data_umum', function (Blueprint $table) {
-            $table->string('tempat_desa');
-            $table->text('alamat_kantor');
+        Schema::create('dataUmum', function (Blueprint $table) {
+            $table->id();
+            $table->string('tempatDesa');
+            $table->text('alamatKantor');
             $table->string('npwp');
-            $table->integer('kode_desa');
-            $table->string('kepala_desa');
-            $table->bigInteger('no_perbub_pjb');
-            $table->timestamp('tanggal_perbub_pjb')->nullable();
-            $table->bigInteger('no_keputusan_dpa');
-            $table->timestamp('tanggal_keputusan_dpa')->nullable();
+            $table->integer('kodeDesa');
+            $table->string('kepalaDesa');
+            $table->bigInteger('noPerbubPjb');
+            $table->timestamp('tanggalPerbubPjb')->nullable();
+            $table->bigInteger('noKeputusanDpa');
+            $table->timestamp('tanggalKeputusanDpa')->nullable();
             $table->string('email')->unique();
             $table->timestamps();
         });

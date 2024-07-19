@@ -77,6 +77,44 @@
             font-size: 16px;
         }
     }
+
+    .container-show {
+        margin-top: 20px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+    }
+
+    /* Table */
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    .table th, .table td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+    }
+
+    .table th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+    }
+
+    .table td {
+        background-color: #fff;
+    }
+
+    /* No Data Message */
+    .no-data {
+        margin-top: 20px;
+        text-align: center;
+        font-style: italic;
+        color: #888;
+    }
 </style>
 @endsection
 
@@ -107,8 +145,8 @@
         </div>
 
         <div class="mb-3">
-            <label for="jenis_kelamin" class="form-label">Jenis Kelamin:</label>
-            <select name="jenis_kelamin" class="form-control" required>
+            <label for="gender" class="form-label">Jenis Kelamin:</label>
+            <select name="gender" class="form-control" required>
                 <option value="">Pilih Jenis Kelamin</option>
                 <option value="Laki-laki">Laki-laki</option>
                 <option value="Perempuan">Perempuan</option>
@@ -122,7 +160,7 @@
 
         <div class="mb-3">
             <label for="nik" class="form-label">NIK:</label>
-            <input type="number" name="nik" class="form-control" required>
+            <input type="number" name="NIK" class="form-control" required>
         </div>
 
         <div class="mb-3">
@@ -147,5 +185,44 @@
 
         <button type="submit" class="btn btn-primary">Create Data Aparatur</button>
     </form>
+</div>
+
+<h1>Data Aparat</h1>
+
+<div class="container-show">
+    @if ($data_aparat->isEmpty())
+        <p>No data available.</p>
+    @else
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Nomor</th>
+                    <th>Nama Lengkap</th>
+                    <th>Gender</th>
+                    <th>Tempat Tanggal Lahir</th>
+                    <th>NIK</th>
+                    <th>Alamat</th>
+                    <th>NPWP</th>
+                    <th>No HP</th>
+                    <th>Jabatan</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($data_aparat as $data)
+                    <tr>
+                        <td>{{ $data->nomor }}</td>
+                        <td>{{ $data->nama_lengkap }}</td>
+                        <td>{{ $data->gender }}</td>
+                        <td>{{ $data->ttl }}</td>
+                        <td>{{ $data->NIK }}</td>
+                        <td>{{ $data->alamat }}</td>
+                        <td>{{ $data->npwp }}</td>
+                        <td>{{ $data->no_hp }}</td>
+                        <td>{{ $data->jabatan }}</td>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
+    @endif
 </div>
 @endsection

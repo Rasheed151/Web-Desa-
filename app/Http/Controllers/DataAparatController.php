@@ -17,10 +17,10 @@ class DataAparatController extends Controller
         $validated = $request->validate([
             'nomor' => 'required|integer',
             'nama_lengkap' => 'required|string|max:255',
-            'jenis_kelamin' => 'required|string|max:255',
+            'gender' => 'required|string|max:255',
             'ttl' => 'required|string|max:255',
-            'kepala_desa' => 'required|integer',
             'alamat' => 'required|string',
+            'NIK' => 'required|integer',
             'npwp' => 'required|integer',
             'no_hp' => 'required|integer',
             'jabatan' => 'required|string|max:255',
@@ -29,5 +29,14 @@ class DataAparatController extends Controller
         DataAparat::create($validated);
 
         return redirect('data_aparat')->with('success', 'Data umum created successfully.');
+    }
+
+    public function index()
+    {
+        // Ambil semua data dari tabel data_umum
+        $data_aparat = DataAparat::all();
+        
+        // Kirim data ke view
+        return view('data_aparat', compact('data_aparat'));
     }
 }

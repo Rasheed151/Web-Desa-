@@ -11,15 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('data_aparat', function (Blueprint $table) {
+        Schema::create('dataAparat', function (Blueprint $table) {
+            $table->id();
             $table->integer('nomor');
-            $table->string('nama_lengkap');
+            $table->string('namaLengkap');
             $table->string('gender');
             $table->string('ttl');
             $table->integer('NIK');
             $table->text('alamat');
             $table->integer('npwp');
-            $table->integer('no_hp');
+            $table->integer('noHp');
             $table->string('jabatan');
             $table->timestamps(); // Created at and updated at timestamps
         });
