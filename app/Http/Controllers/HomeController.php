@@ -18,7 +18,7 @@ class HomeController extends Controller
         return view('dashboard', compact('jumlahLaporan'));
     }
     public function umum(){
-        return view('data_umum');
+        return view('dataUmum');
     }
     public function aparatur(){
         return view('data_aparatur');
