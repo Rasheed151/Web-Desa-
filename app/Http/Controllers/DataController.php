@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\DataUmum;
 use Illuminate\Http\Request;
 
-class DataUmumController extends Controller
+class DataController extends Controller
 {
     public function create()
     {

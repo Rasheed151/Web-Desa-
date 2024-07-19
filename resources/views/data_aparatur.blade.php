@@ -3,6 +3,11 @@
 
 <div class="container mt-5">
     <h1 class="mb-4">Create Data Aparatur</h1>
+    @if (session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+    @endif
 
     @if ($errors->any())
         <div class="alert alert-danger">
@@ -16,10 +21,6 @@
 
     <form action="{{ route('simpan') }}" method="POST">
     @csrf
-    <div class="mb-3">
-        <label for="nomor" class="form-label">Nomor :</label>
-        <input type="number" name="nomor" class="form-control" required>
-    </div>
 
     <div class="mb-3">
         <label for="nama_lengkap" class="form-label">Nama Lengkap :</label>
@@ -41,8 +42,8 @@
     </div>
 
     <div class="mb-3">
-        <label for="kepala_desa" class="form-label">NIK :</label>
-        <input type="number" name="kepala_desa" class="form-control" required>
+        <label for="NIK" class="form-label">NIK :</label>
+        <input type="number" name="NIK" class="form-control" required>
     </div>
 
     <div class="mb-3">

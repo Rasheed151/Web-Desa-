@@ -15,14 +15,13 @@ class DataAparatController extends Controller
     public function simpan(Request $request)
     {
         $validated = $request->validate([
-            'nomor' => 'required|integer',
             'nama_lengkap' => 'required|string|max:255',
-            'jenis_kelamin' => 'required|string|max:255',
+            'gender' => 'required|string|max:255',
             'ttl' => 'required|string|max:255',
-            'kepala_desa' => 'required|integer',
+            'NIK' => 'required|digits:16', // Assuming NIK is 16 digits
             'alamat' => 'required|string',
-            'npwp' => 'required|integer',
-            'no_hp' => 'required|integer',
+            'npwp' => 'required|digits:15', // Assuming NPWP is 15 digits
+            'no_hp' => 'required|digits_between:10,15', // Assuming phone number is between 10 and 15 digits
             'jabatan' => 'required|string|max:255',
         ]);
 
@@ -30,4 +29,5 @@ class DataAparatController extends Controller
 
         return redirect('data_aparat')->with('success', 'Data umum created successfully.');
     }
+
 }

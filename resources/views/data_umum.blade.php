@@ -1,8 +1,27 @@
 @extends('layouts')
 @section('content')
 
+                <div class="row">
+                    @if(isset($jumlahLaporan))
+                    <div class="col-xl-3 col-md-6">
+                        <div class="card bg-primary text-white mb-4">
+                            <div class="card-body"><h3>Jumlah Data</h3></div>
+                            <div class="card-footer d-flex align-items-center justify-content-between">
+                                <p class="small text-white stretched-link" href="#">{{ $jumlahLaporan }}</p>
+                                <div class="small text-white"></div>
+                            </div>
+                        </div>
+                    </div>
+                    @endif
+                </div>
+
 <div class="container mt-5">
     <h1 class="mb-4">Create Data Umum</h1>
+    @if (session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+    @endif
 
     @if ($errors->any())
         <div class="alert alert-danger">

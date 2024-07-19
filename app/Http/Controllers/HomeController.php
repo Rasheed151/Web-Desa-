@@ -24,10 +24,10 @@ class HomeController extends Controller
         return view('data_aparatur');
     }
     public function pka(){
-        return view('PKA');
+        return view('pka');
     }
     public function tpk(){
-        return view('timPelaksana');
+        return view('tpk');
     }
     public function pmsk(){
         return view('pemasok');

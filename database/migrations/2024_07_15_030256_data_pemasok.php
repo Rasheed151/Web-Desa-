@@ -20,6 +20,7 @@ return new class extends Migration
             $table->text('alamat_rumah');
             $table->string('nama_toko');
             $table->text('alamat_toko');
+            $table->string('no_hp');
             $table->integer('npwp');
             $table->integer('nib');
             $table->timestamps(); // Created at and updated at timestamps
