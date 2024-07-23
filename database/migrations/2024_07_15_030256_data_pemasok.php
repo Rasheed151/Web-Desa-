@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('dataPenyedia', function (Blueprint $table) {
+        Schema::create('data_penyedia', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
             $table->string('gender');
@@ -31,6 +31,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('data_pemasok');
+        Schema::dropIfExists('data_penyedia');
     }
 };

@@ -20,6 +20,7 @@ h1 {
 
 .form-group {
     margin-bottom: 15px;
+    margin-right: 15px;
 }
 
 .form-group label {
@@ -93,12 +94,24 @@ h1 {
         @csrf
         @method('PUT')
         <div class="form-group">
-            <label for="tempatDesa">Tempat Desa</label>
-            <input type="text" class="form-control" id="tempatDesa" name="tempatDesa" value="{{ $dataUmum->tempatDesa }}" required>
+            <label for="desa">Desa</label>
+            <input type="text" class="form-control" id="desa" name="desa" value="{{ $dataUmum->desa }}" required>
         </div>
         <div class="form-group">
-            <label for="alamatKantor">Alamat Kantor</label>
-            <input type="text" class="form-control" id="alamatKantor" name="alamatKantor" value="{{ $dataUmum->alamatKantor }}" required>
+            <label for="kecamatan">kecamatan</label>
+            <input type="text" class="form-control" id="kecamatan" name="kecamatan" value="{{ $dataUmum->kecamatan }}" required>
+        </div>
+        <div class="form-group">
+            <label for="kabupaten">kabupaten</label>
+            <input type="text" class="form-control" id="kabupaten" name="kabupaten" value="{{ $dataUmum->kabupaten }}" required>
+        </div>
+        <div class="form-group">
+            <label for="provinsi">provinsi</label>
+            <input type="text" class="form-control" id="provinsi" name="provinsi" value="{{ $dataUmum->provinsi }}" required>
+        </div>
+        <div class="form-group">
+            <label for="alamat">Alamat Kantor</label>
+            <input type="text" class="form-control" id="alamat" name="alamat" value="{{ $dataUmum->alamat }}" required>
         </div>
         <div class="form-group">
             <label for="npwp">NPWP</label>

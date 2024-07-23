@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="css/styles.css" rel="stylesheet" />
+    <link href="{{asset('/css/styles.css')}}" rel="stylesheet" />
     @yield('styles')
 </head>
 <body>    <div class="top-navbar">
         <button class="toggle-navbar" id="toggle-navbar" style="background: none; border: none; cursor: pointer;">
-            <img src="img/icon-toggle.png" alt="Toggle Navbar" style="width: 45px; height: 45px;">
+            <img src="{{asset('/img/icon-toggle.png')}}" alt="Toggle Navbar" style="width: 45px; height: 45px;">
         </button>
         <h2>Klipaa</h2>
         <div class="profile">
-            <img src="img/profil.webp" alt="Profile Picture">
+            <img src="{{asset('/img/profil.webp')}}" alt="Profile Picture">
             <button class="logout-btn" onclick="showLogoutPopup()">Log Out</button>
         </div>
     </div>
@@ -21,18 +21,18 @@
     <div class="navbar" id="navbar">
         <div class="navbar-content">
             <button class="dropdown-btn">
-                <img src="img/entri.png" alt="Home Icon"> Entri data umum
+                <img src="{{asset('/img/entri.png')}}" alt="Home Icon"> Entri data umum
             </button>
             <div class="dropdown-container">
-                <a href="#Data Umum Desa">Umum Desa</a>
-                <a href="#Data Aparatur Desa">Aparatur Desa</a>
+                <a href="/dataUmum">Umum Desa</a>
+                <a href="/dataAparat">Aparatur Desa</a>
                 <a href="#Data Pelaksanaan Kegiatan Anggaran(PKA)">PKA</a>
                 <a href="#Data Tim Pelaksana Kegiatan">Tim Pelaksana Kegiatan</a>
                 <a href="#Data Pemasok">Penyedia</a>
             </div>
 
             <button class="dropdown-btn">
-                <img src="img/perencanaan.png" alt="Services Icon"> Tahap perencanaan
+                <img src="{{asset('/img/perencanaan.png')}}" alt="Services Icon"> Tahap perencanaan
             </button>
             <div class="dropdown-container">
                 <a href="#services1">Berita Acara</a>
@@ -41,7 +41,7 @@
             </div>
 
             <button class="dropdown-btn">
-                <img src="img/persiapan.png" alt="Services Icon"> Tahap persiapan
+                <img src="{{asset('/img/persiapan.png')}}" alt="Services Icon"> Tahap persiapan
             </button>
             <div class="dropdown-container">
                 <a href="#about1">Secara Swakelola</a>
@@ -49,7 +49,7 @@
             </div>
 
             <button class="dropdown-btn">
-                <img src="img/pelaksanaan.png" alt="Services Icon"> Tahap pelaksanaan
+                <img src="{{asset('/img/pelaksanaan.png')}}" alt="Services Icon"> Tahap pelaksanaan
             </button>
             <div class="dropdown-container">
                 <a href="#contact1">Secara Swakelola</a>
@@ -59,7 +59,7 @@
             </div>
 
             <button class="dropdown-btn">
-                <img src="img/pelaporan.png" alt="Services Icon"> Pelaporan & Serah terima
+                <img src="{{asset('/img/pelaporan.png')}}"  alt="Services Icon"> Pelaporan & Serah terima
             </button>
             <div class="dropdown-container">
                 <a href="#contact1">Contact 1</a>

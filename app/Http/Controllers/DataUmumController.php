@@ -25,14 +25,17 @@ class DataUmumController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'tempatDesa' => 'required|string|max:255',
-            'alamatKantor' => 'required|string',
+            'desa' => 'required|string|max:255',
+            'kecamatan' => 'required|string|max:255',
+            'kabupaten' => 'required|string|max:255',
+            'provinsi' => 'required|string|max:255',
+            'alamat' => 'required|string|max:255',
             'npwp' => 'required|string|max:255',
-            'kodeDesa' => 'required|integer',
+            'kodeDesa' => 'required|numeric',
             'kepalaDesa' => 'required|string|max:255',
-            'noPerbubPjb' => 'required|integer',
+            'noPerbubPjb' => 'required|numeric',
             'tanggalPerbubPjb' => 'required|date',
-            'noKeputusanDpa' => 'required|integer',
+            'noKeputusanDpa' => 'required|numeric',
             'tanggalKeputusanDpa' => 'required|date',
             'email' => 'required|email|unique:dataUmum,email',
         ]);
@@ -61,8 +64,11 @@ class DataUmumController extends Controller
     public function update(Request $request, DataUmum $dataUmum)
     {
         $request->validate([
-            'tempatDesa' => 'required',
-            'alamatKantor' => 'required',
+            'desa' => 'required',
+            'kecamatan' => 'required',
+            'kabupaten' => 'required',
+            'provinsi' => 'required',
+            'alamat' => 'required',
             'npwp' => 'required',
             'kodeDesa' => 'required',
             'kepalaDesa' => 'required',

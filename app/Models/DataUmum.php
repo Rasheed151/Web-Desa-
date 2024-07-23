@@ -13,8 +13,11 @@ class DataUmum extends Model
     public $timestamps = false;
 
     protected $fillable = [
-        'tempatDesa',
-        'alamatKantor',
+        'desa',
+        'kecamatan',
+        'kabupaten',
+        'provinsi',
+        'alamat',
         'npwp',
         'kodeDesa',
         'kepalaDesa',

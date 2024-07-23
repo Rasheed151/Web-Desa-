@@ -133,13 +133,28 @@
         <form action="{{ route('dataUmum.store') }}" method="POST">
             @csrf
             <div class="mb-3">
-                <label for="tempatDesa" class="form-label">Tempat Desa:</label>
-                <input type="text" name="tempatDesa" class="form-control" required="" placeholder="Provinsi,Kabupateb,Kecamatan,Desa">
+                <label for="desa" class="form-label">Desa:</label>
+                <input type="text" name="desa" class="form-control" required="" placeholder="Desa">
             </div>
 
             <div class="mb-3">
-                <label for="alamatKantor" class="form-label">Alamat Kantor:</label>
-                <textarea name="alamatKantor" class="form-control" rows="3" required></textarea>
+                <label for="kecamatan" class="form-label">Kecamatan:</label>
+                <input type="text" name="kecamatan" class="form-control" required="" placeholder="Kecamatan">
+            </div>
+
+            <div class="mb-3">
+                <label for="kabupaten" class="form-label">Kabupaten:</label>
+                <input type="text" name="kabupaten" class="form-control" required="" placeholder="Kabupaten">
+            </div>
+
+            <div class="mb-3">
+                <label for="provinsi" class="form-label">Provinsi:</label>
+                <input type="text" name="provinsi" class="form-control" required="" placeholder="Provinsi">
+            </div>
+
+            <div class="mb-3">
+                <label for="alamat" class="form-label">Alamat Kantor:</label>
+                <textarea name="alamat" class="form-control" rows="3" required></textarea>
             </div>
 
             <div class="mb-3">
@@ -198,7 +213,10 @@
         <table class="table table-bordered">
             <thead>
                 <tr>
-                    <th>Tempat Desa</th>
+                    <th>Desa</th>
+                    <th>Kecamatan</th>
+                    <th>Kabupaten</th>
+                    <th>Provinsi</th>
                     <th>Alamat Kantor</th>
                     <th>NPWP</th>
                     <th>Kode Desa</th>
@@ -213,8 +231,11 @@
             <tbody>
                 @foreach ($dataUmum as $data)
                     <tr>
-                        <td>{{ $data->tempatDesa }}</td>
-                        <td>{{ $data->alamatKantor }}</td>
+                        <td>{{ $data->desa }}</td>
+                        <td>{{ $data->kecamatan }}</td>
+                        <td>{{ $data->kabupaten }}</td>
+                        <td>{{ $data->provinsi }}</td>
+                        <td>{{ $data->alamat }}</td>
                         <td>{{ $data->npwp }}</td>
                         <td>{{ $data->kodeDesa }}</td>
                         <td>{{ $data->kepalaDesa }}</td>
@@ -226,7 +247,7 @@
                         <td>
                         <form action="{{ route('dataUmum.destroy', $data->id) }}" method="POST">
 
-                    <a class="btn btn-info" href="{{ route('dataUmum.show', $data->id) }}">Show</a>
+                    <a class="btn btn-primary" href="{{ route('dataUmum.show', $data->id) }}">Show</a>
 
                     <a class="btn btn-primary" href="{{ route('dataUmum.edit', $data->id) }}">Edit</a>
 

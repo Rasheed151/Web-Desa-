@@ -16,7 +16,7 @@ use App\Http\Controllers\DataUmumController;
 */
 
 Route::get('/', function () {
-    return view('show_dataUmum');
+    return view('dashboard');
 });
 
 Route::get('/dashboard', [HomeController::class, 'index']);
@@ -29,6 +29,9 @@ Route::get('/penyedia', [HomeController::class, 'pmsk']);
 
 Route::get('/dashboard', [DataUmumController::class, 'count']);
 Route::resource('dataUmum', DataUmumController::class);
+
+
+Route::resource('dataAparat', DataAparatController::class);
 
 Route::get('/data_aparat', [DataAparatController::class, 'create'])->name('create');
 Route::post('/data_aparat', [DataAparatController::class, 'simpan'])->name('simpan');

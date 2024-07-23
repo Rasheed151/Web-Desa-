@@ -7,7 +7,7 @@
             margin: 20px;
             background-color: #f5f5f5;
         }
-        .container {
+        .container-show {
             background-color: white;
             padding: 20px;
             border-radius: 8px;
@@ -15,6 +15,7 @@
         }
         h1 {
             color: #4e73df;
+            margin-bottom: 20px;
         }
         .data-table {
             width: 100%;
@@ -44,63 +45,48 @@
         }
     </style>
 @endsection
+
 @section('content')
-    <div class="container">
-        <h1>Detail Data Umum</h1>
+    <div class="container-show">
+        <h1>Detail Data Aparat</h1>
         <table class="data-table">
             <tr>
-                <th>Desa</th>
-                <td>{{ $dataUmum->desa }}</td>
+                <th>Nomor</th>
+                <td>{{ $dataAparat->nomor }}</td>
             </tr>
             <tr>
-                <th>Kecamatan</th>
-                <td>{{ $dataUmum->kecamatan }}</td>
+                <th>Nama Lengkap</th>
+                <td>{{ $dataAparat->nama_lengkap }}</td>
             </tr>
             <tr>
-                <th>Kabupaten</th>
-                <td>{{ $dataUmum->kabupaten }}</td>
+                <th>Gender</th>
+                <td>{{ $dataAparat->gender }}</td>
             </tr>
             <tr>
-                <th>Provinsi</th>
-                <td>{{ $dataUmum->provinsi }}</td>
+                <th>Tempat, Tanggal Lahir</th>
+                <td>{{ $dataAparat->ttl }}</td>
+            </tr>
+            <tr>
+                <th>NIK</th>
+                <td>{{ $dataAparat->NIK }}</td>
             </tr>
             <tr>
                 <th>Alamat</th>
-                <td>{{ $dataUmum->alamat }}</td>
+                <td>{{ $dataAparat->alamat }}</td>
             </tr>
             <tr>
                 <th>NPWP</th>
-                <td>{{ $dataUmum->npwp }}</td>
+                <td>{{ $dataAparat->npwp }}</td>
             </tr>
             <tr>
-                <th>Kode Desa</th>
-                <td>{{ $dataUmum->kodeDesa }}</td>
+                <th>No HP</th>
+                <td>{{ $dataAparat->noHp }}</td>
             </tr>
             <tr>
-                <th>Kepala Desa</th>
-                <td>{{ $dataUmum->kepalaDesa }}</td>
-            </tr>
-            <tr>
-                <th>No Perbub Pjb</th>
-                <td>{{ $dataUmum->noPerbubPjb }}</td>
-            </tr>
-            <tr>
-                <th>Tanggal Perbub Pjb</th>
-                <td>{{ $dataUmum->tanggalPerbubPjb }}</td>
-            </tr>
-            <tr>
-                <th>No Keputusan Dpa</th>
-                <td>{{ $dataUmum->noKeputusanDpa }}</td>
-            </tr>
-            <tr>
-                <th>Tanggal Keputusan Dpa</th>
-                <td>{{ $dataUmum->tanggalKeputusanDpa }}</td>
-            </tr>
-            <tr>
-                <th>Email</th>
-                <td>{{ $dataUmum->email }}</td>
+                <th>Jabatan</th>
+                <td>{{ $dataAparat->jabatan }}</td>
             </tr>
         </table>
-        <a href="{{ route('dataUmum.index') }}" class="btn-secondary">Kembali</a>
+        <a href="{{ route('dataAparat.index') }}" class="btn-secondary">Kembali</a>
     </div>
 @endsection

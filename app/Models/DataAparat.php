@@ -10,16 +10,17 @@ class DataAparat extends Model
     use HasFactory;
 
     protected $table = 'data_aparat';
-    public $timestamps = false;
+    public $timestamps = true;
 
     protected $fillable = [
+        'nomor',
         'nama_lengkap',
         'gender',
         'ttl',
         'NIK',
         'alamat',
         'npwp',
-        'no_hp',
+        'noHp',
         'jabatan',
     ];
 }
