@@ -16,7 +16,7 @@ use App\Http\Controllers\DataUmumController;
 */
 
 Route::get('/', function () {
-    return view('dashboard');
+    return view('show_dataUmum');
 });
 
 Route::get('/dashboard', [HomeController::class, 'index']);
@@ -27,10 +27,8 @@ Route::get('/tim-pelaksana', [HomeController::class, 'tpk']);
 Route::get('/penyedia', [HomeController::class, 'pmsk']);
 
 
-Route::get('/dataUmum', [DataUmumController::class, 'create'])->name('create');
-Route::post('/dataUmum', [DataUmumController::class, 'store'])->name('store');
-Route::get('/dataUmum', [DataUmumController::class, 'index'])->name('data_umum.index');
 Route::get('/dashboard', [DataUmumController::class, 'count']);
+Route::resource('dataUmum', DataUmumController::class);
 
 Route::get('/data_aparat', [DataAparatController::class, 'create'])->name('create');
 Route::post('/data_aparat', [DataAparatController::class, 'simpan'])->name('simpan');
