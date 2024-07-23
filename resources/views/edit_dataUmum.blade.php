@@ -1,67 +1,4 @@
-@extends('layouts')
-
-@section('styles')
-<style>
-
-.container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-h1 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #555;
-}
-
-.form-control {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    color: #333;
-}
-
-.form-control:focus {
-    border-color: #4e73df;
-    box-shadow: 0 0 8px rgba(78, 115, 223, 0.2);
-}
-
-.btn-primary {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #4e73df;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.btn-primary:hover {
-    background-color: #3b5cb8;
-}
-
-</style>
-@endsection
+@extends('layouts.edit')
 
 @section('content')
 <div class="container">
@@ -93,12 +30,24 @@ h1 {
         @csrf
         @method('PUT')
         <div class="form-group">
-            <label for="tempatDesa">Tempat Desa</label>
-            <input type="text" class="form-control" id="tempatDesa" name="tempatDesa" value="{{ $dataUmum->tempatDesa }}" required>
+            <label for="desa">Desa</label>
+            <input type="text" class="form-control" id="desa" name="desa" value="{{ $dataUmum->desa }}" required>
         </div>
         <div class="form-group">
-            <label for="alamatKantor">Alamat Kantor</label>
-            <input type="text" class="form-control" id="alamatKantor" name="alamatKantor" value="{{ $dataUmum->alamatKantor }}" required>
+            <label for="kecamatan">kecamatan</label>
+            <input type="text" class="form-control" id="kecamatan" name="kecamatan" value="{{ $dataUmum->kecamatan }}" required>
+        </div>
+        <div class="form-group">
+            <label for="kabupaten">kabupaten</label>
+            <input type="text" class="form-control" id="kabupaten" name="kabupaten" value="{{ $dataUmum->kabupaten }}" required>
+        </div>
+        <div class="form-group">
+            <label for="provinsi">provinsi</label>
+            <input type="text" class="form-control" id="provinsi" name="provinsi" value="{{ $dataUmum->provinsi }}" required>
+        </div>
+        <div class="form-group">
+            <label for="alamat">Alamat Kantor</label>
+            <input type="text" class="form-control" id="alamat" name="alamat" value="{{ $dataUmum->alamat }}" required>
         </div>
         <div class="form-group">
             <label for="npwp">NPWP</label>

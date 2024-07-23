@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="{{asset('/css/styles.css')}}" rel="stylesheet" />
+    <link href="{{asset('/css/show.css')}}" rel="stylesheet" />
 </head>
 <body>    <div class="top-navbar">
         <button class="toggle-navbar" id="toggle-navbar" style="background: none; border: none; cursor: pointer;">
