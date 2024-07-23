@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('spesifikasi_teknis_penyedia', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('noKeg'); // No Keg
-            $table->string('noHps'); // No ID HPS
+            $table->integer('noKeg'); // Nomor Kegiatan
+            $table->string('noHps'); // Nomor ID HPS
             $table->string('kegiatan'); // Kegiatan
             $table->string('jenis'); // Jenis
             $table->string('pekerjaan'); // Kegiatan Pekerjaan

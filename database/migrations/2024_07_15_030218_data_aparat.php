@@ -19,7 +19,7 @@ return new class extends Migration
             $table->bigInteger('NIK');
             $table->text('alamat');
             $table->integer('npwp');
-            $table->integer('no_hp');
+            $table->integer('noHp');
             $table->string('jabatan');
             $table->timestamps(); // Created at and updated at timestamps
         });

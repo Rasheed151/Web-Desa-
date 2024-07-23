@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('catatan_hasil_pembahasan_swa', function (Blueprint $table) {
             $table->increments('id'); 
-            $table->string('no'); // Nomor
+            $table->integer('no'); // Nomor
             $table->string('kegiatan'); // Rapat Pembahasan Kegiatan
             $table->string('tempat'); // Tempat Pelaksanaan
             $table->date('tggl'); // Hari/Tanggal

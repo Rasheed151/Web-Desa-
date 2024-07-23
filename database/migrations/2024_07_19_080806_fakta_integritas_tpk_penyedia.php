@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('fakta_integritas_tpk_penyedia', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('no'); // Nomor
+            $table->integer('no'); // Nomor
             $table->date('tanggal'); // Tanggal/Bulan/Tahun
             $table->string('nama'); // Ketua/Sekretaris/Anggota
             $table->string('alamat'); // Alamat
