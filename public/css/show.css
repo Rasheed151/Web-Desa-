@@ -1,0 +1,195 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #f4f4f4;
+  }
+  
+  .top-navbar {
+    width: 100%;
+    background-color: #2c7e9e;
+    padding: 0px;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .top-navbar h2 {
+    margin-right: 70%;
+  }
+  
+  .profile {
+    display: flex;
+    align-items: center;
+    margin-right: 70px;
+  }
+  
+  .profile img {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+  }
+  
+  .logout-btn {
+    color: white;
+    background: none;
+    border: none;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .navbar {
+    width: 250px;
+    background-color: #2c7e9e;
+    padding: 20px;
+    box-sizing: border-box;
+    color: white;
+    position: fixed;
+    top: 50px;
+    left: 0;
+    max-height: calc(100% - 50px); /* Batasi tinggi maksimal */
+    overflow-y: auto; /* Izinkan scroll */
+    z-index: 1000;
+  
+    transition: transform 0.5s ease;
+  }
+  
+  .navbar.hide {
+    transform: translateX(-100%); /* Geser ke posisi normal */
+  }
+  
+  .navbar-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-top: 10%;
+  }
+  
+  .dropdown-btn {
+    margin-top: 10px;
+    background: none;
+    border: none;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+  }
+  
+  .navbar a img, .dropdown-btn img {
+    width: 20px;
+    height: auto;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  
+  .navbar a, .dropdown-btn {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    font-size: 18px;
+  }
+  
+  .navbar a:hover{
+    background-color: #3b5ebf;
+    padding-left: 10px;
+    transition: padding-left 0.3s;
+  }
+  
+  .dropdown-container {
+    max-height: none;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    padding-left: 20px;
+    margin-bottom: 10px; /* Spasi antar dropdown */
+  }
+  
+  .dropdown-btn.active + .dropdown-container {
+    max-height: 500px; /* Cukup tinggi untuk konten */
+    transition: max-height 0.3s ease-in;
+  }
+  
+  .content {
+    flex-grow: 1;
+    padding: 20px;
+    margin-left: 250px;
+    margin-top: 60px;
+    overflow-y: auto;
+  }
+  
+  /* Footer Styles */
+  .footer {
+    background-color: #2c7e9e; /* Warna latar belakang */
+  color: white; /* Warna teks */
+  text-align: center; /* Pusatkan teks */
+  padding: 20px; /* Jarak dalam footer */
+  
+  margin-top: 450px; /* Pindahkan footer ke bawah */
+  }
+  
+  .footer-links {
+    list-style: none; /* Hapus bullet list */
+    padding: 0; /* Hapus padding */
+    margin: 10px 0 0; /* Margin atas */
+  }
+  
+  .footer-links li {
+    display: inline; /* Tampilkan dalam baris */
+    margin: 0 10px; /* Jarak antar link */
+  }
+  
+  .footer-links a {
+    color: white; /* Warna link */
+    text-decoration: none; /* Hapus garis bawah */
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline; /* Garis bawah saat hover */
+  }
+  
+  .container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    color: #4e73df;
+}
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.data-table th, .data-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+.data-table th {
+    background-color: #4e73df;
+    color: white;
+}
+.btn-secondary {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #6c757d;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
