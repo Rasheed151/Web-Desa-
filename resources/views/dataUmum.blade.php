@@ -130,7 +130,7 @@
     @endif
 
     <div class="form-container">
-        <form action="{{ route('store') }}" method="POST">
+        <form action="{{ route('dataUmum.store') }}" method="POST">
             @csrf
             <div class="mb-3">
                 <label for="tempatDesa" class="form-label">Tempat Desa:</label>
@@ -223,6 +223,19 @@
                         <td>{{ $data->noKeputusanDpa }}</td>
                         <td>{{ $data->tanggalKeputusanDpa }}</td>
                         <td>{{ $data->email }}</td>
+                        <td>
+                        <form action="{{ route('dataUmum.destroy', $data->id) }}" method="POST">
+
+                    <a class="btn btn-info" href="{{ route('dataUmum.show', $data->id) }}">Show</a>
+
+                    <a class="btn btn-primary" href="{{ route('dataUmum.edit', $data->id) }}">Edit</a>
+
+                    @csrf
+                    @method('DELETE')
+
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+                        </td>
                     </tr>
                 @endforeach
             </tbody>
