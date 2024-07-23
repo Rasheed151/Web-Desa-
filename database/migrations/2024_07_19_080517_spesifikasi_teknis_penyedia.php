@@ -11,10 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('spesifikasi_teknis_swa', function (Blueprint $table) {
+        Schema::create('spesifikasi_teknis_penyedia', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('noKeg'); // No Keg
-            $table->string('noHps'); // No ID HPS
+            $table->integer('noKeg'); // Nomor Kegiatan
+            $table->string('noHps'); // Nomor ID HPS
             $table->string('kegiatan'); // Kegiatan
             $table->string('jenis'); // Jenis
             $table->string('pekerjaan'); // Kegiatan Pekerjaan
@@ -32,6 +32,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('spesifikasi_teknis_swa');
+        Schema::dropIfExists('spesifikasi_teknis_penyedia');
     }
 };

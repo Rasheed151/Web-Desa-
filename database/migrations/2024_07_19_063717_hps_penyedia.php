@@ -11,20 +11,22 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('ahs_swa', function (Blueprint $table) {
+        Schema::create('hps_penyedia', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('no_keg'); // No Keg
-            $table->string('noHps'); // No HPS
-            $table->string('pekerjaan'); // Pekerjaan
+            $table->integer('noKeg'); // Nomor Kegiatan
+            $table->string('kegiatan'); // Kegiatan
             $table->string('lokasi'); // Lokasi
             $table->string('namaKasi'); // Nama Kasi/Kaur
             $table->string('jabatanKasi'); // Jabatan Kasi/Kaur
-            $table->string('kegiatan'); // Kegiatan
+            $table->string('idHps'); // ID HPS
+            $table->string('namaBarjas'); // Nama Barang/Jasa
+            $table->text('spesifikasi'); // Spesifikasi
             $table->string('kode'); // Kode
-            $table->string('satuan'); // Satuan
             $table->decimal('koefisien', 10, 2); // Koefisien
+            $table->decimal('volume', 10, 2); // Volume
+            $table->string('satuan'); // Satuan
             $table->decimal('hargaSatuan', 15, 2); // Harga Satuan Rp
-            $table->decimal('jmlhHarga', 15, 2); // Jumlah Harga
+            $table->decimal('jmlhHarga', 15, 2); // Jumlah Harga Rp
             $table->string('jenis'); // Jenis
             $table->timestamps(); // Created at and updated at timestamps
         });
@@ -35,6 +37,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('ahs_swa');
+        Schema::dropIfExists('hps_penyedia');
     }
 };

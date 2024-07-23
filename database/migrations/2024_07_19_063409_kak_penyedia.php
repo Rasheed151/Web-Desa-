@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('kak_swa', function (Blueprint $table) {
+        Schema::create('kak_penyedia', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('no'); // Nomor
             $table->text('ltrBelakang'); // Latar Belakang
@@ -20,8 +20,8 @@ return new class extends Migration
             $table->string('ketuaTpk'); // Ketua TPK
             $table->string('sekTpk'); // Sekretaris TPK
             $table->string('anggotaTpk'); // Anggota TPK
-            $table->string('kepalaSeksi'); // Kasi/Kaur
-            $table->string('namaKeSi'); // Nama Kasi/Kaur
+            $table->string('kasi'); // Kasi/Kaur
+            $table->string('namaKasi'); // Nama Kasi/Kaur
             $table->string('diLokasi'); // Di Lokasi/Diserahterimakan
             $table->date('tgglMulai'); // Tanggal Bulan Tahun Mulai
             $table->string('jangkaWaktu'); // Jangka Waktu Pelaksanaan
@@ -36,6 +36,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('kak');
+        Schema::dropIfExists('kak_penyedia');
     }
 };

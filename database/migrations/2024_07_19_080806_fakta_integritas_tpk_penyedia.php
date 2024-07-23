@@ -11,8 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('fakta_integritas_tpk_swa', function (Blueprint $table) {
+        Schema::create('fakta_integritas_tpk_penyedia', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('no'); // Nomor
             $table->date('tanggal'); // Tanggal/Bulan/Tahun
             $table->string('nama'); // Ketua/Sekretaris/Anggota
             $table->string('alamat'); // Alamat
@@ -27,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('fakta_integritas_tpk');
+        Schema::dropIfExists('fakta_integritas_tpk_penyedia');
     }
 };

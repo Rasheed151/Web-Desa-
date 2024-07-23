@@ -13,8 +13,12 @@ return new class extends Migration
     {
         Schema::create('dataUmum', function (Blueprint $table) {
             $table->id();
-            $table->string('tempatDesa');
-            $table->text('alamatKantor');
+            $table->string('desa');
+            $table->string('kecamatan');
+            $table->string('kabupaten');
+            $table->string('provinsi');
+            $table->text('alamat');
+            $table->string('email')->unique();
             $table->string('npwp');
             $table->integer('kodeDesa');
             $table->string('kepalaDesa');
@@ -22,7 +26,6 @@ return new class extends Migration
             $table->timestamp('tanggalPerbubPjb')->nullable();
             $table->bigInteger('noKeputusanDpa');
             $table->timestamp('tanggalKeputusanDpa')->nullable();
-            $table->string('email')->unique();
             $table->timestamps();
         });
     }

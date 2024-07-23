@@ -11,10 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('ahs_swa', function (Blueprint $table) {
+        Schema::create('ahs_penyedia', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('no_keg'); // No Keg
-            $table->string('noHps'); // No HPS
+            $table->integer('no_keg'); // Nomor Kegiatan
+            $table->string('noHps'); // Nomor HPS
             $table->string('pekerjaan'); // Pekerjaan
             $table->string('lokasi'); // Lokasi
             $table->string('namaKasi'); // Nama Kasi/Kaur
@@ -35,6 +35,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('ahs_swa');
+        Schema::dropIfExists('ahs_penyedia');
     }
 };

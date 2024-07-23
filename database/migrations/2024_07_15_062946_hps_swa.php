@@ -37,6 +37,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('hps');
+        Schema::dropIfExists('hps_swa');
     }
 };

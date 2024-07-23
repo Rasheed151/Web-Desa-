@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('rktk_bahan_dan_peralatan_swa', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('pekerjaan'); // Tanggal/Bulan/Tahun
-            $table->string('jenis'); // Nomor Surat
-            $table->string('kegiatan'); // Perihal
-            $table->string('kode'); // Kegiatan
+            $table->string('pekerjaan'); // Pekerjaan
+            $table->string('jenis'); // Jenis Bahan
+            $table->string('kegiatan'); // Kegiatan 
+            $table->string('kode'); // Kode Bahan 
             $table->string('satuan'); // Lokasi
             $table->string('koefisien'); // Nomor Perbup ttg Pengadaan Barjas di Desa
             $table->string('volume'); // Nama Kasi/Kaur

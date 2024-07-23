@@ -1,9 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\DataController;
 use App\Http\Controllers\DataAparatController;
-use App\Http\Controllers\PkaController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DataUmumController;
 /*

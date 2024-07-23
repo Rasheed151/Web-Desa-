@@ -11,8 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('data_pengadaan_swa', function (Blueprint $table) {
+        Schema::create('data_pengadaan_penyedia', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('no'); // Nomor
             $table->date('tanggal'); // Tanggal/Bulan/Tahun
             $table->string('noSurat'); // Nomor Surat
             $table->string('perihal'); // Perihal
@@ -32,6 +33,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('data_pengadaan_swa');
+        Schema::dropIfExists('data_pengadaan_penyedia');
     }
 };
