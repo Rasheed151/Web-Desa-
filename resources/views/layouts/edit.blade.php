@@ -25,8 +25,8 @@
             <div class="dropdown-container">
                 <a href="/dataUmum">Umum Desa</a>
                 <a href="/dataAparat">Aparatur Desa</a>
-                <a href="#Data Pelaksanaan Kegiatan Anggaran(PKA)">PKA</a>
-                <a href="#Data Tim Pelaksana Kegiatan">Tim Pelaksana Kegiatan</a>
+                <a href="/pka">PKA</a>
+                <a href="/tpk">Tim Pelaksana Kegiatan</a>
                 <a href="#Data Pemasok">Penyedia</a>
             </div>
 
