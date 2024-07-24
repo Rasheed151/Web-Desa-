@@ -1,9 +1,11 @@
 <?php
 
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\DataAparatController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PkaController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\DataUmumController;
+use App\Http\Controllers\DataAparatController;
+use App\Http\Controllers\TpkController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,14 +27,15 @@ Route::get('/data-aparatur', [HomeController::class, 'aparatur']);
 Route::get('/PKA', [HomeController::class, 'pka']);
 Route::get('/tim-pelaksana', [HomeController::class, 'tpk']);
 Route::get('/penyedia', [HomeController::class, 'pmsk']);
-
-
 Route::get('/dashboard', [DataUmumController::class, 'count']);
-Route::resource('dataUmum', DataUmumController::class);
 
+Route::resource('dataUmum', DataUmumController::class);
 
 Route::resource('dataAparat', DataAparatController::class);
 
-Route::get('/data_aparat', [DataAparatController::class, 'create'])->name('create');
-Route::post('/data_aparat', [DataAparatController::class, 'simpan'])->name('simpan');
+Route::resource('pka', PkaController::class);
+
+Route::resource('tpk', TpkController::class);
+
+
 

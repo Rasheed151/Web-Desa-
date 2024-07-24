@@ -5,15 +5,22 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class PkaModel extends Model
+class Pka extends Model
 {
     use HasFactory;
+
+    protected $table = 'data_pka';
+
     protected $fillable = [
+        'nomor',
         'nama',
         'ttl',
-        'nik',
+        'NIK',
         'jabatan',
-        'no_hp',
+        'noHp',
         'alamat',
+        'npwp',
+        'noSkPka',
+        'tanggalSkPka',
     ];
 }

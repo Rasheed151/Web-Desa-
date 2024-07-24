@@ -2,34 +2,76 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pka;
 use Illuminate\Http\Request;
-use App\Models\PkaModel;
 
 class PkaController extends Controller
 {
+    public function index()
+    {
+        $pka = Pka::all();
+        return view('pka.pka', compact('pka'));
+    }
+
+    public function create()
+    {
+        return view('pka.create_pka');
+    }
+
     public function store(Request $request)
     {
-        // Validate the request
-        $request->validate([
+        $validatedData = $request->validate([
+            'nomor' => 'required|numeric',
             'nama' => 'required|string|max:255',
             'ttl' => 'required|string|max:255',
-            'nik' => 'required|numeric',
+            'NIK' => 'required|numeric',
             'jabatan' => 'required|string|max:255',
-            'no_hp' => 'required|string|max:15',
+            'noHp' => 'required|string|max:15',
             'alamat' => 'required|string',
+            'npwp' => 'required|numeric',
+            'noSkPka' => 'required|numeric',
+            'tanggalSkPka' => 'nullable|date',
         ]);
 
-        // Create the data
-        PkaModel::create([
-            'nama' => $request->input('nama'),
-            'ttl' => $request->input('ttl'),
-            'nik' => $request->input('nik'),
-            'jabatan' => $request->input('jabatan'),
-            'no_hp' => $request->input('no_hp'),
-            'alamat' => $request->input('alamat'),
+        Pka::create($validatedData);
+
+        return redirect()->route('pka.index')->with('success', 'Data PKA berhasil ditambahkan');
+    }
+
+    public function show(Pka $pka)
+    {
+        return view('pka.show_pka', compact('pka'));
+    }
+
+    public function edit(Pka $pka)
+    {
+        return view('pka.edit_pka', compact('pka'));
+    }
+
+    public function update(Request $request, Pka $pka)
+    {
+        $validatedData = $request->validate([
+            'nomor' => 'required',
+            'nama' => 'required',
+            'ttl' => 'required',
+            'NIK' => 'required',
+            'jabatan' => 'required',
+            'noHp' => 'required',
+            'alamat' => 'required',
+            'npwp' => 'required',
+            'noSkPka' => 'required',
+            'tanggalSkPka' => 'nullable|date',
         ]);
 
-        // Redirect or return a response
-        return redirect('pka')->with('success', 'Data created successfully!');
+        $pka->update($validatedData);
+
+        return redirect()->route('pka.index')->with('success', 'Data PKA berhasil diperbarui');
+    }
+
+    public function destroy(Pka $pka)
+    {
+        $pka->delete();
+
+        return redirect()->route('pka.index')->with('success', 'Data PKA berhasil dihapus');
     }
 }

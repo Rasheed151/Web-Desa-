@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('ttl');
             $table->text('alamat');
             $table->integer('NIK');
-            $table->integer('noHp');
+            $table->string('noHp');
             $table->integer('noSkTpk');
             $table->timestamp('tanggalSkTpk')->nullable();
             $table->string('jabatan');
