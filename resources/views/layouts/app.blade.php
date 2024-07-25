@@ -27,23 +27,23 @@
                 <a href="/dataAparat">Aparatur Desa</a>
                 <a href="/pka">PKA</a>
                 <a href="/tpk">Tim Pelaksana Kegiatan</a>
-                <a href="#Data Pemasok">Penyedia</a>
+                <a href="/penyedia">Penyedia</a>
             </div>
 
             <button class="dropdown-btn">
                 <img src="{{asset('/img/perencanaan.png')}}" alt="Services Icon"> Tahap perencanaan
             </button>
             <div class="dropdown-container">
-                <a href="#services1">Berita Acara</a>
-                <a href="#services2">RKP Desa</a>
-                <a href="#services3">Pengumuman Perencanaan</a>
+                <a href="/beritaAcara">Berita Acara</a>
+                <a href="/rkp">RKP Desa</a>
+                <a href="/pengumuman">Pengumuman Perencanaan</a>
             </div>
 
             <button class="dropdown-btn">
                 <img src="{{asset('/img/persiapan.png')}}" alt="Services Icon"> Tahap persiapan
             </button>
             <div class="dropdown-container">
-                <a href="/siapSwa">Secara Swakelola</a>
+                <a href="#about1">Secara Swakelola</a>
                 <a href="#about2">Melalui Penyedia</a>
             </div>
 

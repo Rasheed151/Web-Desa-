@@ -267,3 +267,14 @@ h1 {
   font-style: italic;
   color: #888;
 }
+
+.btn-tujuan {
+  background-color: #4e73df;
+  border-color: #4e73df;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  width: 100%; /* Menyesuaikan lebar ruang yang disediakan */
+  cursor: pointer;
+  margin-bottom: 20px;
+}

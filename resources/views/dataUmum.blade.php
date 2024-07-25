@@ -111,6 +111,9 @@
                     <th>No Keputusan DPA</th>
                     <th>Tanggal Keputusan DPA</th>
                     <th>Email</th>
+                    <th>lihat</th>
+                    <th>Edit</th>
+                    <th>Hapus</th>
                 </tr>
             </thead>
             <tbody>
@@ -129,12 +132,10 @@
                         <td>{{ $data->noKeputusanDpa }}</td>
                         <td>{{ $data->tanggalKeputusanDpa }}</td>
                         <td>{{ $data->email }}</td>
+                        <td><a class="btn btn-primary" href="{{ route('dataUmum.show', $data->id) }}">Show</a></td>
+                        <td> <a class="btn btn-primary" href="{{ route('dataUmum.edit', $data->id) }}">Edit</a></td>
                         <td>
                         <form action="{{ route('dataUmum.destroy', $data->id) }}" method="POST">
-
-                    <a class="btn btn-primary" href="{{ route('dataUmum.show', $data->id) }}">Show</a>
-
-                    <a class="btn btn-primary" href="{{ route('dataUmum.edit', $data->id) }}">Edit</a>
 
                     @csrf
                     @method('DELETE')
