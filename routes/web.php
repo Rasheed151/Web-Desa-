@@ -38,6 +38,7 @@ Route::get('/data-aparatur', [HomeController::class, 'aparatur']);
 Route::get('/PKA', [HomeController::class, 'pka']);
 Route::get('/tim-pelaksana', [HomeController::class, 'tpk']);
 Route::get('/penyedia', [HomeController::class, 'pmsk']);
+Route::get('/siapSwa', [HomeController::class, 'siapSwa']);
 Route::get('/dashboard', [DataUmumController::class, 'count']);
 
 Route::resource('dataUmum', DataUmumController::class);

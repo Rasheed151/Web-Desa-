@@ -32,4 +32,7 @@ class HomeController extends Controller
     public function pmsk(){
         return view('pemasok');
     }
+    public function siapSwa(){
+        return view('siapSwa');
+    }
 }
