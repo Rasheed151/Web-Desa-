@@ -43,8 +43,8 @@
                 <img src="{{asset('/img/persiapan.png')}}" alt="Services Icon"> Tahap persiapan
             </button>
             <div class="dropdown-container">
-                <a href="#about1">Secara Swakelola</a>
-                <a href="#about2">Melalui Penyedia</a>
+                <a href="/siapswa">Secara Swakelola</a>
+                <a href="/siapsedia">Melalui Penyedia</a>
             </div>
 
             <button class="dropdown-btn">

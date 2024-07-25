@@ -14,12 +14,12 @@ class DataUmumController extends Controller
         $dataUmum = DataUmum::all();
         
         // Kirim data ke view
-        return view('dataUmum', compact('dataUmum'));
+        return view('dataUmum.dataUmum', compact('dataUmum'));
     }
 
     public function create()
     {
-        return view('dataUmum');
+        return view('dataUmum.create_dataUmum');
     }
 
     public function store(Request $request)
@@ -47,7 +47,7 @@ class DataUmumController extends Controller
     }
 
     public function show(DataUmum $dataUmum){
-        return view('show_dataUmum', compact('dataUmum'));
+        return view('dataUmum.show_dataUmum', compact('dataUmum'));
     }
 
     public function count()
@@ -58,7 +58,7 @@ class DataUmumController extends Controller
 
     public function edit(DataUmum $dataUmum)
     {
-        return view('edit_dataUmum', compact('dataUmum'));
+        return view('dataUmum.edit_dataUmum', compact('dataUmum'));
     }
 
     public function update(Request $request, DataUmum $dataUmum)
