@@ -116,7 +116,7 @@
 @endsection
 @section('content')
 <div class="container mt-5">
-    <h1 class="mb-4">Persiapan Pengadaan Secara Swakelola</h1>
+    <h1 class="mb-4">Persiapan Pengadaan Secara Penyedia</h1>
     <div class="row">
         @php
             $cards = [
@@ -124,10 +124,9 @@
                 ['title' => 'KAK', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
                 ['title' => 'HPS', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
                 ['title' => 'Analisa Harga Satuan', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
-                ['title' => 'Spesifikasi Teknis', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
-                ['title' => 'RKTK Bahan dan Peralatan', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
+                ['title' => 'Spesifikasi Teknis', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Persiapan Pengadaan Secara Swakelola'], 
                 ['title' => 'Fakta Integritas TPK', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
-                ['title' => 'Surat Penyampaian Dokumen dari Kasi/Kaur Kepada TPK', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
+                ['title' => 'Surat Penyampaian Dokumen Persiapan Pengadaan', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
                 ['title' => 'Analisa Harga Satuan', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
             ];
         @endphp
