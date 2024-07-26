@@ -44,13 +44,13 @@
                     <a href="/pengumuman">Pengumuman Perencanaan</a>
                 </div>
 
-                <button class="dropdown-btn">
-                    <img src="{{asset('/img/persiapan.png')}}" alt="Services Icon"> Tahap persiapan
-                </button>
-                <div class="dropdown-container">
-                    <a href="/siapSwa">Secara Swakelola</a>
-                    <a href="#about2">Melalui Penyedia</a>
-                </div>
+            <button class="dropdown-btn">
+                <img src="{{asset('/img/persiapan.png')}}" alt="Services Icon"> Tahap persiapan
+            </button>
+            <div class="dropdown-container">
+                <a href="#about1">Secara Swakelola</a>
+                <a href="#about2">Melalui Penyedia</a>
+            </div>
 
                 <button class="dropdown-btn">
                     <img src="{{asset('/img/pelaksanaan.png')}}" alt="Services Icon"> Tahap pelaksanaan

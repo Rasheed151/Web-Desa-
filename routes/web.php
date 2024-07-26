@@ -57,6 +57,14 @@ Route::resource('rkp', RkpController::class);
 
 Route::resource('pengumuman', PengumumanController::class);
 
+Route::get('/siapswa', function () {
+    return view('siapSwa');
+});
+
+Route::get('/siapsedia', function () {
+    return view('siapSedia');
+});
+
 
 Route::get('login', [AuthController::class,'index'])->name('login');
 Route::get('register', [AuthController::class,'register'])->name('register');
