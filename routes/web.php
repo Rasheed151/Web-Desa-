@@ -65,6 +65,10 @@ Route::get('/siapsedia', function () {
     return view('siapSedia');
 });
 
+Route::get('/laksanaSwa', function () {
+    return view('laksanaSwa');
+});
+
 
 Route::get('login', [AuthController::class,'index'])->name('login');
 Route::get('register', [AuthController::class,'register'])->name('register');

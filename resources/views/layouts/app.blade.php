@@ -48,19 +48,19 @@
                 <img src="{{asset('/img/persiapan.png')}}" alt="Services Icon"> Tahap persiapan
             </button>
             <div class="dropdown-container">
-                <a href="#about1">Secara Swakelola</a>
-                <a href="#about2">Melalui Penyedia</a>
+                <a href="/siapswa">Secara Swakelola</a>
+                <a href="/siapsedia">Melalui Penyedia</a>
             </div>
 
-                <button class="dropdown-btn">
-                    <img src="{{asset('/img/pelaksanaan.png')}}" alt="Services Icon"> Tahap pelaksanaan
-                </button>
-                <div class="dropdown-container">
-                    <a href="#contact1">Secara Swakelola</a>
-                    <a href="#contact2">Melalui Pembelian Langsung</a>
-                    <a href="#contact3">Melalui Pembelian Penawaran</a>
-                    <a href="#contact4">Melalui Lelang</a>
-                </div>
+            <button class="dropdown-btn">
+                <img src="{{asset('/img/pelaksanaan.png')}}" alt="Services Icon"> Tahap pelaksanaan
+            </button>
+            <div class="dropdown-container">
+                <a href="/laksanaSwa">Secara Swakelola</a>
+                <a href="#contact2">Melalui Pembelian Langsung</a>
+                <a href="#contact3">Melalui Pembelian Penawaran</a>
+                <a href="#contact4">Melalui Lelang</a>
+            </div>
 
                 <button class="dropdown-btn">
                     <img src="{{asset('/img/pelaporan.png')}}"  alt="Services Icon"> Pelaporan & Serah terima
