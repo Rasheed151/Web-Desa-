@@ -51,7 +51,7 @@
                 <img src="{{asset('/img/pelaksanaan.png')}}" alt="Services Icon"> Tahap pelaksanaan
             </button>
             <div class="dropdown-container">
-                <a href="#contact1">Secara Swakelola</a>
+                <a href="/laksanaSwa">Secara Swakelola</a>
                 <a href="#contact2">Melalui Pembelian Langsung</a>
                 <a href="#contact3">Melalui Pembelian Penawaran</a>
                 <a href="#contact4">Melalui Lelang</a>
