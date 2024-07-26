@@ -21,12 +21,12 @@ class AuthController extends Controller
             // jika user nya memiliki level admin
             if($user->level =='admin'){
                  // arahkan ke halaman admin ya :P
-                return redirect()->intended('admin');
+                return redirect()->intended('dashboard');
             }
               // jika user nya memiliki level user
             else if($user->level =='user'){
                // arahkan ke halaman user
-                return redirect()->intended('user');
+                return redirect()->intended('dashboard');
             }
 
         }
@@ -51,12 +51,12 @@ class AuthController extends Controller
             $user =  Auth::user();
             // cek lagi jika level user admin maka arahkan ke halaman admin
             if($user->level =='admin'){
-                return redirect()->intended('admin');
+                return redirect()->intended('dashboard');
 
             }
                 // tapi jika level user nya user biasa maka arahkan ke halaman user
                else if($user->level =='user'){
-                return redirect()->intended('user');
+                return redirect()->intended('dashboard');
             }
              // jika belum ada role maka ke halaman /
             return redirect()->intended('/');
@@ -118,4 +118,10 @@ class AuthController extends Controller
 // kembali kan ke halaman login
         return Redirect('login');
       }
+      public function __construct()
+      {
+          $this->middleware('guest')->except('logout');
+      }
+      
+
 }
