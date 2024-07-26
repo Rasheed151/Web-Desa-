@@ -85,3 +85,10 @@ Route::group(['middleware' => ['auth']], function () {
         Route::resource('user', UserController::class);
     });
 });
+
+
+Route::get('login', [AuthController::class, 'index'])->middleware('guest')->name('login');
+Route::post('proses_login', [AuthController::class, 'proses_login'])->middleware('guest');
+Route::get('register', [AuthController::class, 'register'])->middleware('guest')->name('register');
+Route::post('proses_register', [AuthController::class, 'proses_register'])->middleware('guest');
+Route::post('logout', [AuthController::class, 'logout'])->name('logout');

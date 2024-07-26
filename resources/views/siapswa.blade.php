@@ -112,7 +112,6 @@
 
 </style>
 
-
 @endsection
 @section('content')
 <div class="container mt-5">

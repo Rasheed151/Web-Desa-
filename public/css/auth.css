@@ -1,0 +1,167 @@
+/* Layout Container */
+#layoutAuthentication {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+  }
+  
+  /* Content Wrapper */
+  #layoutAuthentication_content {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Main Section */
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Card Styles */
+  .card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Card Header */
+  .card-header {
+    text-align: center;
+    background-color: #2c7e9e;
+    color: white;
+    padding: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .card-header img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  /* Card Body */
+  .card-body {
+    padding: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+/* Form Input Styles */
+.form-control {
+    width: 100%;
+    padding: 12px 15px; /* Perbesar padding untuk kenyamanan */
+    border-radius: 8px; /* Sudut yang lebih membulat */
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    font-size: 16px; /* Ukuran font yang sedikit lebih besar */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Tambahkan transisi untuk efek */
+  }
+  
+  .form-control:focus {
+    border-color: #2c7e9e; /* Warna border saat fokus */
+    box-shadow: 0 0 8px rgba(44, 126, 158, 0.3); /* Tambahkan efek bayangan */
+    outline: none; /* Hapus outline default */
+  }
+  
+  /* Error Message Styles */
+  .error {
+    color: #e74a3b; /* Warna merah untuk pesan error */
+    font-size: 14px; /* Ukuran font untuk pesan error */
+    margin-top: 5px; /* Jarak atas untuk pesan error */
+    display: block; /* Tampilkan sebagai block untuk memudahkan pembacaan */
+  }
+  
+  /* Label Styles */
+  .form-group label {
+    font-size: 15px; /* Ukuran font label yang lebih besar */
+    font-weight: 500; /* Font weight yang lebih ringan */
+    color: #333; /* Warna teks label */
+    margin-bottom: 5px; /* Jarak bawah label */
+    display: block; /* Tampilkan sebagai block untuk mengatur jarak dengan input */
+  }
+  
+  
+  .btn-primary {
+    background-color: #2c7e9e;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-primary:hover {
+    background-color: #1b5e6b;
+  }
+  
+  /* Alert Styles */
+  .alert {
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+  
+  .alert-warning {
+    background-color: #fff3cd;
+    color: #856404;
+  }
+  
+  .alert .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 15px;
+    color: inherit;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .alert .close span {
+    font-size: 1.5em;
+  }
+  
+  /* Card Footer */
+  .card-footer {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  
+  .card-footer .small {
+    font-size: 14px;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 576px) {
+    .card {
+      margin: 0 10px;
+    }
+  }
+  
