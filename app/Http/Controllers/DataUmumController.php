@@ -48,6 +48,7 @@ class DataUmumController extends Controller
 
     public function show(DataUmum $dataUmum){
         return view('dataUmum.show_dataUmum', compact('dataUmum'));
+        
     }
 
     public function count()
