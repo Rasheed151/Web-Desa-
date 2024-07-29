@@ -27,4 +27,6 @@ class DataUmum extends Model
         'tanggalKeputusanDpa',
         'email',
     ];
+     // Kolom yang di-cast ke tipe data tertentu
+    
 }

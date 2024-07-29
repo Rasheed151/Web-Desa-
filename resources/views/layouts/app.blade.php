@@ -13,8 +13,10 @@
             </button>
             <h2>Klipaa</h2>
             <div class="profile">
-                <img src="{{asset('/img/profil.webp')}}" alt="Profile Picture">
-                <button class="logout-btn" onclick="showLogoutPopup()">Log Out</button>
+                <img src="{{asset('/img/profil.webp')}}" alt="Profile Picture"><br><span>{{ Auth::user()->name }}</span>
+                <button class="logout-btn" onclick="showLogoutPopup()">
+                    Log Out 
+                </button>
             </div>
 
             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -82,7 +84,7 @@
 
     <footer class="footer">
         <div class="footer-content">
-            <p>&copy; 2024 Nama Perusahaan. Semua hak dilindungi.</p>
+            <p>&copy; 2024 Pt.Klipaa. Semua hak dilindungi.</p>
             <ul class="footer-links">
                 <li><a href="#">Tentang Kami</a></li>
                 <li><a href="#">Kebijakan Privasi</a></li>

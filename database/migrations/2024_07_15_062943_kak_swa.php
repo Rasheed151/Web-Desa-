@@ -13,15 +13,15 @@ return new class extends Migration
     {
         Schema::create('kak_swa', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('no'); // Nomor
+            $table->integer('no'); // Nomor 
             $table->text('ltrBelakang'); // Latar Belakang
-            $table->string('penerimaManfaat'); // Penerima Manfaat
-            $table->string('caraMelaksanakan'); // Cara Melaksanakan
+            $table->string('nerimaManfaat'); // Penerima Manfaat
+            $table->string('caraLaksana'); // Cara Melaksanakan
             $table->string('ketuaTpk'); // Ketua TPK
             $table->string('sekTpk'); // Sekretaris TPK
-            $table->string('anggotaTpk'); // Anggota TPK
-            $table->string('kepalaSeksi'); // Kasi/Kaur
-            $table->string('namaKeSi'); // Nama Kasi/Kaur
+            $table->string('angTpk'); // Anggota TPK
+            $table->string('namaKasi'); // Nama Kasi/Kaur
+            $table->string('jbtnKasi'); // Jabatan Kasi/Kaur
             $table->string('diLokasi'); // Di Lokasi/Diserahterimakan
             $table->date('tgglMulai'); // Tanggal Bulan Tahun Mulai
             $table->string('jangkaWaktu'); // Jangka Waktu Pelaksanaan

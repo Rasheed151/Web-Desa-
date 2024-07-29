@@ -15,16 +15,30 @@ return new class extends Migration
             $table->increments('id');
             $table->integer('no'); // Nomor
             $table->string('namaKegiatan'); // Nama Pekerjaan/Kegiatan
-            $table->string('ketuaTpk'); // Ketua TPK
-            $table->string('sekTpk'); // Sekretaris TPK
-            $table->string('anggotaTpk'); // Anggota TPK
-            $table->string('jmlhWaktu'); // Jumlah Waktu
-            $table->date('wktPelaksanaanDari'); // Waktu Pelaksanaan dari
-            $table->date('wktPelaksanaanSampai'); // Waktu Pelaksanaan s/d
-            $table->decimal('nlaiPekerjaan', 15, 2); // Nilai Pekerjaan
-            $table->string('namaKasi'); // Nama Kasi/Kaur
-            $table->string('jabatanKasi'); // Jabatan Kasi/Kaur
-            $table->string('lokasi'); // Lokasi
+            $table->string('kegiatan'); // Nama Kegiatan
+            $table->string('jdwlLaksana'); // Jadwal Pelaksanaan Kegiatan
+            $table->bigInteger('biaya'); // Biaya Rp.
+            $table->string('bobot'); // Bobot
+            $table->date('namaKasi'); // Nama Kepala Seksi 
+            $table->date('jbtnKasi'); // Jabatan Kepala Seksi
+            $table->date('jdwlKerja1'); // Jadwal Pekerjaan (Hari/Minggu/Bulan ke-1)
+            $table->date('jdwlKerja2'); // Jadwal Pekerjaan (Hari/Minggu/Bulan ke-2)
+            $table->date('jdwlKerja3'); // Jadwal Pekerjaan (Hari/Minggu/Bulan ke-3)
+            $table->date('jdwlKerja4'); // Jadwal Pekerjaan (Hari/Minggu/Bulan ke-4)
+            $table->date('jdwlKerja5'); // Jadwal Pekerjaan (Hari/Minggu/Bulan ke-5)
+            $table->date('jdwlKerja6'); // Jadwal Pekerjaan (Hari/Minggu/Bulan ke-6)
+            $table->date('jdwlKerja7'); // Jadwal Pekerjaan (Hari/Minggu/Bulan ke-7)
+            $table->date('jdwlKerja8'); // Jadwal Pekerjaan (Hari/Minggu/Bulan ke-8)
+            $table->date('jdwlKerja9'); // Jadwal Pekerjaan (Hari/Minggu/Bulan ke-9)
+            $table->date('jdwlKerja10'); // Jadwal Pekerjaan (Hari/Minggu/Bulan ke-10)
+            $table->date('jdwlKerja11'); // Jadwal Pekerjaan (Hari/Minggu/Bulan ke-11)
+            $table->date('jdwlKerja12'); // Jadwal Pekerjaan (Hari/Minggu/Bulan ke-12)
+            $table->date('jdwlKerja13'); // Jadwal Pekerjaan (Hari/Minggu/Bulan ke-13)
+            $table->date('jdwlKerja14'); // Jadwal Pekerjaan (Hari/Minggu/Bulan ke-14)
+            $table->date('jdwlKerja15'); // Jadwal Pekerjaan (Hari/Minggu/Bulan ke-15)
+            $table->date('jdwlKerja16'); // Jadwal Pekerjaan (Hari/Minggu/Bulan ke-16)
+            $table->date('jdwlKerja17'); // Jadwal Pekerjaan (Hari/Minggu/Bulan ke-17)
+            $table->date('jdwlKerja18'); // Jadwal Pekerjaan (Hari/Minggu/Bulan ke-18)
             $table->timestamps(); // Created at and updated at timestamps
         });
     }

@@ -23,9 +23,9 @@ return new class extends Migration
             $table->integer('kodeDesa');
             $table->string('kepalaDesa');
             $table->bigInteger('noPerbubPjb');
-            $table->timestamp('tanggalPerbubPjb')->nullable();
+            $table->string('tanggalPerbubPjb')->nullable();
             $table->bigInteger('noKeputusanDpa');
-            $table->timestamp('tanggalKeputusanDpa')->nullable();
+            $table->string('tanggalKeputusanDpa')->nullable();
             $table->timestamps();
         });
     }
