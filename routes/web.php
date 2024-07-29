@@ -12,6 +12,7 @@ use App\Http\Controllers\RkpController;
 use App\Http\Controllers\PengumumanController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\profilController;
 use App\Http\Controllers\UserController;
 
 
@@ -31,6 +32,9 @@ use App\Http\Controllers\UserController;
 Route::get('/', function () {
     return view('login');
 });
+
+Route::resource('tes', profilController::class);
+
 
 Route::get('/dashboard', [HomeController::class, 'index']);
 Route::get('/dataUmum', [HomeController::class, 'umum']);
