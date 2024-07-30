@@ -6,6 +6,7 @@
 <div class="container">
     @if ($errors->any())
         <div class="alert alert-danger">
+        <strong>Whoops!</strong> There were some problems with your input.<br><br>
             <ul>
                 @foreach ($errors->all() as $error)
                     <li>{{ $error }}</li>
@@ -64,6 +65,8 @@
             </div>
 
             <button type="submit" class="btn btn-primary">Update Data</button>
+            <a href="{{ route('tes.index') }}" class="btn-back">Kembali</a>
+            
         </form>
     </div>
 </div>

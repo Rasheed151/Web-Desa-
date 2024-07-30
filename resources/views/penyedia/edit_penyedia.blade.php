@@ -1,18 +1,8 @@
 @extends('layouts.edit')
 
 @section('content')
+<h1 class="mb-4">Create Data Aparat</h1>
 <div class="container">
-    <div class="row">
-        <div class="col-lg-12 margin-tb">
-            <div class="pull-left">
-                <h2>Edit Data Penyedia</h2>
-            </div>
-            <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('penyedia.index') }}"> Back</a>
-            </div>
-        </div>
-    </div>
-
     @if ($errors->any())
         <div class="alert alert-danger">
             <strong>Whoops!</strong> There were some problems with your input.<br><br>
@@ -65,6 +55,7 @@
             <input type="number" class="form-control" id="nib" name="nib" value="{{ $penyedia->nib }}" required>
         </div>
         <button type="submit" class="btn btn-primary">Update</button>
+        <a href="{{ route('tes.index') }}" class="btn-back">Kembali</a>
     </form>
 </div>
 @endsection

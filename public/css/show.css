@@ -158,38 +158,97 @@ body {
     text-decoration: underline; /* Garis bawah saat hover */
   }
   
-  .container {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+/* Styles for the container of the show page */
+.container-show {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
 }
-h1 {
-    color: #4e73df;
+
+.container-show h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 1.5em;
 }
+
+/* Styles for the data table */
 .data-table {
-    width: 100%;
-    border-collapse: collapse;
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
 }
+
 .data-table th, .data-table td {
-    padding: 12px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
 }
+
 .data-table th {
-    background-color: #4e73df;
-    color: white;
+  background-color: #4e73df;
+  color: #fff;
+  font-weight: bold;
 }
+
+.data-table td {
+  background-color: #fff;
+}
+
+.data-table tr:nth-child(even) td {
+  background-color: #f2f2f2;
+}
+
+/* Styles for the back button */
 .btn-secondary {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #6c757d;
-    color: #fff;
-    border-radius: 4px;
-    text-decoration: none;
-    transition: background-color 0.3s;
-    margin-top: 20px;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #4e73df;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
+
 .btn-secondary:hover {
-    background-color: #5a6268;
+  background-color: #2c6ebf;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container-show {
+      padding: 15px;
+  }
+
+  .data-table th, .data-table td {
+      padding: 10px;
+  }
+
+  .btn-secondary {
+      padding: 8px 16px;
+      font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container-show {
+      padding: 10px;
+  }
+
+  .data-table th, .data-table td {
+      padding: 8px;
+      font-size: 14px;
+  }
+
+  .btn-secondary {
+      padding: 8px 14px;
+      font-size: 12px;
+  }
 }

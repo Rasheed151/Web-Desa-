@@ -1,18 +1,8 @@
 @extends('layouts.edit')
 
 @section('content')
+<h2 class="mb-4">Edit Data PKA</h2>
 <div class="container">
-    <div class="row">
-        <div class="col-lg-12 margin-tb">
-            <div class="pull-left">
-                <h2>Edit Data PKA</h2>
-            </div>
-            <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('pka.index') }}"> Back</a>
-            </div>
-        </div>
-    </div>
-
     @if ($errors->any())
         <div class="alert alert-danger">
             <strong>Whoops!</strong> There were some problems with your input.<br><br>
@@ -68,7 +58,8 @@
             <label for="tanggalSkPka">Tanggal SK PKA</label>
             <input type="date" class="form-control" id="tanggalSkPka" name="tanggalSkPka" value="{{ $pka->tanggalSkPka }}">
         </div>
-        <button type="submit" class="btn btn-primary">Update</button>
+        <button type="submit" class="btn btn-primary">Update Data</button>
+        <a href="{{ route('tes.index') }}" class="btn-back">Kembali</a>
     </form>
 </div>
 @endsection

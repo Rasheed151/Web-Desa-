@@ -67,53 +67,5 @@
     </div>
 </div>
 
-<h1 class="mb-4">Data TPK</h1>
-
-<div class="container-show">
-    @if ($dataTpk->isEmpty())
-        <p>No data available.</p>
-    @else
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>Nama</th>
-                    <th>Gender</th>
-                    <th>Tempat, Tanggal Lahir</th>
-                    <th>Alamat</th>
-                    <th>NIK</th>
-                    <th>No HP</th>
-                    <th>No SK TPK</th>
-                    <th>Tanggal SK TPK</th>
-                    <th>Jabatan</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach ($dataTpk as $data)
-                    <tr>
-                        <td>{{ $data->nama }}</td>
-                        <td>{{ $data->gender }}</td>
-                        <td>{{ $data->ttl }}</td>
-                        <td>{{ $data->alamat }}</td>
-                        <td>{{ $data->NIK }}</td>
-                        <td>{{ $data->noHp }}</td>
-                        <td>{{ $data->noSkTpk }}</td>
-                        <td>{{ $data->tanggalSkTpk }}</td>
-                        <td>{{ $data->jabatan }}</td>
-                        <td>
-                            <form action="{{ route('tpk.destroy', $data->id) }}" method="POST">
-                                <a class="btn btn-primary" href="{{ route('tpk.show', $data->id) }}">Show</a>
-                                <a class="btn btn-primary" href="{{ route('tpk.edit', $data->id) }}">Edit</a>
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit" class="btn btn-danger">Delete</button>
-                            </form>
-                        </td>
-                    </tr>
-                @endforeach
-            </tbody>
-        </table>
-    @endif
-</div>
 
 @endsection

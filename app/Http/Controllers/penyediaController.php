@@ -33,7 +33,7 @@ class PenyediaController extends Controller
         ]);
 
         Penyedia::create($request->all());
-        return redirect()->route('penyedia.index')
+        return redirect()->route('tes.index')
                          ->with('success', 'Data Penyedia created successfully.');
     }
 
@@ -65,7 +65,7 @@ class PenyediaController extends Controller
 
         $penyedia = Penyedia::findOrFail($id);
         $penyedia->update($request->all());
-        return redirect()->route('penyedia.index')
+        return redirect()->route('tes.index')
                          ->with('success', 'Data Penyedia updated successfully.');
     }
 
@@ -73,7 +73,7 @@ class PenyediaController extends Controller
     {
         $penyedia = Penyedia::findOrFail($id);
         $penyedia->delete();
-        return redirect()->route('penyedia.index')
+        return redirect()->route('tes.index')
                          ->with('success', 'Data Penyedia deleted successfully.');
     }
 }

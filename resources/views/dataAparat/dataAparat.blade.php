@@ -67,53 +67,5 @@
     </div>
 </div>
 
-<h1 class="mb-4">Data Aparat</h1>
-
-<div class="container-show">
-    @if ($dataAparat->isEmpty())
-        <p class="no-data">No data available.</p>
-    @else
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>Nomor</th>
-                    <th>Nama Lengkap</th>
-                    <th>Gender</th>
-                    <th>TTL</th>
-                    <th>NIK</th>
-                    <th>Alamat</th>
-                    <th>NPWP</th>
-                    <th>No HP</th>
-                    <th>Jabatan</th>
-                    <th>Aksi</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach ($dataAparat as $aparat)
-                <tr>
-                    <td>{{ $aparat->nomor }}</td>
-                    <td>{{ $aparat->nama_lengkap }}</td>
-                    <td>{{ $aparat->gender }}</td>
-                    <td>{{ $aparat->ttl }}</td>
-                    <td>{{ $aparat->NIK }}</td>
-                    <td>{{ $aparat->alamat }}</td>
-                    <td>{{ $aparat->npwp }}</td>
-                    <td>{{ $aparat->noHp }}</td>
-                    <td>{{ $aparat->jabatan }}</td>
-                    <td>
-                        <a href="{{ route('dataAparat.show', $aparat->id) }}" class="btn btn-info">Lihat</a>
-                        <a href="{{ route('dataAparat.edit', $aparat->id) }}" class="btn btn-warning">Edit</a>
-                        <form action="{{ route('dataAparat.destroy', $aparat->id) }}" method="POST" style="display:inline;">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="btn btn-danger">Hapus</button>
-                        </form>
-                    </td>
-                </tr>
-                @endforeach
-            </tbody>
-        </table>
-    @endif
-</div>
 @endsection
 

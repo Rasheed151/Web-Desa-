@@ -210,8 +210,31 @@ h1 {
     color: #fff;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin-top: 20px;
+    
 }
 
 .btn-primary:hover {
     background-color: #3b5cb8;
+}
+
+.btn-back {
+  background-color: #4e73df;
+  border-color: #4e73df;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+  width: 93%;
+  text-align: center;
+}
+
+
+.btn-back:hover {
+  background-color: #3b5bbf;
+  border-color: #3b5bbf;
 }

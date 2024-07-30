@@ -1,7 +1,7 @@
 @extends('layouts.show')
 
 @section('content')
-    <div class="container">
+    <div class="container-show">
         <h1>Detail Data TPK</h1>
         <table class="data-table">
             <tr>
@@ -41,6 +41,6 @@
                 <td>{{ $tpk->jabatan }}</td>
             </tr>
         </table>
-        <a href="{{ route('tpk.index') }}" class="btn-secondary">Kembali</a>
+        <a href="{{ route('tes.index') }}" class="btn-secondary">Kembali</a>
     </div>
 @endsection

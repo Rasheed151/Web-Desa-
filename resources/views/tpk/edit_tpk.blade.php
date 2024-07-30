@@ -1,21 +1,12 @@
 @extends('layouts.edit')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-lg-12 margin-tb">
-            <div class="pull-left">
-                <h2>Edit Data</h2>
-            </div>
-            <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('tpk.index') }}"> Back</a>
-            </div>
-        </div>
-    </div>
+<h1 class="mb-4">Edit Data TPK</h1>
 
-    @if ($errors->any())
+<div class="container">
+@if ($errors->any())
         <div class="alert alert-danger">
-            <strong>Whoops!</strong> There were some problems with your input.<br><br>
+        <strong>Whoops!</strong> There were some problems with your input.<br><br>
             <ul>
                 @foreach ($errors->all() as $error)
                     <li>{{ $error }}</li>
@@ -24,8 +15,9 @@
         </div>
     @endif
 
-    <h1>Edit Data</h1>
-    <form action="{{ route('tpk.update' , $tpk->id ) }}" method="POST">
+    
+    <div class="form-container">
+    <form action="{{ route('tpk.update', $tpk->id) }}" method="POST">
         @csrf
         @method('PUT')
         <div class="form-group">
@@ -65,6 +57,8 @@
             <input type="text" class="form-control" id="jabatan" name="jabatan" value="{{ $tpk->jabatan }}" required>
         </div>
         <button type="submit" class="btn btn-primary">Update</button>
+        <a href="{{ route('tes.index') }}" class="btn-back">Kembali</a>
     </form>
+    </div>
 </div>
 @endsection

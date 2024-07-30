@@ -121,7 +121,7 @@
         margin-top: 20px;
     }
 
-    .table-tiga th, .table td {
+    .table-tiga th, .table-tiga td {
         border: 1px solid #ddd;
         padding: 8px;
         text-align: center;
@@ -151,23 +151,38 @@
     font-size: 18px;
     border-radius: 5px;
     cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
   }
+  
   
   .btn-primary:hover {
     background-color: #3b5bbf;
     border-color: #3b5bbf;
   }
+
+  .btn-icon {
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+    margin: 0;
+}
+
 </style>
 @endsection
 
 @section('content')
 <div class="satu">
-    <img src="{{ asset('img/profil.webp') }}" alt="Profile Picture">
-    <!-- Display data from $dataUmum -->
-    @foreach ($dataUmum as $item)
+@foreach ($dataUmum as $item)
+        <a href="{{ route('dataUmum.edit', $item->id) }}">
+            <img src="{{ asset('img/profil.webp') }}" alt="Profile Picture">
+        </a>
         <h1>{{ $item->desa }}</h1>
     @endforeach
 </div>
+
 
 <div class="dua">
     <h1>Detail Data Umum</h1>
@@ -244,10 +259,6 @@
                     <th>Nomor</th>
                     <th>Nama Lengkap</th>
                     <th>Gender</th>
-                    <th>TTL</th>
-                    <th>NIK</th>
-                    <th>Alamat</th>
-                    <th>NPWP</th>
                     <th>No HP</th>
                     <th>Jabatan</th>
                     <th>Aksi</th>
@@ -260,19 +271,26 @@
                             <td>{{ $aparat->nomor }}</td>
                             <td>{{ $aparat->nama_lengkap }}</td>
                             <td>{{ $aparat->gender }}</td>
-                            <td>{{ $aparat->ttl }}</td>
-                            <td>{{ $aparat->NIK }}</td>
-                            <td>{{ $aparat->alamat }}</td>
-                            <td>{{ $aparat->npwp }}</td>
                             <td>{{ $aparat->noHp }}</td>
                             <td>{{ $aparat->jabatan }}</td>
                             <td>
-                                <a href="{{ route('dataAparat.edit', $aparat->id) }}" class="btn btn-warning">Edit</a>
-                                <form action="{{ route('dataAparat.destroy', $aparat->id) }}" method="POST" style="display:inline;">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit" class="btn btn-danger">Hapus</button>
-                                </form>
+                            <a href="{{ route('dataAparat.show', $aparat->id) }}" class="btn">
+                                <img src="/img/info.png" alt="Info" style="width:24px; height:24px; border: none; background: none;">
+                            </a>
+
+                            <!-- Edit Button -->
+                            <a href="{{ route('dataAparat.edit', $aparat->id) }}" class="btn">
+                            <img src="/img/edit.png" alt="Edit" style="width:24px; height:24px; border: none; background: none;">
+                            </a>
+
+                            <!-- Delete Button -->
+                            <form action="{{ route('dataAparat.destroy', $aparat->id) }}" method="POST" style="display:inline;">
+                            @csrf
+                            @method('DELETE')
+                                <button type="submit" style="background: none; border: none; padding: 0;">
+                                    <img src="/img/delete.png" alt="Delete" style="width:24px; height:24px;">
+                                </button>
+                            </form>
                             </td>
                         </tr>
                     @endforeach
@@ -282,22 +300,21 @@
                     </tr>
                 @endif
             </tbody>
-            <button class="btn-primary" href="/dataAparat">Tambahkan Data</button>
         </table>
+        <a href="{{ route('dataAparat.index') }}" class="btn-primary">Tambahkan Data</a>
     </div>
-
     <div class="content-tiga" id="content2">
     <table class="table-tiga">
         <thead>
             <tr>
                 <th>Nomor</th>
                 <th>Nama</th>
-                <th>TTL</th>
-                <th>NIK</th>
+                
+                
                 <th>Jabatan</th>
                 <th>No HP</th>
-                <th>Alamat</th>
-                <th>NPWP</th>
+                
+                
                 <th>No SK PKA</th>
                 <th>Tanggal SK PKA</th>
                 <th>Aksi</th>
@@ -309,22 +326,33 @@
                     <tr>
                         <td>{{ $data->nomor }}</td>
                         <td>{{ $data->nama }}</td>
-                        <td>{{ $data->ttl }}</td>
-                        <td>{{ $data->NIK }}</td>
+                        
+                        
                         <td>{{ $data->jabatan }}</td>
                         <td>{{ $data->noHp }}</td>
-                        <td>{{ $data->alamat }}</td>
-                        <td>{{ $data->npwp }}</td>
+                        
+                        
                         <td>{{ $data->noSkPka }}</td>
                         <td>{{ $data->tanggalSkPka }}</td>
                         <td>
-                            <a class="btn btn-primary" href="{{ route('pka.edit', $data->id) }}">Edit</a>
-                            <form action="{{ route('pka.destroy', $data->id) }}" method="POST" style="display:inline-block;">
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit" class="btn btn-danger">Delete</button>
+                            <a href="{{ route('pka.show', $data->id) }}" class="btn">
+                                <img src="/img/info.png" alt="Info" style="width:24px; height:24px; border: none; background: none;">
+                            </a>
+
+                            <!-- Edit Button -->
+                            <a href="{{ route('pka.edit', $data->id) }}" class="btn">
+                            <img src="/img/edit.png" alt="Edit" style="width:24px; height:24px; border: none; background: none;">
+                            </a>
+
+                            <!-- Delete Button -->
+                            <form action="{{ route('pka.destroy', $data->id) }}" method="POST" style="display:inline;">
+                            @csrf
+                            @method('DELETE')
+                                <button type="submit" style="background: none; border: none; padding: 0;">
+                                    <img src="/img/delete.png" alt="Delete" style="width:24px; height:24px;">
+                                </button>
                             </form>
-                        </td>
+                            </td>
                     </tr>
                 @endforeach
             @else
@@ -334,8 +362,9 @@
             @endif
         </tbody>
     </table>
-    <button class="btn-primary" >Tambahkan Data</button>
+    <a href="{{ route('pka.index') }}" class="btn-primary">Tambahkan Data</a>
 </div>
+
 
     <div class="content-tiga" id="content3">
     <table class="table-tiga">
@@ -343,9 +372,6 @@
                 <tr>
                     <th>Nama</th>
                     <th>Gender</th>
-                    <th>Tempat, Tanggal Lahir</th>
-                    <th>Alamat</th>
-                    <th>NIK</th>
                     <th>No HP</th>
                     <th>No SK TPK</th>
                     <th>Tanggal SK TPK</th>
@@ -359,21 +385,29 @@
                     <tr>
                         <td>{{ $data->nama }}</td>
                         <td>{{ $data->gender }}</td>
-                        <td>{{ $data->ttl }}</td>
-                        <td>{{ $data->alamat }}</td>
-                        <td>{{ $data->NIK }}</td>
                         <td>{{ $data->noHp }}</td>
                         <td>{{ $data->noSkTpk }}</td>
                         <td>{{ $data->tanggalSkTpk }}</td>
                         <td>{{ $data->jabatan }}</td>
                         <td>
-                            <form action="{{ route('tpk.destroy', $data->id) }}" method="POST">
-                                <a class="btn btn-primary" href="{{ route('tpk.edit', $data->id) }}">Edit</a>
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit" class="btn btn-danger">Delete</button>
+                            <a href="{{ route('tpk.show', $data->id) }}" class="btn">
+                                <img src="/img/info.png" alt="Info" style="width:24px; height:24px; border: none; background: none;">
+                            </a>
+
+                            <!-- Edit Button -->
+                            <a href="{{ route('tpk.edit', $data->id) }}" class="btn">
+                            <img src="/img/edit.png" alt="Edit" style="width:24px; height:24px; border: none; background: none;">
+                            </a>
+
+                            <!-- Delete Button -->
+                            <form action="{{ route('tpk.destroy', $data->id) }}" method="POST" style="display:inline;">
+                            @csrf
+                            @method('DELETE')
+                                <button type="submit" style="background: none; border: none; padding: 0;">
+                                    <img src="/img/delete.png" alt="Delete" style="width:24px; height:24px;">
+                                </button>
                             </form>
-                        </td>
+                            </td>
                     </tr>
                 @endforeach
                 @else
@@ -382,22 +416,24 @@
                     </tr>
                 @endif
             </tbody>
-            <button class="btn-primary" href="tpk">Tambahkan Data</button>
         </table>
+        <a href="{{ route('tpk.index') }}" class="btn-primary">Tambahkan Data</a>
     </div>
+
+
     <div class="content-tiga" id="content4">
     <table class="table-tiga">
             <thead>
                 <tr>
                     <th>Nama</th>
                     <th>Gender</th>
-                    <th>Tanggal Lahir</th>
+                    
                     <th>NIK</th>
-                    <th>Alamat Rumah</th>
+                    
                     <th>Nama Toko</th>
                     <th>Alamat Toko</th>
                     <th>NPWP</th>
-                    <th>NIB</th>
+                    
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -407,21 +443,32 @@
                     <tr>
                         <td>{{ $item->nama }}</td>
                         <td>{{ $item->gender }}</td>
-                        <td>{{ $item->ttl }}</td>
+                        
                         <td>{{ $item->NIK }}</td>
-                        <td>{{ $item->alamat_rumah }}</td>
+                        
                         <td>{{ $item->nama_toko }}</td>
                         <td>{{ $item->alamat_toko }}</td>
                         <td>{{ $item->npwp }}</td>
-                        <td>{{ $item->nib }}</td>
+                        
                         <td>
-                            <form action="{{ route('penyedia.destroy', $item->id) }}" method="POST">
-                                <a class="btn btn-primary" href="{{ route('penyedia.edit', $item->id) }}">Edit</a>
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit" class="btn btn-danger">Delete</button>
+                            <a href="{{ route('penyedia.show', $data->id) }}" class="btn">
+                                <img src="/img/info.png" alt="Info" style="width:24px; height:24px; border: none; background: none;">
+                            </a>
+
+                            <!-- Edit Button -->
+                            <a href="{{ route('penyedia.edit', $data->id) }}" class="btn">
+                            <img src="/img/edit.png" alt="Edit" style="width:24px; height:24px; border: none; background: none;">
+                            </a>
+
+                            <!-- Delete Button -->
+                            <form action="{{ route('penyedia.destroy', $data->id) }}" method="POST" style="display:inline;">
+                            @csrf
+                            @method('DELETE')
+                                <button type="submit" style="background: none; border: none; padding: 0;">
+                                    <img src="/img/delete.png" alt="Delete" style="width:24px; height:24px;">
+                                </button>
                             </form>
-                        </td>
+                            </td>
                     </tr>
                 @endforeach
                 @else
@@ -430,8 +477,8 @@
                     </tr>
                 @endif
             </tbody>
-            <button class="btn-primary" href="penyedia">Tambahkan Data</button>
         </table>
+        <a href="{{ route('penyedia.index') }}" class="btn-primary">Tambahkan Data</a>
     </div>
 </div>
 @endsection
