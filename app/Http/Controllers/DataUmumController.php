@@ -82,7 +82,7 @@ class DataUmumController extends Controller
 
         $dataUmum->update($request->all());
 
-        return redirect()->route('dataUmum.index')
+        return redirect()->route('tes.index')
                         ->with('success', 'Data Umum updated successfully.');
     }
 

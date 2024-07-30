@@ -2,18 +2,6 @@
 
 @section('content')
 <div class="container">
-
-<div class="row">
-        <div class="col-lg-12 margin-tb">
-            <div class="pull-left">
-                <h2>Edit Data</h2>
-            </div>
-            <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('dataUmum.index') }}"> Back</a>
-            </div>
-        </div>
-    </div>
-
     @if ($errors->any())
         <div class="alert alert-danger">
             <strong>Whoops!</strong> There were some problems with your input.<br><br>
@@ -82,6 +70,7 @@
             <input type="email" class="form-control" id="email" name="email" value="{{ $dataUmum->email }}" required>
         </div>
         <button type="submit" class="btn btn-primary">Update</button>
+        <a href="{{ route('tes.index') }}" class="btn-back">Kembali</a>
     </form>
 </div>
 

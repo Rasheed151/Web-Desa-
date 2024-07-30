@@ -13,7 +13,7 @@
             </button>
             <h2>Klipaa</h2>
             <div class="profile">
-                <img src="{{asset('/img/profil.webp')}}" alt="Profile Picture"><br><span>{{ Auth::user()->name }}</span>
+                <img src="{{asset('/img/profil.webp')}}" alt="Profile Picture">
                 <button class="logout-btn" onclick="showLogoutPopup()">
                     Log Out 
                 </button>

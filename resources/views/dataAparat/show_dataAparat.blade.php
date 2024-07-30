@@ -41,6 +41,6 @@
                 <td>{{ $dataAparat->jabatan }}</td>
             </tr>
         </table>
-        <a href="{{ route('dataAparat.index') }}" class="btn-secondary">Kembali</a>
+        <a href="{{ route('tes.index') }}" class="btn-secondary">Kembali</a>
     </div>
 @endsection

@@ -34,7 +34,7 @@ class DataAparatController extends Controller
 
         DataAparat::create($request->all());
 
-        return redirect()->route('dataAparat.index')
+        return redirect()->route('tes.index')
             ->with('success', 'Data aparat created successfully.');
     }
 
@@ -64,7 +64,7 @@ class DataAparatController extends Controller
 
         $dataAparat->update($request->all());
 
-        return redirect()->route('dataAparat.index')
+        return redirect()->route('tes.index')
             ->with('success', 'Data aparat updated successfully.');
     }
 
@@ -72,7 +72,7 @@ class DataAparatController extends Controller
     {
         $dataAparat->delete();
 
-        return redirect()->route('dataAparat.index')
+        return redirect()->route('tes.index')
             ->with('success', 'Data aparat deleted successfully.');
     }
 }

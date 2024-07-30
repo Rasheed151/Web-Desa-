@@ -33,7 +33,7 @@ class TpkController extends Controller
         ]);
 
         Tpk::create($request->all());
-        return redirect()->route('tpk.index')
+        return redirect()->route('tes.index')
                         ->with('success', 'Data TPK created successfully.');
     }
 
@@ -62,14 +62,14 @@ class TpkController extends Controller
         ]);
 
         $tpk->update($request->all());
-        return redirect()->route('tpk.index')
+        return redirect()->route('tes.index')
                         ->with('success', 'Data TPK updated successfully.');
     }
 
     public function destroy(Tpk $tpk)
     {
         $tpk->delete();
-        return redirect()->route('tpk.index')
+        return redirect()->route('tes.index')
                         ->with('success', 'Data TPK deleted successfully.');
     }
 }

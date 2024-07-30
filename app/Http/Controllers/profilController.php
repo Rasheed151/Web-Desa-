@@ -15,7 +15,10 @@ class ProfilController extends Controller
     {
         $dataUmum = DataUmum::all();
         $dataAparat = DataAparat::all();
-        return view('profil', compact('dataUmum', 'dataAparat'));
+        $pka = Pka::all();
+        $dataTpk = Tpk::all();
+        $penyedia = Penyedia::all();
+        return view('profil', compact('dataUmum', 'dataAparat', 'pka', 'dataTpk', 'penyedia'));
     }
 
     public function show(DataUmum $dataUmum)
@@ -45,24 +48,23 @@ class ProfilController extends Controller
         return view('profil', compact('pka'));
     }
 
-
     public function tpk()
     {
         $dataTpk = Tpk::all();
         return view('profil', compact('dataTpk'));
     }
+
     public function tpkshow(Tpk $dataAparat)
     {
         return view('profil', compact('dataTpk'));
     }
-
-
 
     public function penyedia()
     {
         $penyedia = Penyedia::all();
         return view('profil', compact('penyedia'));
     }
+
     public function penyediashow(Penyedia $dataAparat)
     {
         return view('profil', compact('penyedia'));
