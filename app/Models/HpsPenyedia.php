@@ -5,27 +5,30 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class AhsSwa extends Model
+class HpsPenyedia extends Model
 {
     use HasFactory;
 
-    protected $table = 'ahs_swa';
+    protected $table = 'hps_penyedia';
     protected $fillable = [
         'noKeg',
-        'noHps',
-        'pekerjaan',
+        'kegiatan',
         'lokasi',
         'namaKasi',
         'jbtnKasi',
-        'kegiatan',
+        'idHps',
+        'namaBarjas',
+        'spesifikasi',
         'kode',
+        'koefisien', 
+        'volume',
         'satuan',
-        'koefisien',
         'hrgSatuan',
         'jmlhHarga',
         'jenis'
     ];
     protected $casts = [
+        'volume' => 'decimal:2',
         'koefisien' => 'decimal:2',
         'hrgSatuan' => 'decimal:2',
         'jmlhHarga' => 'decimal:2'

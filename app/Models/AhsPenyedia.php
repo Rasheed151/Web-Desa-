@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class AhsSwa extends Model
+class AhsPenyedia extends Model
 {
     use HasFactory;
 
-    protected $table = 'ahs_swa';
+    protected $table = 'ahs_penyedia';
     protected $fillable = [
         'noKeg',
         'noHps',
