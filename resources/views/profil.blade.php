@@ -246,13 +246,15 @@
 
 <div class="container-tiga">
     <div class="head-tiga">
-        <h1 onclick="tombol(0)" id="title1">Data Aparat</h1>
+        
+
+        <h1 onclick="tombol(0)" id="title1" class="active">Data Aparat</h1>
         <h1 onclick="tombol(1)" id="title2">PKA</h1>
         <h1 onclick="tombol(2)" id="title3">Tim Pelaksana Kegiatan</h1>
         <h1 onclick="tombol(3)" id="title4">Data Penyedia</h1>
     </div>
 
-    <div class="content-tiga" id="content1">
+    <div class="content-tiga active" id="content1">
         <table class="table-tiga">
             <thead>
                 <tr>
@@ -309,8 +311,7 @@
             <tr>
                 <th>Nomor</th>
                 <th>Nama</th>
-                
-                
+                      
                 <th>Jabatan</th>
                 <th>No HP</th>
                 

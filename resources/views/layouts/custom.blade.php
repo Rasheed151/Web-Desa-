@@ -15,23 +15,18 @@
         </button>
         <h2>Klipaa</h2>
         <div class="profile">
-            <img src="{{ asset('/img/profil.webp') }}" alt="Profile Picture">
-            <button class="logout-btn" onclick="showLogoutPopup()">Log Out</button>
+                <a href="{{ route('tes.index') }}">
+                    <img src="{{ asset('img/profil.webp') }}" alt="Profile Picture">
+                </a>
+            <button class="logout-btn" onclick="showLogoutPopup()">
+                Log Out
+            </button>
         </div>
     </div>
 
     <div class="navbar" id="navbar">
         <div class="navbar-content">
-            <button class="dropdown-btn">
-                <img src="{{ asset('/img/entri.png') }}" alt="Home Icon"> Entri data umum
-            </button>
-            <div class="dropdown-container">
-                <a href="/dataUmum">Umum Desa</a>
-                <a href="/dataAparat">Aparatur Desa</a>
-                <a href="/pka">PKA</a>
-                <a href="/tpk">Tim Pelaksana Kegiatan</a>
-                <a href="/penyedia">Penyedia</a>
-            </div>
+            
 
             <button class="dropdown-btn">
                 <img src="{{ asset('/img/perencanaan.png') }}" alt="Services Icon"> Tahap perencanaan
