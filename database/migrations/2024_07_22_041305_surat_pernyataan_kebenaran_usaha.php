@@ -9,9 +9,9 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void
+    public function up(): void 
     {
-        Schema::create('surat_pernyataan_kebenaran_usaha', function (Blueprint $table) {
+        Schema::create('surat_pernyataan', function (Blueprint $table) {
             $table->increments('id'); 
             $table->integer('no'); // Nomor
             $table->date('tggl'); // Tanggal/Bulan/Tahun
@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('ttl'); // Tempat,  Tanggal Lahir
             $table->bigInteger('NIK'); // NIK/SIM/Paspor
             $table->string('alamat'); // Alamat Tempat Tinggal
-            $table->string('bergerakDibidang'); // Perusahaan Bergerak Dibidang
+            $table->string('gerakDibidang'); // Perusahaan Bergerak Dibidang
             $table->string('namaToko'); // Nama Perusahaan/Toko/Pemasok
             $table->string('alamatToko'); // Tanggal BA Hasil Pengadaan Langsung
             $table->string('noHp'); // Penawaran Ini Berlaku Selama (hari)
@@ -36,6 +36,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('surat_pernyataan_kebenaran_usaha');
+        Schema::dropIfExists('surat_pernyataan');
     }
 };

@@ -10,6 +10,19 @@ class HpsSwa extends Model
     use HasFactory;
 
     protected $table = 'hps_swa';
+
+    // Tentukan primary key
+    protected $primaryKey = 'id';
+
+    // Tentukan apakah primary key auto-increment atau tidak
+    public $incrementing = true;
+
+    // Tentukan tipe data primary key
+    protected $keyType = 'int';
+
+    // Tentukan apakah tabel menggunakan timestamps atau tidak
+    public $timestamps = true;
+
     protected $fillable = [
         'noKeg',
         'kegiatan',

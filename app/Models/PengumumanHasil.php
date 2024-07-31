@@ -5,11 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class KakPenyedia extends Model
+class PengumumanHasil extends Model
 {
     use HasFactory;
 
-    protected $table = 'kak_penyedia';
+    use HasFactory;
+
+    // Tentukan nama tabel
+    protected $table = 'pengumuman_hasil_kegiatan_swa';
 
     // Tentukan primary key
     protected $primaryKey = 'id';
@@ -23,23 +26,24 @@ class KakPenyedia extends Model
     // Tentukan apakah tabel menggunakan timestamps atau tidak
     public $timestamps = true;
 
+    // Tentukan atribut yang dapat diisi (mass assignable)
     protected $fillable = [
-        'noKeg',
-        'ltrBelakang',
-        'nerimaManfaat',
-        'caraLaksana',
-        'ketuaTpk',
-        'sekTpk',
-        'angTpk',
-        'namaKasi',
-        'jbtnKasi',
-        'diLokasi',
-        'tgglMulai',
-        'jangkaWaktu',
-        'biayaKegiatan',
-        'sebesarRp'
+        'no', 
+        'tggl', 
+        'kegiatan', 
+        'nilaiPengadaan', 
+        'output', 
+        'noPengumuman', 
+        'lokasi', 
+        'wktuPelaksanaan', 
+        'satuan', 
+        'ketuaTpk', 
+        'sekTpk', 
+        'angTpk'
     ];
+
+    // Jika ada atribut yang harus di-cast, tambahkan di sini
     protected $casts = [
-        'sebesarRp' => 'decimal:2'
+        'tggl' => 'date',
     ];
 }

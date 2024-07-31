@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class KakPenyedia extends Model
+class SuratPerjanjian extends Model
 {
     use HasFactory;
 
-    protected $table = 'kak_penyedia';
+    protected $table = 'surat_perjanjian';
 
     // Tentukan primary key
     protected $primaryKey = 'id';
@@ -24,22 +24,31 @@ class KakPenyedia extends Model
     public $timestamps = true;
 
     protected $fillable = [
-        'noKeg',
-        'ltrBelakang',
-        'nerimaManfaat',
-        'caraLaksana',
-        'ketuaTpk',
-        'sekTpk',
-        'angTpk',
+        'no',
+        'noSp',
+        'tggl',
         'namaKasi',
         'jbtnKasi',
-        'diLokasi',
-        'tgglMulai',
-        'jangkaWaktu',
-        'biayaKegiatan',
-        'sebesarRp'
+        'alamat',
+        'namaPekerjaan',
+        'lokasi',
+        'namaDir',
+        'namaToko',
+        'alamatToko',
+        'namaBank',
+        'cabang',
+        'noRek',
+        'spesifikasi',
+        'nego',
+        'selesaiKerja',
+        'sd',
+        'bayarPka',
+        'garansi',
+        'spdr'
     ];
-    protected $casts = [
-        'sebesarRp' => 'decimal:2'
+
+    protected $cast = [
+        'tggl' => 'date',
+        'sd' => 'date'
     ];
 }

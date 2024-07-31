@@ -7,14 +7,14 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration
 {
     /**
-     * Run the migrations.
+     * Run the migrations. 
      */
     public function up(): void
     {
-        Schema::create('laporan_hasil_pelaksanaan_swa', function (Blueprint $table) {
+        Schema::create('laporan_hasil', function (Blueprint $table) {
             $table->increments('id'); 
             $table->integer('no'); // Nomor
-            $table->string('laporanBulan'); // Laporan Bulan
+            $table->string('lprnBulan'); // Laporan Bulan
             $table->text('uraian'); // Uraian/Kegiatan
             $table->string('ketuaTpk'); // Ketua TPK
             $table->string('rencanaVolume'); // Output Rencana Volume
@@ -33,6 +33,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('laporan_hasil_pelaksanaan_swa');
+        Schema::dropIfExists('laporan_hasil');
     }
 };

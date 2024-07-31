@@ -9,9 +9,9 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void
+    public function up(): void 
     {
-        Schema::create('surat_permintaan_penawaran', function (Blueprint $table) {
+        Schema::create('surat_permintaan', function (Blueprint $table) {
             $table->increments('id'); 
             $table->integer('no'); // Nomor
             $table->date('tgglpPenawar'); // Tanggal/Bulan/Tahun
@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('namaPekerjaan'); // Nama Pekerjaan 
             $table->bigInteger('nilaiTtl'); // Nilai Total Hps
             $table->date('penawaranPalam'); // Penawaran Paling Lambat
-            $table->date('pukul'); // Pukul S/d
+            $table->dateTime('pukul'); // Pukul S/d
             $table->string('jangkaWktu'); // Jangka Waktu Pelaksanaan Pekerjaan Selama (hari)
             $table->string('ketuaTpk'); // Ketua TPK
 
@@ -49,6 +49,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('surat_permintaan_penawaran');
+        Schema::dropIfExists('surat_permintaan');
     }   
 };

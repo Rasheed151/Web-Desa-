@@ -10,6 +10,19 @@ class Rkp extends Model
     use HasFactory;
 
     protected $table = 'rkp_desa';
+
+    // Tentukan primary key
+    protected $primaryKey = 'id';
+
+    // Tentukan apakah primary key auto-increment atau tidak
+    public $incrementing = true;
+
+    // Tentukan tipe data primary key
+    protected $keyType = 'int';
+
+    // Tentukan apakah tabel menggunakan timestamps atau tidak
+    public $timestamps = true;
+
     protected $fillable = [
         'no',
         'TBL',

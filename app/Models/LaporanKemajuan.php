@@ -5,32 +5,32 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class JadwalSwa extends Model
+class LaporanKemajuan extends Model
 {
-    use HasFactory;
-    protected $table = 'jadwal_pelaksanaan_swa';
+    use HasFactory; 
 
-    // Tentukan primary key
-    protected $primaryKey = 'id';
+    protected $table = 'laporan_kemajuan';
 
-    // Tentukan apakah primary key auto-increment atau tidak
-    public $incrementing = true;
+        // Tentukan primary key
+        protected $primaryKey = 'id';
 
-    // Tentukan tipe data primary key
-    protected $keyType = 'int';
-
-    // Tentukan apakah tabel menggunakan timestamps atau tidak
-    public $timestamps = true;
-
+        // Tentukan apakah primary key auto-increment atau tidak
+        public $incrementing = true;
+    
+        // Tentukan tipe data primary key
+        protected $keyType = 'int';
+    
+        // Tentukan apakah tabel menggunakan timestamps atau tidak
+        public $timestamps = true;
+        
     protected $fillable = [
         'no',
-        'namaKegiatan',
+        'pekerjaan',
+        'lokasi',
         'kegiatan',
-        'jdwlLaksana',
         'biaya',
         'bobot',
-        'namaKasi',
-        'jbtnKasi',
+        'rencana',
         'jdwlKerja1',
         'jdwlKerja2',
         'jdwlKerja3',
@@ -47,7 +47,6 @@ class JadwalSwa extends Model
         'jdwlKerja14',
         'jdwlKerja15',
         'jdwlKerja16',
-        'jdwlKerja17',
-        'jdwlKerja18',
+        'jdwlKerja17'
     ];
 }
