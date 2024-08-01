@@ -9,7 +9,7 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void
+    public function up(): void 
     {
         Schema::create('penetapan_pemenang', function (Blueprint $table) {
             $table->increments('id'); 
@@ -27,7 +27,7 @@ return new class extends Migration
             $table->string('namaToko'); // Nama Perusahaan/Penyedia/Toko
             $table->string('alamatToko'); // Alamat Perusahaab/Penyedia/Toko
             $table->integer('hrgaTawar'); // Harga Penawaran 
-            $table->string('jabatanKasi'); // Jabatan Kepala Seksi
+            $table->string('jbtnKasi'); // Jabatan Kepala Seksi
             $table->string('ketuaTpk'); // Nama Ketua TPK
             $table->timestamps(); // Created at and updated at timestamps
         });

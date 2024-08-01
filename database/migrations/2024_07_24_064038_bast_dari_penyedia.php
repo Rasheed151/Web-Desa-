@@ -10,14 +10,14 @@ return new class extends Migration
      * Run the migrations.
      */
     public function up(): void
-    {
+    { 
         Schema::create('bast_penyedia', function (Blueprint $table) {
             $table->increments('id'); 
             $table->integer('no'); // Nomor
             $table->integer('noBa'); // Nomor Berita Acara
             $table->date('tggl'); // Tanggal/Bulan/Tahun
             $table->string('namaKasi'); // Nama Kepala Seksi Selaku PKA
-            $table->string('jabatanKasi'); // Jabatan Kepala Seksi Selaku PKA
+            $table->string('jbtnKasi'); // Jabatan Kepala Seksi Selaku PKA
             $table->string('ketuaTpk'); // Ketua TPK
             $table->string('sekTpk'); // Sekretaris TPK
             $table->string('angTpk'); // Anggota TPK

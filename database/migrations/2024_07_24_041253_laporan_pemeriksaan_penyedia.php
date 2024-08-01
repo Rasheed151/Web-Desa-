@@ -11,19 +11,20 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('lprn_pemeriksaan_tpk', function (Blueprint $table) {
+        Schema::create('laporan_pemeriksaan_penyedia', function (Blueprint $table) {
             $table->increments('id'); 
             $table->integer('no'); // Nomor
             $table->date('tggl'); // Tanggal/Bulan/Tahun
-            $table->string('kegiatan'); // Kegiatan
-            $table->string('lokasi'); // Lokasi Pekerjaan  
-            $table->string('namaToko'); // Nama Penyedia
-            $table->string('alamatToko'); // Alamat Penyedia
-            $table->date('tgglBast'); // Tanggal/Bulan/Tahun BAST
-            $table->enum('dgnHsl', ['Baik', 'Tidak Baik']); // Dengan Hasil 
+            $table->string('kpd'); // Kepada Yth
+            $table->string('kegiatan'); // Nama Kegiatan
+            $table->string('lokasi'); // Kegiatan
+            $table->string('namaToko'); // Toko/Pemasok/Penyedia
+            $table->string('alamatToko'); // Alamat Toko/Pemasok/Penyedia
+            $table->date('tgglKeg'); // Tanggal Kegiatan 
             $table->string('ketuaTpk'); // Ketua TPK
             $table->string('sekTpk'); // Sekretaris TPK
             $table->string('angTpk'); // Anggota TPK
+            $table->enum('dgnHsl', ['Baik','Tidak Baik']); // Dengan Hasil
             $table->timestamps(); // Created at and updated at timestamps
         });
     }
@@ -33,6 +34,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('lprn_pemeriksaan_tpk');
+        Schema::dropIfExists('laporan_pemeriksaan_penyedia');
     }
 };
