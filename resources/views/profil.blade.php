@@ -452,17 +452,17 @@
                         <td>{{ $item->npwp }}</td>
                         
                         <td>
-                            <a href="{{ route('penyedia.show', $data->id) }}" class="btn">
+                            <a href="{{ route('penyedia.show', $item->id) }}" class="btn">
                                 <img src="/img/info.png" alt="Info" style="width:24px; height:24px; border: none; background: none;">
                             </a>
 
                             <!-- Edit Button -->
-                            <a href="{{ route('penyedia.edit', $data->id) }}" class="btn">
+                            <a href="{{ route('penyedia.edit', $item->id) }}" class="btn">
                             <img src="/img/edit.png" alt="Edit" style="width:24px; height:24px; border: none; background: none;">
                             </a>
 
                             <!-- Delete Button -->
-                            <form action="{{ route('penyedia.destroy', $data->id) }}" method="POST" style="display:inline;">
+                            <form action="{{ route('penyedia.destroy', $item->id) }}" method="POST" style="display:inline;">
                             @csrf
                             @method('DELETE')
                                 <button type="submit" style="background: none; border: none; padding: 0;">
@@ -497,3 +497,5 @@
     }
 </script>
 @endsection
+
+

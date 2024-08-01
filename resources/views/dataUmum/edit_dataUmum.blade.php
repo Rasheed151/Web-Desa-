@@ -70,7 +70,7 @@
             <input type="email" class="form-control" id="email" name="email" value="{{ $dataUmum->email }}" required>
         </div>
         <button type="submit" class="btn btn-primary">Update</button>
-        <a href="{{ route('tes.index') }}" class="btn-back">Kembali</a>
+        <a href="{{ route('profil.index') }}" class="btn-back">Kembali</a>
     </form>
 </div>
 

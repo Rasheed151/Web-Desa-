@@ -89,46 +89,4 @@
     </div>
 </div>
 
-<h1 class="mb-4">Data Berita Acara</h1>
-
-<div class="container-show">
-    @if ($beritaAcara->isEmpty())
-        <p>No data available.</p>
-    @else
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>Nomor</th>
-                    <th>Tanggal</th>
-                    <th>Jam</th>
-                    <th>Tempat</th>
-                    <th>Ketua BPD</th>
-                    <th>Aksi</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach ($beritaAcara as $item)
-                <tr>
-                    <td>{{ $item->no }}</td>
-                    <td>{{ $item->date }}</td>
-                    <td>{{ $item->jam }}</td>
-                    <td>{{ $item->tempat }}</td>
-                    <td>{{ $item->ketuaBpd }}</td>
-                    <td>
-                        <a href="{{ route('beritaAcara.show', $item->id) }}" class="btn btn-info">Lihat</a>
-                        <a href="{{ route('beritaAcara.edit', $item->id) }}" class="btn btn-warning">Edit</a>
-                        <form action="{{ route('beritaAcara.destroy', $item->id) }}" method="POST" style="display:inline;">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="btn btn-danger">Hapus</button>
-                        </form>
-                    </td>
-                </tr>
-                @endforeach
-            </tbody>
-        </table>
-    @endif
-</div>
 @endsection
-
-                   

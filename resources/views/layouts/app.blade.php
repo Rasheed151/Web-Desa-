@@ -13,7 +13,7 @@
             </button>
             <h2>Klipaa</h2>
             <div class="profile">
-                <a href="{{ route('tes.index') }}">
+                <a href="{{ route('profil.index') }}">
             <img src="{{ asset('img/profil.webp') }}" alt="Profile Picture">
                 </a>
                 <button class="logout-btn" onclick="showLogoutPopup()">

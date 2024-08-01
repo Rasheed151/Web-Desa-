@@ -1,7 +1,7 @@
 @extends('layouts.show')
 
 @section('content')
-    <div class="container-show">
+<div class="container-show">
         <h1>Detail Data Aparat</h1>
         <table class="data-table">
             <tr>
@@ -41,6 +41,6 @@
                 <td>{{ $dataAparat->jabatan }}</td>
             </tr>
         </table>
-        <a href="{{ route('tes.index') }}" class="btn-secondary">Kembali</a>
+        <a href="{{ route('profil.index') }}" class="btn-secondary">Kembali</a>
     </div>
 @endsection

@@ -1,7 +1,7 @@
 @extends('layouts.show')
 
 @section('content')
-<div class="container">
+<div class="container-show">
     <h1>Detail Data RKPD</h1>
     <table class="data-table">
         <tr>
@@ -66,6 +66,6 @@
         </tr>
     </table>
 
-    <a href="{{ route('rkp.index') }}" class="btn btn-primary">Kembali</a>
+    <a href="{{ route('rkp.index') }}" class="btn-secondary">Kembali</a>
 </div>
 @endsection

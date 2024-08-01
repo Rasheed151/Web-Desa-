@@ -2,16 +2,6 @@
 
 @section('content')
 <div class="container">
-    <div class="row">
-        <div class="col-lg-12 margin-tb">
-            <div class="pull-left">
-                <h2>Edit Data RKPD</h2>
-            </div>
-            <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('rkp.index') }}"> Kembali</a>
-            </div>
-        </div>
-    </div>
 
     @if ($errors->any())
         <div class="alert alert-danger">
@@ -89,6 +79,7 @@
             <input type="text" class="form-control" id="rncnaPegiat" name="rncnaPegiat" value="{{ $rkp->rncnaPegiat }}" required>
         </div>
         <button type="submit" class="btn btn-primary">Update</button>
+        <a class="btn-back" href="{{ route('rkp.index') }}"> Kembali</a>
     </form>
 </div>
 @endsection

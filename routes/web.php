@@ -13,6 +13,7 @@ use App\Http\Controllers\PengumumanController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\profilController;
+use App\Http\Controllers\tesController;
 use App\Http\Controllers\UserController;
 
 
@@ -33,7 +34,7 @@ Route::get('/', function () {
     return view('login');
 });
 
-Route::resource('tes', profilController::class);
+Route::resource('tes', tesController::class);
 
 
 Route::get('/dashboard', [HomeController::class, 'index']);
@@ -44,6 +45,8 @@ Route::get('/tim-pelaksana', [HomeController::class, 'tpk']);
 Route::get('/penyedia', [HomeController::class, 'pmsk']);
 Route::get('/siapSwa', [HomeController::class, 'siapSwa']);
 Route::get('/dashboard', [DataUmumController::class, 'count']);
+
+Route::resource('profil', profilController::class);
 
 Route::resource('dataUmum', DataUmumController::class);
 
