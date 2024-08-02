@@ -73,26 +73,3 @@ Route::get('/laksanaSwa', function () {
     return view('laksanaSwa');
 });
 
-
-Route::get('login', [AuthController::class,'index'])->name('login');
-Route::get('register', [AuthController::class,'register'])->name('register');
-Route::post('proses_login', [AuthController::class,'proses_login'])->name('proses_login');
-Route::get('logout', [AuthController::class,'logout'])->name('logout');
-
-Route::post('proses_register',[AuthController::class,'proses_register'])->name('proses_register');
-
-Route::group(['middleware' => ['auth']], function () {
-    Route::group(['middleware' => ['cek_login:admin']], function () {
-        Route::resource('admin', AdminController::class);
-    });
-    Route::group(['middleware' => ['cek_login:user']], function () {
-        Route::resource('user', UserController::class);
-    });
-});
-
-
-Route::get('login', [AuthController::class, 'index'])->middleware('guest')->name('login');
-Route::post('proses_login', [AuthController::class, 'proses_login'])->middleware('guest');
-Route::get('register', [AuthController::class, 'register'])->middleware('guest')->name('register');
-Route::post('proses_register', [AuthController::class, 'proses_register'])->middleware('guest');
-Route::post('logout', [AuthController::class, 'logout'])->name('logout');
