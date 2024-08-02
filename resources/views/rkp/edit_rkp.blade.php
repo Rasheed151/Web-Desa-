@@ -62,18 +62,21 @@
             <label for="smbrBiaya">Sumber Biaya</label>
             <input type="text" class="form-control" id="smbrBiaya" name="smbrBiaya" value="{{ $rkp->smbrBiaya }}" required>
         </div>
-        <div class="form-group">
-            <label for="swakelola">Swakelola</label>
-            <input type="checkbox" class="form-check-input" id="swakelola" name="swakelola" {{ $rkp->swakelola ? 'checked' : '' }}>
-        </div>
-        <div class="form-group">
-            <label for="krjsmaAndes">Kerjasama Antar Desa</label>
-            <input type="checkbox" class="form-check-input" id="krjsmaAndes" name="krjsmaAndes" {{ $rkp->krjsmaAndes ? 'checked' : '' }}>
-        </div>
-        <div class="form-group">
-            <label for="krjsmaPitig">Kerjasama Pihak Ketiga</label>
-            <input type="checkbox" class="form-check-input" id="krjsmaPitig" name="krjsmaPitig" {{ $rkp->krjsmaPitig ? 'checked' : '' }}>
-        </div>
+        <div class="mb-3">
+                    <label for="krjsmaPitig" class="form-label">Kerjasama Pihak Ketiga:</label>
+                    <input type="hidden" name="krjsmaPitig" value="0">
+                    <input type="checkbox" name="krjsmaPitig" class="form-check-input" value="1">
+                </div>
+                <div class="mb-3">
+                    <label for="krjsmaPitig" class="form-label">Kerjasama Pihak Ketiga:</label>
+                    <input type="hidden" name="krjsmaPitig" value="0">
+                    <input type="checkbox" name="krjsmaPitig" class="form-check-input" value="1">
+                </div>
+                <div class="mb-3">
+                    <label for="krjsmaPitig" class="form-label">Kerjasama Pihak Ketiga:</label>
+                    <input type="hidden" name="krjsmaPitig" value="0">
+                    <input type="checkbox" name="krjsmaPitig" class="form-check-input" value="1">
+                </div>
         <div class="form-group">
             <label for="rncnaPegiat">Rencana Pelaksana Kegiatan</label>
             <input type="text" class="form-control" id="rncnaPegiat" name="rncnaPegiat" value="{{ $rkp->rncnaPegiat }}" required>

@@ -199,6 +199,7 @@ body {
 .container-show {
   display: inline-block; /* Membuat container sebagai elemen inline-block */
   padding: 20px;
+  min-width: 70%;
   background-color: #f9f9f9;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -221,6 +222,10 @@ body {
   margin-bottom: 20px;
 }
 
+.data-table tr{
+  display: flex;
+}
+
 .data-table th, .data-table td {
   padding: 12px;
   text-align: left;
@@ -231,10 +236,13 @@ body {
   background-color: #4e73df;
   color: #fff;
   font-weight: bold;
+  margin: auto;
+  flex: 1;
 }
 
 .data-table td {
   background-color: #fff;
+  flex: 4;
 }
 
 .data-table tr:nth-child(even) td {

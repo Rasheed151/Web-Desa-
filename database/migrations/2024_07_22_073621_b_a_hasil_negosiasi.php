@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
+    /** 
      * Run the migrations.
      */
     public function up(): void
@@ -21,9 +21,9 @@ return new class extends Migration
             $table->string('ketuaTpk'); // Ketua TPK
             $table->string('sekTpk'); // Sekretaris TPK 
             $table->string('angTpk'); // Anggota TPK 
-            $table->string('jabatanKasi'); // Alamat Tempat Tinggal
-            $table->string('alamatToko'); // Alamat Toko
+            $table->string('jbtnKasi'); // Alamat Tempat Tinggal
             $table->string('namaToko'); // Nama Perusahaan/Toko
+            $table->string('alamatToko'); // Alamat Toko
             $table->string('namaBank'); // Pembayaran Melalui Rekening Bank
             $table->string('cabang'); // Cabang
             $table->integer('noRek'); // Nomor Rekening

@@ -19,19 +19,12 @@
             </div>
         </div>
 
-        <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card bg-success text-white h-100">
-                <div class="card-body">
-                    <div class="card-title">
-                        <h3>KAK</h3>
-                    </div>
-                    <p>Persiapan Pengadaan Secara Swakelola</p>
-                </div>
-                <div class="card-footer">
-                    <a href="#" class="small text-white stretched-link">Go to KAK</a>
-                </div>
-            </div>
-        </div>
+.card {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 2rem; /* Add margin-bottom for spacing */
+}
 
         <div class="col-xl-3 col-md-6 mb-4">
             <div class="card bg-warning text-white h-100">
