@@ -11,6 +11,13 @@ use Illuminate\Routing\Controller;
 
 class ProfilController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    
     public function index()
     {
         $dataUmum = DataUmum::all();

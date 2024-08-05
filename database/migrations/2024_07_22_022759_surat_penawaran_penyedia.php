@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('namaPekerjaan'); // Penawaran Pengadaan
             $table->string('noSMinta'); // Nomor Surat Permintaan Penawaran 
             $table->date('tgglSMinta'); // Tanggal/Bulan/Tahun Surat Permintaan Penawaran
-            $table->sring('sebesar'); // Sebesar
+            $table->string('sebesar'); // Sebesar
             $table->string('jangkaWktu'); // Jangka Waktu Pelaksanaan Pekerjaan Selama (hari)
             $table->date('tgglBa'); // Tanggal BA Hasil Pengadaan Langsung
             $table->string('pnwrnBerlaku'); // Penawaran Ini Berlaku Selama (hari)
