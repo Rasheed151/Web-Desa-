@@ -28,6 +28,7 @@ class LoginController extends Controller
      */
     protected $redirectTo = '/profil';
 
+
     /**
      * Create a new controller instance.
      *
@@ -47,6 +48,6 @@ class LoginController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return redirect('/login');
+        return redirect('/login'); // Redirect setelah logout
     }
 }

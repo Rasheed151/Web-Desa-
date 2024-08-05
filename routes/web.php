@@ -10,15 +10,9 @@ use App\Http\Controllers\PenyediaController;
 use App\Http\Controllers\BeritaAcaraController;
 use App\Http\Controllers\RkpController;
 use App\Http\Controllers\PengumumanController;
-use App\Http\Controllers\AuthController;
-use App\Http\Controllers\AdminController;
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\profilController;
 use App\Http\Controllers\tesController;
-use App\Http\Controllers\UserController;
-use App\Http\Controllers\Auth\LoginController;
-
-
-
 
 /*
 |--------------------------------------------------------------------------
@@ -31,6 +25,15 @@ use App\Http\Controllers\Auth\LoginController;
 |
 */
 
+// Route untuk login dan logout (tanpa middleware auth)
+Route::group(['middleware' => 'guest'], function () {
+    Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
+    Route::post('login', [LoginController::class, 'login']);
+});
+
+Route::post('logout', [LoginController::class, 'logout'])->name('logout');
+
+// Route yang dilindungi middleware auth
 Route::group(['middleware' => 'auth'], function () {
     // Home route
     Route::get('/home', [HomeController::class, 'index'])->name('home');
@@ -51,7 +54,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/siapswa', function () {
         return view('siapSwa');
     });
-    
+
     Route::get('/siapsedia', function () {
         return view('siapSedia');
     });
@@ -60,11 +63,3 @@ Route::group(['middleware' => 'auth'], function () {
         return view('laksanaSwa');
     });
 });
-
-// Route untuk login dan logout (tanpa middleware auth)
-Route::group(['middleware' => 'guest'], function () {
-    Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
-    Route::post('login', [LoginController::class, 'login']);
-});
-
-Route::post('logout', [LoginController::class, 'logout'])->name('logout');
