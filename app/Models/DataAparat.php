@@ -13,14 +13,17 @@ class DataAparat extends Model
     public $timestamps = true;
 
     protected $fillable = [
-        'nomor',
-        'nama_lengkap',
+        'noAparat',
+        'namaAparat',
         'gender',
         'ttl',
         'NIK',
         'alamat',
         'npwp',
         'noHp',
-        'jabatan',
+        'jbtn',
     ];
+    public function pka(){
+        return $this->hasMany(Pka::class, 'noAparat');
+    }
 }

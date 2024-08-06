@@ -9,7 +9,7 @@ class PkaController extends Controller
 {
     public function index()
     {
-        $pka = Pka::all();
+        $pka = Pka::with('aparat')->get();
         return view('pka.pka', compact('pka'));
     }
 
@@ -21,8 +21,8 @@ class PkaController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'nomor' => 'required|numeric',
-            'nama' => 'required|string|max:255',
+            'noPka' => 'required|numeric',
+            'namaAparat' => 'required|string|max:255',
             'ttl' => 'required|string|max:255',
             'NIK' => 'required|numeric',
             'jabatan' => 'required|string|max:255',
