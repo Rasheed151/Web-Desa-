@@ -32,6 +32,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('data_pengadaan');
+        Schema::dropIfExists('rktk_bahan_dan_peralatan_swa');
     }
 };

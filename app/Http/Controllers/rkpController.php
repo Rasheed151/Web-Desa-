@@ -10,12 +10,12 @@ class RkpController extends Controller
     public function index()
     {
         $rkps = Rkp::all();
-        return view('rkp.rkp', compact('rkps'));
+        return view('rkp.awal', compact('rkps'));
     }
 
     public function create()
     {
-        return view('rkp.create_rkp');
+        return view('rkp.rkp');
     }
 
     public function store(Request $request)
@@ -37,6 +37,11 @@ class RkpController extends Controller
             'krjsmaPitig' => 'boolean',
             'rncnaPegiat' => 'required|string',
         ]);
+
+        $data = $request->all();
+        $data['swakelola'] = $request->filled('swakelola');
+        $data['krjsmaAndes'] = $request->filled('krjsmaAndes');
+        $data['krjsmaPitig'] = $request->filled('krjsmaPitig');
 
         Rkp::create($request->all());
         return redirect()->route('rkp.index')->with('success', 'Data RKPD berhasil ditambahkan.');

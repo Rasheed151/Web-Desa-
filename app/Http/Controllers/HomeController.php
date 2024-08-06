@@ -2,37 +2,27 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\DataUmum;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function index(){
-        $datas = DataUmum::all();
-        return view('layouts',compact('datas'));
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
     }
 
-    public function count()
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function index()
     {
-        $jumlahLaporan = DataUmum::count();
-        return view('dashboard', compact('jumlahLaporan'));
-    }
-    public function umum(){
-        return view('dataUmum');
-    }
-    public function aparatur(){
-        return view('data_aparatur');
-    }
-    public function pka(){
-        return view('pka');
-    }
-    public function tpk(){
-        return view('tpk');
-    }
-    public function pmsk(){
-        return view('pemasok');
-    }
-    public function siapSwa(){
-        return view('siapSwa');
+        return view('profil');
     }
 }

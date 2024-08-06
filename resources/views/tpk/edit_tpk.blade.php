@@ -57,7 +57,7 @@
             <input type="text" class="form-control" id="jabatan" name="jabatan" value="{{ $tpk->jabatan }}" required>
         </div>
         <button type="submit" class="btn btn-primary">Update</button>
-        <a href="{{ route('tes.index') }}" class="btn-back">Kembali</a>
+        <a href="{{ route('profil.index') }}" class="btn-back">Kembali</a>
     </form>
     </div>
 </div>
