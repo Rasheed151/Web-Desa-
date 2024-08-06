@@ -32,7 +32,7 @@ class TpkController extends Controller
             'jabatan' => 'required',
         ]);
 
-        Tpk::create($request->all());
+        Tpk::create(array_merge($request->all(), ['userId' => auth()->id()]));
         return redirect()->route('profil.index')
                         ->with('success', 'Data TPK created successfully.');
     }

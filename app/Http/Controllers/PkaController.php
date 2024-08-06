@@ -20,7 +20,7 @@ class PkaController extends Controller
 
     public function store(Request $request)
     {
-        $validatedData = $request->validate([
+        $request->validate([
             'nomor' => 'required|numeric',
             'nama' => 'required|string|max:255',
             'ttl' => 'required|string|max:255',
@@ -33,9 +33,10 @@ class PkaController extends Controller
             'tanggalSkPka' => 'nullable|date',
         ]);
 
-        Pka::create($validatedData);
+        Pka::create(array_merge($request->all(), ['userId' => auth()->id()]));
 
-        return redirect()->route('profil.index')->with('success', 'Data PKA berhasil ditambahkan');
+        return redirect()->route('profil.index')
+            ->with('success', 'Data PKA berhasil ditambahkan');
     }
 
     public function show(Pka $pka)

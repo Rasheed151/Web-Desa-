@@ -9,7 +9,7 @@ class BeritaAcaraController extends Controller
 {
     public function index()
     {
-        $beritaAcara = BeritaAcara::all();
+        $beritaAcara = BeritaAcara::where('userId', auth()->id())->get();
         return view('beritaAcara.awal', compact('beritaAcara'));
     }
 
@@ -44,14 +44,15 @@ class BeritaAcaraController extends Controller
             'kesepakatanAkhir' => 'required|string',
         ]);
 
-        BeritaAcara::create($request->all());
+        BeritaAcara::create(array_merge($request->all(), ['userId' => auth()->id()]));
 
         return redirect()->route('beritaAcara.index')
             ->with('success', 'Berita Acara created successfully.');
     }
 
-    public function show(BeritaAcara $beritaAcara)
+    public function show($id)
     {
+        $beritaAcara = BeritaAcara::findOrFail($id);
         return view('beritaAcara.show_beritaAcara', compact('beritaAcara'));
     }
 

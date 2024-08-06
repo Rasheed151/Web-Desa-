@@ -28,7 +28,10 @@ return new class extends Migration
             $table->boolean('krjsmaAndes')->default(false); // Kerjasama Antar Desa
             $table->boolean('krjsmaPitig')->default(false); // Kerjasama Pihak Ketiga
             $table->string('rncnaPegiat'); // Rencana Pelaksana Kegiatan
-            $table->timestamps(); // Created at and updated at timestamps
+            $table->unsignedBigInteger('userId'); // Updated column type
+            $table->timestamps();
+    
+            $table->foreign('userId')->references('id')->on('users')->onDelete('cascade'); // Add foreign key constraint
         });
     }
 

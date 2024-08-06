@@ -33,6 +33,7 @@ class BeritaAcara extends Model
               'wklMasyarakat',
                'pimpinanRapat', 
         'notulen', 'ns1', 'ns1Dari', 'ns2', 'ns2Dari', 'ns3', 'ns3Dari', 'ns4', 'ns4Dari', 'ns5', 
-        'ns5Dari', 'materiPembahasan', 'kesepakatanAkhir'
+        'ns5Dari', 'materiPembahasan', 'kesepakatanAkhir',
+        'userId', // Ensure this is fillable
     ];
 }

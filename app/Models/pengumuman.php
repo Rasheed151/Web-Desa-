@@ -37,5 +37,6 @@ class Pengumuman extends Model
         'jangkaWaktu',
         'wktuPelaksanaan',
         'tglPengumuman',
+        'userId', // Ensure this is fillable
     ];
 }

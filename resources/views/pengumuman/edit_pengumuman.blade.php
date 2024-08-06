@@ -52,11 +52,11 @@
             </div>
             <div class="form-group">
                 <label for="tglMulai">Tanggal Mulai</label>
-                <input type="date" class="form-control" id="tglMulai" name="tglMulai" value="{{ $pengumuman->tglMulai->format('Y-m-d') }}" required>
+                <input type="date" class="form-control" id="tglMulai" name="tglMulai" value="{{ $pengumuman->tglMulai}}" required>
             </div>
             <div class="form-group">
                 <label for="tglSelesai">Tanggal Selesai</label>
-                <input type="date" class="form-control" id="tglSelesai" name="tglSelesai" value="{{ $pengumuman->tglSelesai->format('Y-m-d') }}" required>
+                <input type="date" class="form-control" id="tglSelesai" name="tglSelesai" value="{{ $pengumuman->tglSelesai}}" required>
             </div>
             <div class="form-group">
                 <label for="jangkaWaktu">Jangka Waktu</label>
@@ -68,7 +68,7 @@
             </div>
             <div class="form-group">
                 <label for="tglPengumuman">Tanggal Pengumuman</label>
-                <input type="date" class="form-control" id="tglPengumuman" name="tglPengumuman" value="{{ $pengumuman->tglPengumuman->format('Y-m-d') }}" required>
+                <input type="date" class="form-control" id="tglPengumuman" name="tglPengumuman" value="{{ $pengumuman->tglPengumuman}}" required>
             </div>
             <button type="submit" class="btn btn-primary">Update</button>
         </form>

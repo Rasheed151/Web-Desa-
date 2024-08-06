@@ -22,5 +22,6 @@ class Pka extends Model
         'npwp',
         'noSkPka',
         'tanggalSkPka',
+        'userId', // Ensure this is fillable
     ];
 }

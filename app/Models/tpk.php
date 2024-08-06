@@ -20,6 +20,7 @@ class Tpk extends Model
         'noHp', 
         'noSkTpk', 
         'tanggalSkTpk', 
-        'jabatan'
+        'jabatan',
+        'userId', // Ensure this is fillable
     ];
 }

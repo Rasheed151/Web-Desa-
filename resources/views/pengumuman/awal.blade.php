@@ -86,35 +86,35 @@
     <table class="table-tiga">
         <thead>
             <tr>
-                <th>Nomor</th>
-                <th>Tanggal</th>
-                <th>SUB Bidang</th>
-                <th>Jenis Kegiatan</th>
-                <th>Swakelola</th>
+            <th>Nomor</th>
+            <th>Nama Kegiatan</th>
+            <th>Lokasi Kegiatan</th>
+            <th>Tanggal Mulai</th>
+            <th>Tanggal Pengumuman</th>
                 <th>Aksi</th>
             </tr>
         </thead>
         <tbody>
-            @if(isset($rkps) && count($rkps) > 0)
-                @foreach ($rkps as $data)
+            @if(isset($pengumuman) && count($pengumuman) > 0)
+                @foreach ($pengumuman as $data)
                     <tr>
                         <td>{{ $data->no }}</td>
-                        <td>{{ $data->TBL }}</td>
-                        <td>{{ $data->subBidang }}</td>
-                        <td>{{ $data->jnsKegiatan }}</td>
-                        <td>{{ $data->swakelola ? 'Ya' : 'Tidak' }}</td>
+                        <td>{{ $data->namaKegiatan }}</td>
+                        <td>{{ $data->lksKegiatan }}</td>
+                        <td>{{ $data->tglMulai }}</td>
+                        <td>{{ $data->tglPengumuman}}</td>
                         <td>
-                            <a href="{{ route('rkp.show', $data->id) }}" class="btn">
+                            <a href="{{ route('pengumuman.show', $data->id) }}" class="btn">
                                 <img src="/img/info.png" alt="Info" style="width:24px; height:24px; border: none; background: none;">
                             </a>
 
                             <!-- Edit Button -->
-                            <a href="{{ route('rkp.edit', $data->id) }}" class="btn">
+                            <a href="{{ route('pengumuman.edit', $data->id) }}" class="btn">
                             <img src="/img/edit.png" alt="Edit" style="width:24px; height:24px; border: none; background: none;">
                             </a>
 
                             <!-- Delete Button -->
-                            <form action="{{ route('rkp.destroy', $data->id) }}" method="POST" style="display:inline;">
+                            <form action="{{ route('pengumuman.destroy', $data->id) }}" method="POST" style="display:inline;">
                             @csrf
                             @method('DELETE')
                                 <button type="submit" style="background: none; border: none; padding: 0;">
@@ -132,6 +132,6 @@
             @endif
         </tbody>
     </table>
-    <a href="{{ route('rkp.create') }}" class="btn-primary">Tambahkan Data</a>
+    <a href="{{ route('pengumuman.create') }}" class="btn-primary">Tambahkan Data</a>
 </div>
 @endsection

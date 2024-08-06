@@ -22,5 +22,6 @@ class DataAparat extends Model
         'npwp',
         'noHp',
         'jabatan',
+        'userId', // Ensure this is fillable
     ];
 }
