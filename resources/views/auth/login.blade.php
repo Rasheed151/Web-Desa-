@@ -144,7 +144,7 @@ body {
         <div class="col-md-8">
             <!-- Gambar di atas card -->
             <div class="text-center mb-4">
-                <img src="{{ asset('img/klipaa.png') }}" alt="Logo" class="login-image">
+                <img src="{{ asset('img/klipaa-logo.png') }}" alt="Logo" class="login-image">
             </div>
 
             <div class="card">

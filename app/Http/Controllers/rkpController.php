@@ -9,7 +9,7 @@ class RkpController extends Controller
 {
     public function index()
     {
-        $rkps = Rkp::all();
+        $rkps = Rkp::where('userId', auth()->id())->get();
         return view('rkp.awal', compact('rkps'));
     }
 
@@ -43,7 +43,7 @@ class RkpController extends Controller
         $data['krjsmaAndes'] = $request->filled('krjsmaAndes');
         $data['krjsmaPitig'] = $request->filled('krjsmaPitig');
 
-        Rkp::create($request->all());
+        Rkp::create(array_merge($request->all(), ['userId' => auth()->id()]));
         return redirect()->route('rkp.index')->with('success', 'Data RKPD berhasil ditambahkan.');
     }
 

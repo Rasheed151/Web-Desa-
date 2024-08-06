@@ -20,22 +20,28 @@ class ProfilController extends Controller
     
     public function index()
     {
-        $dataUmum = DataUmum::all();
-        $dataAparat = DataAparat::all();
-        $pka = Pka::all();
-        $dataTpk = Tpk::all();
-        $penyedia = Penyedia::all();
+        $dataUmum = DataUmum::where('userId', auth()->id())->get();
+        $dataAparat = DataAparat::where('userId', auth()->id())->get();
+        $pka = Pka::where('userId', auth()->id())->get();
+        $dataTpk = Tpk::where('userId', auth()->id())->get();
+        $penyedia = Penyedia::where('userId', auth()->id())->get();
         return view('profil', compact('dataUmum', 'dataAparat', 'pka', 'dataTpk', 'penyedia'));
     }
 
     public function show(DataUmum $dataUmum)
     {
+        if ($dataUmum->userId !== auth()->id()) {
+            abort(403, 'Unauthorized access');
+        }
+
         return view('profil', compact('dataUmum'));
     }
 
-    public function aparat()
+    public function aparat(DataAparat $dataAparat)
     {
-        $dataAparat = DataAparat::all();
+        if ($dataAparat->userId !== auth()->id()) {
+            abort(403, 'Unauthorized access');
+        }
         return view('profil', compact('dataAparat'));
     }
 
@@ -44,9 +50,11 @@ class ProfilController extends Controller
         return view('profil', compact('dataAparat'));
     }
 
-    public function pka()
+    public function pka(Pka $pka)
     {
-        $pka = Pka::all();
+        if ($pka->userId !== auth()->id()) {
+            abort(403, 'Unauthorized access');
+        }
         return view('profil', compact('pka'));
     }
     
@@ -55,24 +63,28 @@ class ProfilController extends Controller
         return view('profil', compact('pka'));
     }
 
-    public function tpk()
+    public function tpk(Tpk $tpk)
     {
-        $dataTpk = Tpk::all();
+        if ($tpk->userId !== auth()->id()) {
+            abort(403, 'Unauthorized access');
+        }
         return view('profil', compact('dataTpk'));
     }
 
-    public function tpkshow(Tpk $dataAparat)
+    public function tpkshow(Tpk $tpk)
     {
         return view('profil', compact('dataTpk'));
     }
 
-    public function penyedia()
+    public function penyedia(Penyedia $penyedia)
     {
-        $penyedia = Penyedia::all();
+        if ($penyedia->userId !== auth()->id()) {
+            abort(403, 'Unauthorized access');
+        }
         return view('profil', compact('penyedia'));
     }
 
-    public function penyediashow(Penyedia $dataAparat)
+    public function penyediashow(Penyedia $penyedia)
     {
         return view('profil', compact('penyedia'));
     }

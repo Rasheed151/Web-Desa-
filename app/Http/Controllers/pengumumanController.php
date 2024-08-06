@@ -9,13 +9,13 @@ class PengumumanController extends Controller
 {
     public function index()
     {
-        $pengumuman = Pengumuman::all();
-        return view('pengumuman.pengumuman', compact('pengumuman'));
+        $pengumuman = Pengumuman::where('userId', auth()->id())->get();
+        return view('pengumuman.awal', compact('pengumuman'));
     }
 
     public function create()
     {
-        return view('pengumuman.create_pengumuman');
+        return view('pengumuman.pengumuman');
     }
 
     public function store(Request $request)
@@ -36,7 +36,7 @@ class PengumumanController extends Controller
             'tglPengumuman' => 'required|date',
         ]);
 
-        Pengumuman::create($request->all());
+        Pengumuman::create(array_merge($request->all(), ['userId' => auth()->id()]));
         return redirect()->route('pengumuman.index')->with('success', 'Pengumuman created successfully.');
     }
 

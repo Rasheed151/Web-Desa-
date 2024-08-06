@@ -32,7 +32,7 @@ class PenyediaController extends Controller
             'nib' => 'required|numeric',
         ]);
 
-        Penyedia::create($request->all());
+        Penyedia::create(array_merge($request->all(), ['userId' => auth()->id()]));
         return redirect()->route('profil.index')
                          ->with('success', 'Data Penyedia created successfully.');
     }

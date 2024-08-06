@@ -32,7 +32,7 @@ class DataAparatController extends Controller
             'jabatan' => 'required|string|max:255',
         ]);
 
-        DataAparat::create($request->all());
+        DataAparat::create(array_merge($request->all(), ['userId' => auth()->id()]));
 
         return redirect()->route('profil.index')
             ->with('success', 'Data aparat created successfully.');

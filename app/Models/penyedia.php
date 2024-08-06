@@ -21,5 +21,6 @@ class Penyedia extends Model
         'alamat_toko',
         'npwp',
         'nib',
+        'userId', // Ensure this is fillable
     ];
 }

@@ -26,7 +26,10 @@ return new class extends Migration
             $table->string('jangkaWaktu'); // Jangka Waktu Selama
             $table->string('wktuPelaksanaan'); // Waktu Pelaksanaan
             $table->date('tglPengumuman'); // Tanggal Pengumuman
-            $table->timestamps(); // Created at and updated at timestamps
+            $table->unsignedBigInteger('userId'); // Updated column type
+            $table->timestamps();
+    
+            $table->foreign('userId')->references('id')->on('users')->onDelete('cascade'); // Add foreign key constraint
         });
     }
 

@@ -15,7 +15,7 @@ class Pka extends Model
         'noPka',
         'noSkPka',
         'tanggalSkPka',
-        'noAparat',
+        'userId', // Ensure this is fillable
     ];
 
     public function aparat(){

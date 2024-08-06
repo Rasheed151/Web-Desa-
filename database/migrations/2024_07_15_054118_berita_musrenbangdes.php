@@ -34,7 +34,10 @@ return new class extends Migration
             $table->string('ns5Dari')->nullable(); // Narasumber 5 dari
             $table->text('materiPembahasan'); // Materi Pembahasan
             $table->text('kesepakatanAkhir'); // Kesepakatan Akhir dari Musrenbangdes
-            $table->timestamps(); // Created at and updated at timestamps
+            $table->unsignedBigInteger('userId'); // Updated column type
+            $table->timestamps();
+    
+            $table->foreign('userId')->references('id')->on('users')->onDelete('cascade'); // Add foreign key constraint
         });
     }
 
