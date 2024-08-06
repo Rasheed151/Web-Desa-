@@ -12,16 +12,13 @@ class Pka extends Model
     protected $table = 'data_pka';
 
     protected $fillable = [
-        'nomor',
-        'nama',
-        'ttl',
-        'NIK',
-        'jabatan',
-        'noHp',
-        'alamat',
-        'npwp',
+        'noPka',
         'noSkPka',
         'tanggalSkPka',
         'userId', // Ensure this is fillable
     ];
+
+    public function aparat(){
+        return $this->belongsTo(DataAparat::class, 'noAparat');
+    }
 }

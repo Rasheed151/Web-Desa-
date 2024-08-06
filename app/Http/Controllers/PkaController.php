@@ -9,7 +9,7 @@ class PkaController extends Controller
 {
     public function index()
     {
-        $pka = Pka::all();
+        $pka = Pka::with('aparat')->get();
         return view('pka.pka', compact('pka'));
     }
 

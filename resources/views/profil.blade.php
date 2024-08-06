@@ -311,11 +311,12 @@
             <tr>
                 <th>Nomor</th>
                 <th>Nama</th>
-                      
+                <th>Tmpt/Tgl Lahir</th>
+                <th>NIK</th>
                 <th>Jabatan</th>
                 <th>No HP</th>
-                
-                
+                <th>Alamat</th>
+                <th>NPWP</th>
                 <th>No SK PKA</th>
                 <th>Tanggal SK PKA</th>
                 <th>Aksi</th>
@@ -325,14 +326,14 @@
             @if(isset($pka) && count($pka) > 0)
                 @foreach ($pka as $data)
                     <tr>
-                        <td>{{ $data->nomor }}</td>
-                        <td>{{ $data->nama }}</td>
-                        
-                        
-                        <td>{{ $data->jabatan }}</td>
-                        <td>{{ $data->noHp }}</td>
-                        
-                        
+                        <td>{{ $data->noPka }}</td>
+                        <td>{{ $data->aparat->namaAparat }}</td>
+                        <td>{{ $data->aparat->ttl }}</td>
+                        <td>{{ $data->aparat->NIK }}</td>
+                        <td>{{ $data->aparat->jabatan }}</td>
+                        <td>{{ $data->aparat->noHp }}</td>
+                        <td>{{ $data->aparat->alamat }}</td>
+                        <td>{{ $data->aparat->npwp }}</td>
                         <td>{{ $data->noSkPka }}</td>
                         <td>{{ $data->tanggalSkPka }}</td>
                         <td>

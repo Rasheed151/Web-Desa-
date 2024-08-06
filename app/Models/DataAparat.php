@@ -13,8 +13,8 @@ class DataAparat extends Model
     public $timestamps = true;
 
     protected $fillable = [
-        'nomor',
-        'nama_lengkap',
+        'noAparat',
+        'namaAparat',
         'gender',
         'ttl',
         'NIK',
@@ -24,4 +24,7 @@ class DataAparat extends Model
         'jabatan',
         'userId', // Ensure this is fillable
     ];
+    public function pka(){
+        return $this->hasMany(Pka::class, 'noAparat');
+    }
 }
