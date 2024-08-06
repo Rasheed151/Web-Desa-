@@ -1,7 +1,7 @@
 @extends('layouts.show')
 
 @section('content')
-<div class="container">
+<div class="container-show">
     <h1>Detail Berita Acara</h1>
 
     <table class="data-table">

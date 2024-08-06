@@ -13,15 +13,20 @@
             </button>
             <h2>Klipaa</h2>
             <div class="profile">
-                <a href="{{ route('tes.index') }}">
+                <a href="{{ route('profil.index') }}">
             <img src="{{ asset('img/profil.webp') }}" alt="Profile Picture">
                 </a>
-                <button class="logout-btn" onclick="showLogoutPopup()">
-                    Log Out 
-                </button>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="logout-btn">
+    @csrf
+</form>
+
+<a href="javascript:void(0);" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+    Logout
+</a>
+
             </div>
 
-            <form id="logout-form" action="#" method="POST" style="display: none;">
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                 @csrf
             </form>
         </div>

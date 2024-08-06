@@ -10,13 +10,9 @@ use App\Http\Controllers\PenyediaController;
 use App\Http\Controllers\BeritaAcaraController;
 use App\Http\Controllers\RkpController;
 use App\Http\Controllers\PengumumanController;
-use App\Http\Controllers\AuthController;
-use App\Http\Controllers\AdminController;
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\profilController;
-use App\Http\Controllers\UserController;
-
-
-
+use App\Http\Controllers\tesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,7 +26,7 @@ use App\Http\Controllers\UserController;
 */
 
 Route::get('/', function () {
-    return view('dashboard');
+    return view('login');
 });
 
 Route::resource('tes', profilController::class);
@@ -61,15 +57,16 @@ Route::resource('rkp', RkpController::class);
 
 Route::resource('pengumuman', PengumumanController::class);
 
-Route::get('/siapswa', function () {
-    return view('siapSwa');
-});
+    // Static routes
+    Route::get('/siapswa', function () {
+        return view('siapSwa');
+    });
 
-Route::get('/siapsedia', function () {
-    return view('siapSedia');
-});
+    Route::get('/siapsedia', function () {
+        return view('siapSedia');
+    });
 
-Route::get('/laksanaSwa', function () {
-    return view('laksanaSwa');
+    Route::get('/laksanaSwa', function () {
+        return view('laksanaSwa');
+    });
 });
-

@@ -35,7 +35,7 @@ class PkaController extends Controller
 
         Pka::create($validatedData);
 
-        return redirect()->route('tes.index')->with('success', 'Data PKA berhasil ditambahkan');
+        return redirect()->route('profil.index')->with('success', 'Data PKA berhasil ditambahkan');
     }
 
     public function show(Pka $pka)
@@ -65,13 +65,13 @@ class PkaController extends Controller
 
         $pka->update($validatedData);
 
-        return redirect()->route('tes.index')->with('success', 'Data PKA berhasil diperbarui');
+        return redirect()->route('profil.index')->with('success', 'Data PKA berhasil diperbarui');
     }
 
     public function destroy(Pka $pka)
     {
         $pka->delete();
 
-        return redirect()->route('tes.index')->with('success', 'Data PKA berhasil dihapus');
+        return redirect()->route('profil.index')->with('success', 'Data PKA berhasil dihapus');
     }
 }

@@ -24,7 +24,14 @@ class BeritaAcara extends Model
         public $timestamps = true;
 
     protected $fillable = [
-        'no', 'date', 'jam', 'tempat', 'bahasKegiatan', 'ketuaBpd', 'wklMasyarakat', 'pimpinanRapat', 
+        'no',
+         'date',
+          'jam',
+           'tempat',
+            'bahasKegiatan',
+             'ketuaBpd',
+              'wklMasyarakat',
+               'pimpinanRapat', 
         'notulen', 'ns1', 'ns1Dari', 'ns2', 'ns2Dari', 'ns3', 'ns3Dari', 'ns4', 'ns4Dari', 'ns5', 
         'ns5Dari', 'materiPembahasan', 'kesepakatanAkhir'
     ];

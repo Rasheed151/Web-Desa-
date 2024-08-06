@@ -59,7 +59,7 @@
             <input type="date" class="form-control" id="tanggalSkPka" name="tanggalSkPka" value="{{ $pka->tanggalSkPka }}">
         </div>
         <button type="submit" class="btn btn-primary">Update Data</button>
-        <a href="{{ route('tes.index') }}" class="btn-back">Kembali</a>
+        <a href="{{ route('profil.index') }}" class="btn-back">Kembali</a>
     </form>
 </div>
 @endsection

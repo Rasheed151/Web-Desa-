@@ -10,12 +10,12 @@ class BeritaAcaraController extends Controller
     public function index()
     {
         $beritaAcara = BeritaAcara::all();
-        return view('beritaAcara.beritaAcara', compact('beritaAcara'));
+        return view('beritaAcara.awal', compact('beritaAcara'));
     }
 
     public function create()
     {
-        return view('beritaAcara.create_beritaAcara');
+        return view('beritaAcara.beritaAcara');
     }
 
     public function store(Request $request)

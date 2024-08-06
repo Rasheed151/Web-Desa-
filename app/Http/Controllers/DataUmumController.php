@@ -42,7 +42,7 @@ class DataUmumController extends Controller
 
         DataUmum::create($request->all());
 
-        return redirect()->route('dataUmum.index')
+        return redirect()->route('profil.index')
         ->with('success', 'Data umum created successfully.');
     }
 
@@ -82,7 +82,7 @@ class DataUmumController extends Controller
 
         $dataUmum->update($request->all());
 
-        return redirect()->route('tes.index')
+        return redirect()->route('profil.index')
                         ->with('success', 'Data Umum updated successfully.');
     }
 
@@ -90,7 +90,7 @@ class DataUmumController extends Controller
     {
         $dataUmum->delete();
 
-        return redirect()->route('dataUmum.index')
+        return redirect()->route('profil.index')
                         ->with('success', 'Data Umum deleted successfully.');
     }
 }

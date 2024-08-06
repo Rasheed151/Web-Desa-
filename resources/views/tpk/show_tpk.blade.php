@@ -13,7 +13,7 @@
                 <td>{{ $tpk->gender }}</td>
             </tr>
             <tr>
-                <th>Tempat, Tanggal Lahir</th>
+                <th>Tempat,Tanggal Lahir</th>
                 <td>{{ $tpk->ttl }}</td>
             </tr>
             <tr>
@@ -41,6 +41,6 @@
                 <td>{{ $tpk->jabatan }}</td>
             </tr>
         </table>
-        <a href="{{ route('tes.index') }}" class="btn-secondary">Kembali</a>
+        <a href="{{ route('profil.index') }}" class="btn-secondary">Kembali</a>
     </div>
 @endsection

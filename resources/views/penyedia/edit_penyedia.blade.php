@@ -1,7 +1,7 @@
 @extends('layouts.edit')
 
 @section('content')
-<h1 class="mb-4">Create Data Aparat</h1>
+
 <div class="container">
     @if ($errors->any())
         <div class="alert alert-danger">
@@ -55,7 +55,7 @@
             <input type="number" class="form-control" id="nib" name="nib" value="{{ $penyedia->nib }}" required>
         </div>
         <button type="submit" class="btn btn-primary">Update</button>
-        <a href="{{ route('tes.index') }}" class="btn-back">Kembali</a>
+        <a href="{{ route('profil.index') }}" class="btn-back">Kembali</a>
     </form>
 </div>
 @endsection

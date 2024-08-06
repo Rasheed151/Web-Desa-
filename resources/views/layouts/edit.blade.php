@@ -6,18 +6,26 @@
     <title>Document</title>
     <link href="{{asset('/css/edit.css')}}" rel="stylesheet" />
 </head>
-<body>    <div class="top-navbar">
-        <button class="toggle-navbar" id="toggle-navbar" style="background: none; border: none; cursor: pointer;">
-            <img src="{{asset('/img/icon-toggle.png')}}" alt="Toggle Navbar" style="width: 45px; height: 45px;">
-        </button>
-        <h2>Klipaa</h2>
-        <div class="profile">
-                <a href="{{ route('tes.index') }}">
-                    <img src="{{ asset('img/profil.webp') }}" alt="Profile Picture">
+<body>    
+<div class="top-navbar">
+            <button class="toggle-navbar" id="toggle-navbar" style="background: none; border: none; cursor: pointer;">
+                <img src="{{asset('/img/icon-toggle.png')}}" alt="Toggle Navbar" style="width: 45px; height: 45px;">
+            </button>
+            <h2>Klipaa</h2>
+            <div class="profile">
+                <a href="{{ route('profil.index') }}">
+            <img src="{{ asset('img/profil.webp') }}" alt="Profile Picture">
                 </a>
-            <button class="logout-btn" onclick="showLogoutPopup()">Log Out</button>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="logout-btn">
+    @csrf
+</form>
+
+<a href="javascript:void(0);" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+    Logout
+</a>
+
+            </div>
         </div>
-    </div>
 
     <div class="navbar" id="navbar">
         <div class="navbar-content">
