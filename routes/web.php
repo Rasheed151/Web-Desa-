@@ -69,4 +69,4 @@ Route::resource('pengumuman', PengumumanController::class);
     Route::get('/laksanaSwa', function () {
         return view('laksanaSwa');
     });
-});
+
