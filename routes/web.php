@@ -26,7 +26,7 @@ use App\Http\Controllers\tesController;
 */
 
 Route::get('/', function () {
-    return view('login');
+    return view('profil');
 });
 
 Route::resource('tes', profilController::class);
