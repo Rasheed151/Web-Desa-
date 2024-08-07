@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('data_pka', function (Blueprint $table) {
             $table->id();
             $table->integer('noPka');
-            $table->string('namaAparat');
+            $table->integer('noAparat');
             $table->string('ttl');
             $table->integer('NIK');
             $table->string('jabatan');
@@ -27,6 +27,10 @@ return new class extends Migration
             $table->timestamps();
     
             $table->foreign('userId')->references('id')->on('users')->onDelete('cascade'); // Add foreign key constraint
+
+            $table->timestamp('tanggalSkPka');
+            $table->timestamps(); // Created at and updated at timestamps
+
         });
     }
 

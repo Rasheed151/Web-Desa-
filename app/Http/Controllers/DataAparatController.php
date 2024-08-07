@@ -21,12 +21,12 @@ class DataAparatController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nomor' => 'required|numeric',
-            'nama_lengkap' => 'required|string|max:255',
+            'noAparat' => 'required|numeric',
+            'namaAparat' => 'required|string|max:255',
             'gender' => 'required|string|max:10',
             'ttl' => 'required|string',
             'NIK' => 'required|numeric',
-            'alamat' => 'required|string',
+            'almtAparat' => 'required|string',
             'npwp' => 'required|numeric',
             'noHp' => 'required|numeric',
             'jabatan' => 'required|string|max:255',
@@ -51,12 +51,12 @@ class DataAparatController extends Controller
     public function update(Request $request, DataAparat $dataAparat)
     {
         $request->validate([
-            'nomor' => 'required|numeric',
-            'nama_lengkap' => 'required|string|max:255',
+            'noAparat' => 'required|numeric',
+            'namaAparat' => 'required|string|max:255',
             'gender' => 'required|string|max:10',
             'ttl' => 'required|string',
             'NIK' => 'required|numeric',
-            'alamat' => 'required|string',
+            'almtAparat' => 'required|string',
             'npwp' => 'required|numeric',
             'noHp' => 'required|numeric',
             'jabatan' => 'required|string|max:255',

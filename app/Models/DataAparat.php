@@ -18,13 +18,13 @@ class DataAparat extends Model
         'gender',
         'ttl',
         'NIK',
-        'alamat',
+        'almtAparat',
         'npwp',
         'noHp',
         'jabatan',
         'userId', // Ensure this is fillable
     ];
-    public function pka(){
-        return $this->hasMany(Pka::class, 'noAparat');
+    public function aparat(){
+        return $this->hasMany(Pka::class, 'namaAparat');
     }
 }

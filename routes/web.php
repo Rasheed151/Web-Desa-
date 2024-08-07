@@ -25,8 +25,6 @@ use App\Http\Controllers\tesController;
 |
 */
 
-
-// Middleware untuk route otentikasi
 Route::group(['middleware' => 'auth'], function () {
     // Home route
     Route::get('/home', [HomeController::class, 'index'])->name('home');

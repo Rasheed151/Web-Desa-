@@ -19,6 +19,6 @@ class Pka extends Model
     ];
 
     public function aparat(){
-        return $this->belongsTo(DataAparat::class, 'noAparat');
+        return $this->belongsTo(DataAparat::class, 'namaAparat');
     }
 }
