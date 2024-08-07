@@ -55,6 +55,22 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/laksanaSwa', function () {
         return view('laksanaSwa');
     });
+
+    Route::get('/laksanaBenang', function () {
+        return view('laksanabenang');
+    });
+
+    Route::get('/laksanaLelang', function () {
+        return view('laksanaLelang');
+    });
+
+    Route::get('/pelateriSwa', function () {
+        return view('pelateriSwa');
+    });
+
+    Route::get('/pelateriPenyedia', function () {
+        return view('pelateriPenyedia');
+    });
 });
 
 // Route untuk login dan logout (tanpa middleware auth)

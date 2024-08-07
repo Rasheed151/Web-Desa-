@@ -151,19 +151,14 @@
 
 @section('content')
 <div class="container mt-5">
-    <h1 class="mb-4">Persiapan Pengadaan Secara Penyedia</h1>
+    <h1 class="mb-4">Pelaporan & Serah terima Pengadaan Secara Swakelola</h1>
     <div class="row">
         @php
             $cards = [
-                ['title' => 'Jadwal Pelaksanaan Pekerjaan', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
-                ['title' => 'KAK', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
-                ['title' => 'HPS', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
-                ['title' => 'Analisa Harga Satuan', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
-                ['title' => 'Spesifikasi Teknis', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
+                ['title' => 'Berita Acara Serah Terima Pekerjaan Dan TPK Kepada Kasi/Kaur', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Pengumuman Lelang'],
+                ['title' => 'Laporan Pemeriksaan Hasil Pengadaan Oleh TPK', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Undangan Lelang'],
+                ['title' => 'Berita Acara Serah Terima Pekerjaan Dari Kasi/Kaur Kepada Kepala Desa', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Surat Penawaran Penyedia'],
                 
-                
-                ['title' => 'Surat Penyampaian Dokumen dari Kasi/Kaur Kepada TPK', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
-                ['title' => 'Analisa Harga Satuan', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
             ];
         @endphp
 

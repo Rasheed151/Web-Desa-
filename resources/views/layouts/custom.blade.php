@@ -51,25 +51,24 @@
             </div>
 
             <button class="dropdown-btn">
-                <img src="{{ asset('/img/pelaksanaan.png') }}" alt="Services Icon"> Tahap pelaksanaan
+                <img src="{{asset('/img/pelaksanaan.png')}}" alt="Services Icon"> Tahap pelaksanaan
             </button>
             <div class="dropdown-container">
                 <a href="/laksanaSwa">Secara Swakelola</a>
-                <a href="#contact2">Melalui Pembelian Langsung</a>
-                <a href="#contact3">Melalui Pembelian Penawaran</a>
-                <a href="#contact4">Melalui Lelang</a>
+                <a href="#">Melalui Pembelian Langsung</a>
+                <a href="/laksanaBenang">Melalui Pembelian Penawaran</a>
+                <a href="/laksanaLelang">Melalui Lelang</a>
             </div>
 
-            <button class="dropdown-btn">
-                <img src="{{ asset('/img/pelaporan.png') }}" alt="Services Icon"> Pelaporan & Serah terima
-            </button>
-            <div class="dropdown-container">
-                <a href="#contact1">Contact 1</a>
-                <a href="#contact2">Contact 2</a>
-                <a href="#contact3">Contact 3</a>
+                <button class="dropdown-btn">
+                    <img src="{{asset('/img/pelaporan.png')}}"  alt="Services Icon"> Pelaporan & Serah terima
+                </button>
+                <div class="dropdown-container">
+                    <a href="/pelateriSwa">Secara Swakelola</a>
+                    <a href="/pelateriPenyedia">Secara Penyedia</a>
+                </div>
             </div>
         </div>
-    </div>
 
     <div class="content">
         @yield('content')

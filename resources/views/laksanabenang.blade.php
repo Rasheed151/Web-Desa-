@@ -151,19 +151,17 @@
 
 @section('content')
 <div class="container mt-5">
-    <h1 class="mb-4">Persiapan Pengadaan Secara Penyedia</h1>
+    <h1 class="mb-4">Pelaksanaan Pengadaan Melalui Lelang</h1>
     <div class="row">
         @php
             $cards = [
-                ['title' => 'Jadwal Pelaksanaan Pekerjaan', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
-                ['title' => 'KAK', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
-                ['title' => 'HPS', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
-                ['title' => 'Analisa Harga Satuan', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
-                ['title' => 'Spesifikasi Teknis', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
-                
-                
-                ['title' => 'Surat Penyampaian Dokumen dari Kasi/Kaur Kepada TPK', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
-                ['title' => 'Analisa Harga Satuan', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
+                ['title' => 'Surat Permintaan Penawaran', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Surat Permintaan Penawaran'],
+                ['title' => 'Surat Penawaran Penyedia', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Surat Penawaran Penyedia'],
+                ['title' => 'Surat Pernyataan Kebenaran Usaha', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Surat Pernyataan Kebenaran Usaha'],
+                ['title' => 'Surat Perjanjin', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Surat Perjanjin'],
+                ['title' => 'BA Hasil Evaluasi Penawaran', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'BA Hasil Evaluasi Penawaran'],
+                ['title' => 'BA Hasil Negosiasi', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'BA Hasil Negosiasi'],
+                ['title' => 'Penawaran Pemenang', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Penawaran Pemenang'],
             ];
         @endphp
 

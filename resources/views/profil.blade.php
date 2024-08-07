@@ -31,32 +31,92 @@
         margin-left: 5%;
     }
 
-    .dua h1 {
-        margin-left: 2%;
-    }
+    .container-dua {
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
 
-    .table-dua {
-        text-align: center;
-        margin: 20px;
-        display: flex;
-        border-radius: 20px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        padding: 2%;
-    }
+.dua {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
-    .table-dua th, .table-dua td {
-        padding: 12px;
-        text-align: left;
-        border-bottom: 1px solid #ddd;
-        border-radius: 20px;
-    }
+.dua h1 {
+    text-align: center;
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
 
-    .table-dua th {
-        background-color: #4e73df;
-        color: white;
-        border-radius: 20px;
-        text-align: center;
-    }
+.table-dua {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.table-dua th, .table-dua td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.table-dua th {
+    background-color: #4e73df;
+    color: white;
+    font-weight: bold;
+}
+
+.table-dua tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.table-dua tr:hover {
+    background-color: #e9ecef;
+}
+
+.table-dua td {
+    color: #555;
+}
+
+/* Emphasize specific rows */
+.highlight-group .highlight th, .highlight-group .highlight td {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2c3e50;
+    background-color: #eaf2f8;
+}
+
+.highlight-group .emphasize th, .highlight-group .emphasize td {
+    font-size: 16px;
+    font-weight: bold;
+    color: #34495e;
+    background-color: #f4f6f6;
+}
+
+/* Separate styling for other data */
+.other-group {
+    margin-top: 20px;
+}
+
+.other-group tr th, .other-group tr td {
+    background-color: #fff;
+    color: #777;
+    border: 1px solid #ddd;
+}
+
+.other-group tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.other-group tr:hover {
+    background-color: #f1f1f1;
+}
 
     .container-tiga {
         width: 100%;
@@ -184,65 +244,73 @@
 </div>
 
 
-<div class="dua">
-    <h1>Detail Data Umum</h1>
-    <table class="table-dua">
-        @foreach ($dataUmum as $data)
-            <tr>
-                <th>Desa</th>
-                <td>{{ $data->desa }}</td>
-            </tr>
-            <tr>
-                <th>Kecamatan</th>
-                <td>{{ $data->kecamatan }}</td>
-            </tr>
-            <tr>
-                <th>Kabupaten</th>
-                <td>{{ $data->kabupaten }}</td>
-            </tr>
-            <tr>
-                <th>Provinsi</th>
-                <td>{{ $data->provinsi }}</td>
-            </tr>
-            <tr>
-                <th>Alamat</th>
-                <td>{{ $data->alamat }}</td>
-            </tr>
-            <tr>
-                <th>NPWP</th>
-                <td>{{ $data->npwp }}</td>
-            </tr>
-            <tr>
-                <th>Kode Desa</th>
-                <td>{{ $data->kodeDesa }}</td>
-            </tr>
-            <tr>
-                <th>Kepala Desa</th>
-                <td>{{ $data->kepalaDesa }}</td>
-            </tr>
-            <tr>
-                <th>No Perbub PJB</th>
-                <td>{{ $data->noPerbubPjb }}</td>
-            </tr>
-            <tr>
-                <th>Tanggal Perbub PJB</th>
-                <td>{{ $data->tanggalPerbubPjb }}</td>
-            </tr>
-            <tr>
-                <th>No Keputusan DPA</th>
-                <td>{{ $data->noKeputusanDpa }}</td>
-            </tr>
-            <tr>
-                <th>Tanggal Keputusan DPA</th>
-                <td>{{ $data->tanggalKeputusanDpa }}</td>
-            </tr>
-            <tr>
-                <th>Email</th>
-                <td>{{ $data->email }}</td>
-            </tr>
-        @endforeach
-    </table>
-</div>
+<div class="container-dua">
+        <div class="dua">
+            <h1>Detail Data Umum</h1>
+            <table class="table-dua">
+                <tbody class="highlight-group">
+                    @foreach ($dataUmum as $data)
+                    <tr class="highlight">
+                        <th>Desa</th>
+                        <td>{{ $data->desa }}</td>
+                    </tr>
+                    <tr class="highlight">
+                        <th>Kecamatan</th>
+                        <td>{{ $data->kecamatan }}</td>
+                    </tr>
+                    <tr class="highlight">
+                        <th>Kabupaten</th>
+                        <td>{{ $data->kabupaten }}</td>
+                    </tr>
+                    <tr class="highlight">
+                        <th>Provinsi</th>
+                        <td>{{ $data->provinsi }}</td>
+                    </tr>
+                    <tr class="emphasize">
+                        <th>Alamat</th>
+                        <td>{{ $data->alamat }}</td>
+                    </tr>
+                    @endforeach
+                </tbody>
+                <tbody class="other-group">
+                    @foreach ($dataUmum as $data)
+                    <tr>
+                        <th>NPWP</th>
+                        <td>{{ $data->npwp }}</td>
+                    </tr>
+                    <tr>
+                        <th>Kode Desa</th>
+                        <td>{{ $data->kodeDesa }}</td>
+                    </tr>
+                    <tr>
+                        <th>Kepala Desa</th>
+                        <td>{{ $data->kepalaDesa }}</td>
+                    </tr>
+                    <tr>
+                        <th>No Perbub PJB</th>
+                        <td>{{ $data->noPerbubPjb }}</td>
+                    </tr>
+                    <tr>
+                        <th>Tanggal Perbub PJB</th>
+                        <td>{{ $data->tanggalPerbubPjb }}</td>
+                    </tr>
+                    <tr>
+                        <th>No Keputusan DPA</th>
+                        <td>{{ $data->noKeputusanDpa }}</td>
+                    </tr>
+                    <tr>
+                        <th>Tanggal Keputusan DPA</th>
+                        <td>{{ $data->tanggalKeputusanDpa }}</td>
+                    </tr>
+                    <tr>
+                        <th>Email</th>
+                        <td>{{ $data->email }}</td>
+                    </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
+    </div>
 
 <div class="container-tiga">
     <div class="head-tiga">

@@ -151,19 +151,14 @@
 
 @section('content')
 <div class="container mt-5">
-    <h1 class="mb-4">Persiapan Pengadaan Secara Penyedia</h1>
+    <h1 class="mb-4">Pelaksanaan Pengadaan Lelang</h1>
     <div class="row">
         @php
             $cards = [
-                ['title' => 'Jadwal Pelaksanaan Pekerjaan', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
-                ['title' => 'KAK', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
-                ['title' => 'HPS', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
-                ['title' => 'Analisa Harga Satuan', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
-                ['title' => 'Spesifikasi Teknis', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
-                
-                
-                ['title' => 'Surat Penyampaian Dokumen dari Kasi/Kaur Kepada TPK', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
-                ['title' => 'Analisa Harga Satuan', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
+                ['title' => 'Pengumuman Lelang', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Pengumuman Lelang'],
+                ['title' => 'Undangan Lelang', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Undangan Lelang'],
+                ['title' => 'Surat Penawaran Penyedia', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Surat Penawaran Penyedia'],
+                ['title' => 'Daftar Kuantitas Dan Harga', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Daftar Kuantitas Dan Harga'],
             ];
         @endphp
 
