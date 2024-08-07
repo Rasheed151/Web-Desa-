@@ -29,6 +29,7 @@ class DataUmum extends Model
         'kabupaten',
         'provinsi',
         'alamat',
+        'email',
         'npwp',
         'kodeDesa',
         'kepalaDesa',
@@ -36,8 +37,9 @@ class DataUmum extends Model
         'tanggalPerbubPjb',
         'noKeputusanDpa',
         'tanggalKeputusanDpa',
-        'email',
+        'userId', // Ensure this is fillable
     ];
+    
      // Kolom yang di-cast ke tipe data tertentu
     
 }

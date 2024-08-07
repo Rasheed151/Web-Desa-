@@ -22,7 +22,10 @@ return new class extends Migration
             $table->text('alamat_toko');
             $table->integer('npwp');
             $table->integer('nib');
-            $table->timestamps(); // Created at and updated at timestamps
+            $table->unsignedBigInteger('userId'); // Updated column type
+            $table->timestamps();
+    
+            $table->foreign('userId')->references('id')->on('users')->onDelete('cascade'); // Add foreign key constraint
         });
     }
 

@@ -22,7 +22,10 @@ return new class extends Migration
             $table->bigInteger('npwp');
             $table->string('noHp');
             $table->string('jabatan');
-            $table->timestamps(); // Created at and updated at timestamps
+            $table->unsignedBigInteger('userId'); // Updated column type
+            $table->timestamps();
+    
+            $table->foreign('userId')->references('id')->on('users')->onDelete('cascade'); // Add foreign key constraint
         });
     }
 

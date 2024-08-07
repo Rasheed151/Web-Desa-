@@ -26,7 +26,7 @@ use App\Http\Controllers\tesController;
 */
 
 Route::get('/', function () {
-    return view('profil');
+    return view('login');
 });
 
 Route::resource('tes', profilController::class);
@@ -61,7 +61,7 @@ Route::resource('pengumuman', PengumumanController::class);
     Route::get('/siapswa', function () {
         return view('siapSwa');
     });
-
+    
     Route::get('/siapsedia', function () {
         return view('siapSedia');
     });
@@ -69,4 +69,12 @@ Route::resource('pengumuman', PengumumanController::class);
     Route::get('/laksanaSwa', function () {
         return view('laksanaSwa');
     });
+});
 
+// Route untuk login dan logout (tanpa middleware auth)
+Route::group(['middleware' => 'guest'], function () {
+    Route::get('login', [LoginController::class, 'showLoginForm'])->name('login');
+    Route::post('login', [LoginController::class, 'login']);
+});
+
+Route::post('logout', [LoginController::class, 'logout'])->name('logout');

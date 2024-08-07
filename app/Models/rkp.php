@@ -39,6 +39,7 @@ class Rkp extends Model
         'krjsmaAndes',
         'krjsmaPitig',
         'rncnaPegiat',
+        'userId', // Ensure this is fillable
     ];
 
     protected $casts = [

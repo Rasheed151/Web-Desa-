@@ -21,7 +21,8 @@ class DataAparat extends Model
         'alamat',
         'npwp',
         'noHp',
-        'jbtn',
+        'jabatan',
+        'userId', // Ensure this is fillable
     ];
     public function pka(){
         return $this->hasMany(Pka::class, 'noAparat');
