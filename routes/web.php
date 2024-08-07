@@ -25,37 +25,21 @@ use App\Http\Controllers\tesController;
 |
 */
 
-Route::get('/', function () {
-    return view('login');
-});
+Route::group(['middleware' => 'auth'], function () {
+    // Home route
+    Route::get('/home', [HomeController::class, 'index'])->name('home');
 
-Route::resource('tes', profilController::class);
-
-
-Route::get('/dashboard', [HomeController::class, 'index']);
-Route::get('/dataUmum', [HomeController::class, 'umum']);
-Route::get('/data-aparatur', [HomeController::class, 'aparatur']);
-Route::get('/PKA', [HomeController::class, 'pka']);
-Route::get('/tim-pelaksana', [HomeController::class, 'tpk']);
-Route::get('/penyedia', [HomeController::class, 'pmsk']);
-Route::get('/siapSwa', [HomeController::class, 'siapSwa']);
-Route::get('/dashboard', [DataUmumController::class, 'count']);
-
-Route::resource('dataUmum', DataUmumController::class);
-
-Route::resource('dataAparat', DataAparatController::class);
-
-Route::resource('pka', PkaController::class);
-
-Route::resource('tpk', TpkController::class);
-
-Route::resource('penyedia', PenyediaController::class);
-
-Route::resource('beritaAcara', BeritaAcaraController::class);
-
-Route::resource('rkp', RkpController::class);
-
-Route::resource('pengumuman', PengumumanController::class);
+    // Route resource
+    Route::resource('tes', tesController::class);
+    Route::resource('profil', profilController::class);
+    Route::resource('dataUmum', DataUmumController::class);
+    Route::resource('dataAparat', DataAparatController::class);
+    Route::resource('pka', PkaController::class);
+    Route::resource('tpk', TpkController::class);
+    Route::resource('penyedia', PenyediaController::class);
+    Route::resource('beritaAcara', BeritaAcaraController::class);
+    Route::resource('rkp', RkpController::class);
+    Route::resource('pengumuman', PengumumanController::class);
 
     // Static routes
     Route::get('/siapswa', function () {

@@ -13,12 +13,12 @@ return new class extends Migration
     {
         Schema::create('data_aparat', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('noAparat');
-            $table->string('namaLengkap');
+            $table->integer('noAparat')->unique();
+            $table->string('namaAparat');
             $table->string('gender');
             $table->string('ttl');
             $table->bigInteger('NIK');
-            $table->text('alamat');
+            $table->text('almtAparat');
             $table->bigInteger('npwp');
             $table->string('noHp');
             $table->string('jabatan');

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Pka;
+use App\Models\DataAparat;
 use Illuminate\Http\Request;
 
 class PkaController extends Controller
@@ -10,27 +11,23 @@ class PkaController extends Controller
     public function index()
     {
         $pka = Pka::with('aparat')->get();
+        
         return view('pka.pka', compact('pka'));
     }
 
     public function create()
     {
-        return view('pka.create_pka');
+        $dataAparat = DataAparat::all(); // Fetch all data from DataAparat
+        return view('pka.pka', compact('dataAparat'));
     }
-
     public function store(Request $request)
     {
         $request->validate([
-            'nomor' => 'required|numeric',
-            'nama' => 'required|string|max:255',
-            'ttl' => 'required|string|max:255',
-            'NIK' => 'required|numeric',
-            'jabatan' => 'required|string|max:255',
-            'noHp' => 'required|string|max:15',
-            'alamat' => 'required|string',
-            'npwp' => 'required|numeric',
-            'noSkPka' => 'required|numeric',
-            'tanggalSkPka' => 'nullable|date',
+            'noPka' => 'required|integer',
+            'ttl' => 'required|string',
+            'noSkPka' => 'required|integer',
+            'tanggalSkPka' => 'required|date',
+            'aparat_id' => 'required|exists:data_aparat,id',
         ]);
 
         Pka::create(array_merge($request->all(), ['userId' => auth()->id()]));

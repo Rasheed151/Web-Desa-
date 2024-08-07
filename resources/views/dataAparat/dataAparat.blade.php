@@ -18,13 +18,13 @@
         <form action="{{ route('dataAparat.store') }}" method="POST">
             @csrf
             <div class="mb-3">
-                <label for="nomor" class="form-label">Nomor:</label>
-                <input type="number" name="nomor" class="form-control" required placeholder="Nomor">
+                <label for="noAparat" class="form-label">Nomor:</label>
+                <input type="number" name="noAparat" class="form-control" required placeholder="NoAparat">
             </div>
 
             <div class="mb-3">
-                <label for="nama_lengkap" class="form-label">Nama Lengkap:</label>
-                <input type="text" name="nama_lengkap" class="form-control" required placeholder="Nama Lengkap">
+                <label for="namaAparat" class="form-label">Nama Lengkap:</label>
+                <input type="text" name="namaAparat" class="form-control" required placeholder="Nama Lengkap">
             </div>
 
             <div class="mb-3">
@@ -43,8 +43,8 @@
             </div>
 
             <div class="mb-3">
-                <label for="alamat" class="form-label">Alamat:</label>
-                <textarea name="alamat" class="form-control" rows="3" required></textarea>
+                <label for="almtAparat" class="form-label">Alamat:</label>
+                <textarea name="almtAparat" class="form-control" rows="3" required></textarea>
             </div>
 
             <div class="mb-3">

@@ -15,46 +15,27 @@
     @endif
 
     <div class="form-container">
-        <form action="{{ route('pka.store') }}" method="POST">
+        <form action="{{ route('pka.store') }}" method="POST"> 
             @csrf
             <div class="mb-3">
                 <label for="nomor" class="form-label">Nomor:</label>
                 <input type="number" name="nomor" class="form-control" required placeholder="Nomor">
             </div>
 
-            <div class="mb-3">
-                <label for="nama" class="form-label">Nama:</label>
-                <input type="text" name="nama" class="form-control" required placeholder="Nama">
-            </div>
-
-            <div class="mb-3">
-                <label for="ttl" class="form-label">TTL:</label>
-                <input type="text" name="ttl" class="form-control" required placeholder="TTL">
-            </div>
-
-            <div class="mb-3">
-                <label for="NIK" class="form-label">NIK:</label>
-                <input type="number" name="NIK" class="form-control" required placeholder="NIK">
-            </div>
-
-            <div class="mb-3">
-                <label for="jabatan" class="form-label">Jabatan:</label>
-                <input type="text" name="jabatan" class="form-control" required placeholder="Jabatan">
-            </div>
-
-            <div class="mb-3">
-                <label for="noHp" class="form-label">No HP:</label>
-                <input type="number" name="noHp" class="form-control" required placeholder="No HP">
-            </div>
-
-            <div class="mb-3">
-                <label for="alamat" class="form-label">Alamat:</label>
-                <textarea name="alamat" class="form-control" rows="3" required placeholder="Alamat"></textarea>
-            </div>
-
-            <div class="mb-3">
-                <label for="npwp" class="form-label">NPWP:</label>
-                <input type="number" name="npwp" class="form-control" required placeholder="NPWP">
+            <div class="form-group">
+                <label for="noAparat">Nama Aparat:</label>
+                <select class="form-control" id="noAparat" name="noAparat" required>
+                    <option value="">Select Aparat</option>
+                    @if(isset($dataAparat) && $dataAparat->count() > 0)
+                        @foreach ($dataAparat as $aparat)
+                            @if(is_object($post))
+                                <option value="{{ $aparat->noAparat }}" data-aparat="{{ json_encode($aparat) }}">{{ $aparat->noAparat }}</option>
+                            @endif
+                        @endforeach
+                    @else
+                        <option value="">No Aparat available</option>
+                    @endif
+                </select>
             </div>
 
             <div class="mb-3">
@@ -71,5 +52,34 @@
         </form>
     </div>
 </div>
+
+<script>
+    $(document).ready(function() {
+        $('#noAparat').change(function() {
+            var selectedOption = $(this).find('option:selected');
+            var aparatData = selectedOption.data('aparat');
+
+            console.log(aparatData); // Debugging line
+
+            if (aparatData) {
+                $('#gender').val(aparatData.gender);
+                $('#ttlAparat').val(aparatData.ttl);
+                $('#NIK').val(aparatData.NIK);
+                $('#alamat').val(aparatData.alamat);
+                $('#npwp').val(aparatData.npwp);
+                $('#noHp').val(aparatData.noHp);
+                $('#jbtn').val(aparatData.jbtn);
+            } else {
+                $('#gender').val('');
+                $('#ttlAparat').val('');
+                $('#NIK').val('');
+                $('#alamat').val('');
+                $('#npwp').val('');
+                $('#noHp').val('');
+                $('#jbtn').val('');
+            }
+        });
+    });
+</script>
 
 @endsection

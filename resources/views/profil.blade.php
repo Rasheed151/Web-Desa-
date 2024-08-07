@@ -270,8 +270,8 @@
                 @if(isset($dataAparat) && count($dataAparat) > 0)
                     @foreach ($dataAparat as $aparat)
                         <tr>
-                            <td>{{ $aparat->nomor }}</td>
-                            <td>{{ $aparat->nama_lengkap }}</td>
+                            <td>{{ $aparat->noAparat }}</td>
+                            <td>{{ $aparat->namaAparat }}</td>
                             <td>{{ $aparat->gender }}</td>
                             <td>{{ $aparat->noHp }}</td>
                             <td>{{ $aparat->jabatan }}</td>
