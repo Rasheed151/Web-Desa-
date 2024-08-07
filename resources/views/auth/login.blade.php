@@ -5,28 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <style>
-/* Global Styles */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fc;
-    margin: 0;
-    padding: 0;
-}
-
 /* Container */
 .container {
-    margin-top: 50px;
+    padding: 20px;
+    max-width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 100vh; /* Membuat container memenuhi tinggi viewport */
 }
 
-/* Card Styles */
+/* Card */
 .card {
+    width: 200%; /* Lebar card menjadi 200% dari lebar kontainer */
+    max-width: 1000px; /* Membatasi lebar maksimum card untuk mencegah terlalu besar pada layar lebar */
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 500px;
+    background-color: #fff;
+    margin-left: -50%; /* Menggeser card ke kiri untuk memusatkan di halaman */
+    position: relative; /* Agar margin-left bekerja dengan baik */
 }
 
 /* Card Body */
@@ -34,7 +32,15 @@ body {
     padding: 20px;
 }
 
-/* Form Styles */
+/* Image */
+.login-image {
+    max-width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px; /* Mengatur gambar agar berada di tengah dan memberi jarak bawah */
+}
+
+/* Form Elements */
 .form-group {
     margin-bottom: 15px;
 }
@@ -48,92 +54,69 @@ body {
 .input {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
     border-radius: 4px;
+    font-size: 16px;
     box-sizing: border-box;
 }
 
-.input.is-invalid {
+.input:focus {
+    border-color: #4e73df;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(78, 115, 223, 0.25);
+}
+
+.is-invalid {
     border-color: #dc3545;
 }
 
 .feedback {
     color: #dc3545;
-    font-size: 0.875rem;
+    font-size: 14px;
     margin-top: 5px;
+    display: block;
 }
 
+/* Checkbox */
 .form-check {
     margin-bottom: 15px;
-    display: flex;
-    align-items: center;
 }
 
 .check {
-    margin-right: 10px;
+    margin-right: 5px;
 }
 
 .check-label {
-    font-weight: normal;
+    font-size: 16px;
 }
 
-/* Button Styles */
+/* Button */
 .btn {
     background-color: #4e73df;
-    color: white;
+    color: #fff;
     border: none;
     padding: 10px 20px;
     border-radius: 4px;
+    font-size: 16px;
     cursor: pointer;
-    font-size: 1rem;
-    text-align: center;
-    display: inline-block;
-    text-decoration: none;
+    transition: background-color 0.3s ease;
 }
 
 .btn:hover {
     background-color: #2e59d9;
 }
 
+/* Link */
 .link {
-    color: #007bff;
+    display: inline-block;
+    margin-top: 10px;
+    color: #4e73df;
     text-decoration: none;
-    font-size: 0.875rem;
+    font-size: 16px;
 }
 
 .link:hover {
     text-decoration: underline;
-}
-
-/* Image Styles */
-.login-image {
-    max-width: 100px;
-    height: auto;
-    display: block;
-    margin: 0 auto 20px auto;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .container {
-        margin-top: 20px;
-    }
-
-    .card {
-        margin: 0 15px;
-    }
-}
-
-@media (max-width: 576px) {
-    .btn {
-        width: 100%;
-        padding: 12px;
-        font-size: 1.125rem;
-    }
-
-    .link {
-        font-size: 0.75rem;
-    }
 }
 
     </style>

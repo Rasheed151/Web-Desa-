@@ -151,19 +151,14 @@
 
 @section('content')
 <div class="container mt-5">
-    <h1 class="mb-4">Persiapan Pengadaan Secara Penyedia</h1>
+    <h1 class="mb-4">Pelaporan & Serah terima Pengadaan Secara Penyedia</h1>
     <div class="row">
         @php
             $cards = [
-                ['title' => 'Jadwal Pelaksanaan Pekerjaan', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
-                ['title' => 'KAK', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
-                ['title' => 'HPS', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
-                ['title' => 'Analisa Harga Satuan', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
-                ['title' => 'Spesifikasi Teknis', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
-                
-                
-                ['title' => 'Surat Penyampaian Dokumen dari Kasi/Kaur Kepada TPK', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
-                ['title' => 'Analisa Harga Satuan', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
+                ['title' => 'BAST Pekerjaan Melalui Penyedia Dari TPK Kepada Kasi/kaur', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'BAST Pekerjaan Melalui Penyedia Dari TPK Kepada Kasi/kaur'],
+                ['title' => 'Laporan Pemeriksaan Hasil Pengadaan Oleh TPK', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Laporan Pemeriksaan Hasil Pengadaan Oleh TPK'],
+                ['title' => 'BAST Dari Penyedia Kepada TPK/Kasi/Kaur', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'BAST Dari Penyedia Kepada TPK/Kasi/Kaur'],
+                ['title' => 'BAST Dari Kasi/Kaur Kepada Kepala Desa', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'BAST Dari Kasi/Kaur Kepada Kepala Desa'],
             ];
         @endphp
 
