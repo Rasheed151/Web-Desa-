@@ -36,7 +36,8 @@ class KakSwa extends Model
         'tgglMulai',
         'jangkaWaktu',
         'biayaKegiatan',
-        'sebesarRp'
+        'sebesarRp',
+        'userId', // Ensure this is fillable
     ];
     protected $casts = [
         'sebesarRp' => 'decimal:2'

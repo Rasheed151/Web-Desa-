@@ -19,27 +19,30 @@ return new class extends Migration
             $table->string('jdwlLaksana'); // Jadwal Pelaksanaan Kegiatan
             $table->bigInteger('biaya'); // Biaya Rp.
             $table->string('bobot'); // Bobot
-            $table->date('namaKasi'); // Nama Kepala Seksi 
-            $table->date('jbtnKasi'); // Jabatan Kepala Seksi
-            $table->date('jdwlKerja1'); // Jadwal Pekerjaan (Hari/Minggu/Bulan ke-1)
-            $table->date('jdwlKerja2'); // Jadwal Pekerjaan (Hari/Minggu/Bulan ke-2)
-            $table->date('jdwlKerja3'); // Jadwal Pekerjaan (Hari/Minggu/Bulan ke-3)
-            $table->date('jdwlKerja4'); // Jadwal Pekerjaan (Hari/Minggu/Bulan ke-4)
-            $table->date('jdwlKerja5'); // Jadwal Pekerjaan (Hari/Minggu/Bulan ke-5)
-            $table->date('jdwlKerja6'); // Jadwal Pekerjaan (Hari/Minggu/Bulan ke-6)
-            $table->date('jdwlKerja7'); // Jadwal Pekerjaan (Hari/Minggu/Bulan ke-7)
-            $table->date('jdwlKerja8'); // Jadwal Pekerjaan (Hari/Minggu/Bulan ke-8)
-            $table->date('jdwlKerja9'); // Jadwal Pekerjaan (Hari/Minggu/Bulan ke-9)
-            $table->date('jdwlKerja10'); // Jadwal Pekerjaan (Hari/Minggu/Bulan ke-10)
-            $table->date('jdwlKerja11'); // Jadwal Pekerjaan (Hari/Minggu/Bulan ke-11)
-            $table->date('jdwlKerja12'); // Jadwal Pekerjaan (Hari/Minggu/Bulan ke-12)
-            $table->date('jdwlKerja13'); // Jadwal Pekerjaan (Hari/Minggu/Bulan ke-13)
-            $table->date('jdwlKerja14'); // Jadwal Pekerjaan (Hari/Minggu/Bulan ke-14)
-            $table->date('jdwlKerja15'); // Jadwal Pekerjaan (Hari/Minggu/Bulan ke-15)
-            $table->date('jdwlKerja16'); // Jadwal Pekerjaan (Hari/Minggu/Bulan ke-16)
-            $table->date('jdwlKerja17'); // Jadwal Pekerjaan (Hari/Minggu/Bulan ke-17)
-            $table->date('jdwlKerja18'); // Jadwal Pekerjaan (Hari/Minggu/Bulan ke-18)
-            $table->timestamps(); // Created at and updated at timestamps
+            $table->string('namaKasi'); // Nama Kepala Seksi 
+            $table->string('jbtnKasi'); // Jabatan Kepala Seksi
+            $table->date('jdwlKerja1')->nullable(); // Jadwal Pekerjaan (Hari/Minggu/Bulan ke-1)
+            $table->date('jdwlKerja2')->nullable(); // Jadwal Pekerjaan (Hari/Minggu/Bulan ke-2)
+            $table->date('jdwlKerja3')->nullable(); // Jadwal Pekerjaan (Hari/Minggu/Bulan ke-3)
+            $table->date('jdwlKerja4')->nullable(); // Jadwal Pekerjaan (Hari/Minggu/Bulan ke-4)
+            $table->date('jdwlKerja5')->nullable(); // Jadwal Pekerjaan (Hari/Minggu/Bulan ke-5)
+            $table->date('jdwlKerja6')->nullable(); // Jadwal Pekerjaan (Hari/Minggu/Bulan ke-6)
+            $table->date('jdwlKerja7')->nullable(); // Jadwal Pekerjaan (Hari/Minggu/Bulan ke-7)
+            $table->date('jdwlKerja8')->nullable(); // Jadwal Pekerjaan (Hari/Minggu/Bulan ke-8)
+            $table->date('jdwlKerja9')->nullable(); // Jadwal Pekerjaan (Hari/Minggu/Bulan ke-9)
+            $table->date('jdwlKerja10')->nullable(); // Jadwal Pekerjaan (Hari/Minggu/Bulan ke-10)
+            $table->date('jdwlKerja11')->nullable(); // Jadwal Pekerjaan (Hari/Minggu/Bulan ke-11)
+            $table->date('jdwlKerja12')->nullable(); // Jadwal Pekerjaan (Hari/Minggu/Bulan ke-12)
+            $table->date('jdwlKerja13')->nullable(); // Jadwal Pekerjaan (Hari/Minggu/Bulan ke-13)
+            $table->date('jdwlKerja14')->nullable(); // Jadwal Pekerjaan (Hari/Minggu/Bulan ke-14)
+            $table->date('jdwlKerja15')->nullable(); // Jadwal Pekerjaan (Hari/Minggu/Bulan ke-15)
+            $table->date('jdwlKerja16')->nullable(); // Jadwal Pekerjaan (Hari/Minggu/Bulan ke-16)
+            $table->date('jdwlKerja17')->nullable(); // Jadwal Pekerjaan (Hari/Minggu/Bulan ke-17)
+            $table->date('jdwlKerja18')->nullable(); // Jadwal Pekerjaan (Hari/Minggu/Bulan ke-18)
+            $table->unsignedBigInteger('userId'); // Updated column type
+            $table->timestamps();
+    
+            $table->foreign('userId')->references('id')->on('users')->onDelete('cascade'); // Add foreign key constraint
         });
     }
 

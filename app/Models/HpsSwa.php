@@ -38,7 +38,8 @@ class HpsSwa extends Model
         'satuan',
         'hrgSatuan',
         'jmlhHarga',
-        'jenis'
+        'jenis',
+        'userId', // Ensure this is fillable
     ];
     protected $casts = [
         'volume' => 'decimal:2',

@@ -29,14 +29,14 @@ class AkunSeeder extends Seeder
                 'name'=>'AkunUser1',
                 'email'=>'user1@gmail.com',
                 'level'=>'user',
-                'password'=>Hash::make('123456')
+                'password'=>Hash::make('123')
             ],
             [
                 'username'=>'user2',
                 'name'=>'AkunUser2',
                 'email'=>'user2@gmail.com',
                 'level'=>'user',
-                'password'=>Hash::make('123456')
+                'password'=>Hash::make('123')
             ],
 
         ];

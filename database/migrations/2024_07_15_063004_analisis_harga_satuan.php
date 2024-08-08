@@ -26,7 +26,10 @@ return new class extends Migration
             $table->decimal('hargaSatuan', 15, 2); // Harga Satuan Rp
             $table->decimal('jmlhHarga', 15, 2); // Jumlah Harga
             $table->string('jenis'); // Jenis
-            $table->timestamps(); // Created at and updated at timestamps
+            $table->unsignedBigInteger('userId'); // Updated column type
+            $table->timestamps();
+    
+            $table->foreign('userId')->references('id')->on('users')->onDelete('cascade'); // Add foreign key constraint
         });
     }
 

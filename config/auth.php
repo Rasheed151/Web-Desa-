@@ -114,6 +114,6 @@ return [
 
     'redirect' => [
         'login' => '/login',
-        'home' => '/home',
+        'home' => '/profil',
     ],
 ];
