@@ -18,24 +18,8 @@
         <form action="{{ route('pka.store') }}" method="POST"> 
             @csrf
             <div class="mb-3">
-                <label for="nomor" class="form-label">Nomor:</label>
-                <input type="number" name="nomor" class="form-control" required placeholder="Nomor">
-            </div>
-
-            <div class="form-group">
-                <label for="noAparat">Nama Aparat:</label>
-                <select class="form-control" id="noAparat" name="noAparat" required>
-                    <option value="">Select Aparat</option>
-                    @if(isset($dataAparat) && $dataAparat->count() > 0)
-                        @foreach ($dataAparat as $aparat)
-                            @if(is_object($post))
-                                <option value="{{ $aparat->noAparat }}" data-aparat="{{ json_encode($aparat) }}">{{ $aparat->noAparat }}</option>
-                            @endif
-                        @endforeach
-                    @else
-                        <option value="">No Aparat available</option>
-                    @endif
-                </select>
+                <label for="noPka" class="form-label">Nomor:</label>
+                <input type="number" name="noPka" class="form-control" required placeholder="Nomor">
             </div>
 
             <div class="mb-3">
@@ -44,8 +28,8 @@
             </div>
 
             <div class="mb-3">
-                <label for="tanggalSkPka" class="form-label">Tanggal SK PKA:</label>
-                <input type="date" name="tanggalSkPka" class="form-control">
+                <label for="tgglSkPka" class="form-label">Tanggal SK PKA:</label>
+                <input type="date" name="tgglSkPka" class="form-control">
             </div>
 
             <button type="submit" class="btn btn-primary">Masukan Data</button>

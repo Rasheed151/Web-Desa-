@@ -26,22 +26,22 @@ class JadwalPenyedia extends Model
     protected $fillable = [
         'no',
         'namaKegiatan',
-        'ketuaTpk',
+        'ketuaTpk', 
         'sekTpk',
-        'anggotaTpk',
+        'angTpk',
         'jmlhWaktu',
-        'wktPelaksanaanDari',
-        'wktPelaksanaanSampai',
+        'wktLaksanaDari',
+        'wktLaksanaSampai',
         'nlaiPekerjaan',
         'namaKasi',
-        'jabatanKasi',
-        'lokasi'
+        'jbtnKasi',
+        'lokasi',
+        'userId'
     ];
 
     // Kolom yang di-cast ke tipe data tertentu
     protected $casts = [
-        'wktPelaksanaanDari' => 'date',
-        'wktPelaksanaanSampai' => 'date',
-        'nlaiPekerjaan' => 'decimal:2'
+        'wktlaksanaanDari' => 'date',
+        'wktlaksanaanSampai' => 'date',
     ];
 }
