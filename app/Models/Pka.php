@@ -14,7 +14,7 @@ class Pka extends Model
     protected $fillable = [
         'noPka',
         'noSkPka',
-        'tanggalSkPka',
+        'tgglSkPka',
         'userId', // Ensure this is fillable
     ];
 

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\JdwlLaksanaController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PkaController;
 use App\Http\Controllers\HomeController;
@@ -13,6 +14,7 @@ use App\Http\Controllers\PengumumanController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\profilController;
 use App\Http\Controllers\tesController;
+use App\Http\Controllers\JdwlLaksanaPenyediaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,6 +42,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('beritaAcara', BeritaAcaraController::class);
     Route::resource('rkp', RkpController::class);
     Route::resource('pengumuman', PengumumanController::class);
+    Route::resource('jadwal', JdwlLaksanaPenyediaController::class);
 
     // Static routes
     Route::get('/siapswa', function () {

@@ -24,9 +24,8 @@ class PkaController extends Controller
     {
         $request->validate([
             'noPka' => 'required|integer',
-            'ttl' => 'required|string',
             'noSkPka' => 'required|integer',
-            'tanggalSkPka' => 'required|date',
+            'tngglSkPka' => 'required|date',
             'aparat_id' => 'required|exists:data_aparat,id',
         ]);
 
