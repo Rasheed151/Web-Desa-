@@ -19,7 +19,10 @@ return new class extends Migration
             $table->string('alamat'); // Alamat
             $table->string('atasNama'); // Bertindak untuk dan atas nama
             $table->string('noIdentitas'); // Nomor Identitas
+            $table->unsignedBigInteger('userId'); 
             $table->timestamps(); // Created at and updated at timestamps
+
+            $table->foreign('userId')->references('id')->on('users')->onDelete('cascade'); // Add foreign key constraint
         });
     }
 

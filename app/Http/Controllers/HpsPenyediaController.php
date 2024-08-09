@@ -21,20 +21,21 @@ class HpsPenyediaController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'noKeg' => 'required|numeric',
-            'ltrBelakang' => 'required|',
-            'nerimaManfaat' => 'required|',
-            'caraLaksana' => 'required|',
-            'ketuaTpk' => 'required|',
-            'sekTpk' => 'required|',
-            'angTpk' => 'required|',
-            'namaKasi' => 'nullable|',
-            'jbtnKasi' => 'nullable|',
-            'dilokasi' => 'required|',
-            'tgglMulai' => 'required|date',
-            'jangkaWaktu' => 'required|',
-            'biayaKegiatan' => 'required|',
-            'sebesarRp' => 'required|numeric'
+            'noKeg' => 'required|numeric' ,
+            'kegiatan' => 'required|',
+            'lokasi' => 'required|',
+            'namaKasi' => 'required|',
+            'jbtnKasi' => 'required|',
+            'idHps' => 'required|numeric',
+            'namaBarjas' => 'required|',
+            'spesifikasi' => 'required|',
+            'kode' => 'required|',
+            'koefisien' => 'required|numeric', 
+            'volume' => 'required|numeric',
+            'satuan' => 'required|',
+            'hrgSatuan' => 'required|numeric',
+            'jmlhHarga' => 'required|numeric',
+            'jenis' => 'required|',
         ]);
 
         HpsPenyedia::create(array_merge($request->all(), ['userId' => auth()->id()]));
@@ -46,31 +47,32 @@ class HpsPenyediaController extends Controller
     public function show($id)
     {
         $hpsSedia = HpsPenyedia::findOrFail($id);
-        return view('persiapanpenyedia.kak.show_hps', compact('hpsSedia'));
+        return view('persiapanpenyedia.hps.show_hps', compact('hpsSedia'));
     }
 
     public function edit(HpsPenyedia $hpsSedia)
     {
-        return view('persiapanpenyedia.kak.edit_hps', compact('hpsSedia'));
+        return view('persiapanpenyedia.hps.edit_hps', compact('hpsSedia'));
     }
 
     public function update(Request $request, HpsPenyedia $hpsSedia)
     {
         $request->validate([
-            'noKeg' => 'required|numeric',
-            'ltrBelakang' => 'required|text',
-            'nerimaManfaat' => 'required|',
-            'caraLaksana' => 'required|',
-            'ketuaTpk' => 'required|',
-            'sekTpk' => 'required|',
-            'angTpk' => 'required|',
-            'namaKasi' => 'nullable|',
-            'jbtnKasi' => 'nullable|',
-            'dilokasi' => 'required|',
-            'tgglMulai' => 'required|date',
-            'jangkaWaktu' => 'required|',
-            'biayaKegiatan' => 'required|',
-            'sebesarRp' => 'required|numeric'
+            'noKeg' => 'required|numeric' ,
+            'kegiatan' => 'required|',
+            'lokasi' => 'required|',
+            'namaKasi' => 'required|',
+            'jbtnKasi' => 'required|',
+            'idHps' => 'required|',
+            'namaBarjas' => 'required|',
+            'spesifikasi' => 'required|',
+            'kode' => 'required|',
+            'koefisien' => 'required|numeric', 
+            'volume' => 'required|numeric',
+            'satuan' => 'required|',
+            'hrgSatuan' => 'required|numeric',
+            'jmlhHarga' => 'required|numeric',
+            'jenis' => 'required|',
         ]);
 
         $hpsSedia->update($request->all());

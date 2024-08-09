@@ -17,15 +17,15 @@ return new class extends Migration
             $table->string('kegiatan'); // Kegiatan
             $table->string('lokasi'); // Lokasi
             $table->string('namaKasi'); // Nama Kasi/Kaur
-            $table->string('jabatanKasi'); // Jabatan Kasi/Kaur
-            $table->string('idHps'); // ID HPS
+            $table->string('jbtnKasi'); // Jabatan Kasi/Kaur
+            $table->integer('idHps'); // ID HPS
             $table->string('namaBarjas'); // Nama Barang/Jasa
             $table->text('spesifikasi'); // Spesifikasi
             $table->string('kode'); // Kode
             $table->integer('koefisien'); // Koefisien
             $table->integer('volume'); // Volume
             $table->string('satuan'); // Satuan
-            $table->integer('hargaSatuan'); // Harga Satuan Rp
+            $table->integer('hrgSatuan'); // Harga Satuan Rp
             $table->integer('jmlhHarga'); // Jumlah Harga Rp
             $table->string('jenis'); // Jenis
             $table->unsignedBigInteger('userId'); // Jenis

@@ -23,7 +23,10 @@ return new class extends Migration
             $table->text('spek2'); // Spesifikasi*
             $table->string('namaKasi'); // Kasi/Kaur
             $table->string('jabatanKasi'); // Nama Kasi/Kaur
+            $table->unsignedBigInteger('userId');
             $table->timestamps(); // Created at and updated at timestamps
+
+            $table->foreign('userId')->references('id')->on('users')->onDelete('cascade'); // Add foreign key constraint
         });
     }
 

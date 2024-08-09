@@ -36,7 +36,8 @@ class AhsPenyedia extends Model
         'koefisien',
         'hrgSatuan',
         'jmlhHarga',
-        'jenis'
+        'jenis',
+        'userId'
     ];
     protected $casts = [
         'koefisien' => 'decimal:2',

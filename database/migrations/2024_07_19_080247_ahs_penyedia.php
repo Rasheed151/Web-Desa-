@@ -22,11 +22,14 @@ return new class extends Migration
             $table->string('kegiatan'); // Kegiatan
             $table->string('kode'); // Kode
             $table->string('satuan'); // Satuan
-            $table->decimal('koefisien', 10, 2); // Koefisien
-            $table->decimal('hargaSatuan', 15, 2); // Harga Satuan Rp
-            $table->decimal('jmlhHarga', 15, 2); // Jumlah Harga
+            $table->integer('koefisien'); // Koefisien
+            $table->integer('hargaSatuan'); // Harga Satuan Rp
+            $table->integer('jmlhHarga'); // Jumlah Harga
             $table->string('jenis'); // Jenis
+            $table->unsignedBigInteger('userId'); 
             $table->timestamps(); // Created at and updated at timestamps
+
+            $table->foreign('userId')->references('id')->on('users')->onDelete('cascade'); // Add foreign key constraint
         });
     }
 

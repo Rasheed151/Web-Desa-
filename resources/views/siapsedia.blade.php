@@ -157,8 +157,8 @@
             $cards = [
                 ['title' => 'Jadwal Pelaksanaan Pekerjaan', 'bg' => 'bg-primary', 'link' => 'jadwalSedia', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
                 ['title' => 'KAK', 'bg' => 'bg-primary', 'link' => 'kakSedia', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
-                ['title' => 'HPS', 'bg' => 'bg-primary', 'link' => '', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
-                ['title' => 'Analisa Harga Satuan', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
+                ['title' => 'HPS', 'bg' => 'bg-primary', 'link' => 'hpsSedia', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
+                ['title' => 'Analisa Harga Satuan', 'bg' => 'bg-primary', 'link' => 'ahsSedia', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
                 ['title' => 'Spesifikasi Teknis', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
                 
                 ['title' => 'Fakta Integritas', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],

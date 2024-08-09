@@ -24,7 +24,10 @@ return new class extends Migration
             $table->string('jabatanKasi'); // Jabatan Kasi/Kaur
             $table->string('noDpa'); // Nomor SK DPA
             $table->date('tgglDpa'); // Tanggal SK DPA
+            $table->unsignedBigInteger('userId'); 
             $table->timestamps(); // Created at and updated at timestamps
+
+            $table->foreign('userId')->references('id')->on('users')->onDelete('cascade'); // Add foreign key constraint
         });
     }
 

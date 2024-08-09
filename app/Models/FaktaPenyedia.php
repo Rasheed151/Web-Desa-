@@ -28,7 +28,8 @@ class FaktaPenyedia extends Model
         'nama',
         'alamat',
         'atasNama',
-        'noIdentitas'
+        'noIdentitas',
+        'userId'
     ];
 
     // Kolom yang di-cast ke tipe data tertentu

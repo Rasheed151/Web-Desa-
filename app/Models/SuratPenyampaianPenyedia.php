@@ -34,7 +34,8 @@ class SuratPenyampaianPenyedia extends Model
         'namaKasi',
         'jbtnKasi',
         'noDpa',
-        'tgglDpa'
+        'tgglDpa',
+        'userId'
     ];
 
     // Kolom yang di-cast ke tipe data tertentu
