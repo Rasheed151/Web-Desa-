@@ -23,7 +23,10 @@ return new class extends Migration
             $table->text('pembahasan'); // Pembahasn
             $table->text('tndkLanjut'); // Tindak Lanjut
             $table->string('pp'); // Panitia Pengadaan
-            $table->timestamps(); // Created at and updated at timestamps
+            $table->unsignedBigInteger('userId'); // Updated column type
+            $table->timestamps();
+    
+            $table->foreign('userId')->references('id')->on('users')->onDelete('cascade'); // Add foreign key constraint
         });
     }
 

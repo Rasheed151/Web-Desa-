@@ -16,8 +16,11 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\DataAparatController;
 use App\Http\Controllers\PengumumanController;
 use App\Http\Controllers\BeritaAcaraController;
+use App\Http\Controllers\CatatanHasilController;
 use App\Http\Controllers\SuratPerintahController;
+use App\Http\Controllers\JdwlLaksanaPenyediaController;
 use App\Http\Controllers\JadwalPelaksanaanSwaController;
+use App\Http\Controllers\AmankanController;
 
 
 /*
@@ -49,6 +52,16 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('jadwalSwa', JadwalPelaksanaanSwaController::class);
     Route::resource('kakSwa', KakSwaController::class);
     Route::resource('suratPerintah', SuratPerintahController::class);
+    Route::resource('jadwal', JdwlLaksanaPenyediaController::class);
+    Route::resource('CatatanHasilSwa', CatatanHasilController::class);
+    Route::resource('Example', CatatanHasilController::class,);
+    Route::get('/example', [AmankanController::class, 'index']);
+Route::get('/example1', [AmankanController::class, 'jadwal']);
+Route::get('/example2', [AmankanController::class, 'beritaAcara']);
+Route::get('/example3', [AmankanController::class, 'pengumuman']);
+Route::get('/example4', [AmankanController::class, 'rkps']);
+Route::get('/example5', [AmankanController::class, 'catatanHasil']);
+
 
 
     // Static routes

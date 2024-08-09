@@ -9,7 +9,7 @@ class CatatanHasil extends Model
 {
     use HasFactory;
 
-    protected $table = 'catatan_hasil';
+    protected $table = 'catatan_hasil_pembahasan_swa';
 
     // Tentukan primary key
     protected $primaryKey = 'id';
@@ -28,13 +28,14 @@ class CatatanHasil extends Model
         'kegiatan',
         'tempat',
         'tggl',
-        'waktuLaksana',
+        'waktuPelaksana',
         'agenda',
         'noPerbup',
         'namaKasi',
         'jbtnKasi',
         'noDpa',
-        'tgglDpa'
+       'tgglDpa',
+        'userId', // Ensure this is fillable
     ];
 
     // Kolom yang di-cast ke tipe data tertentu
