@@ -33,6 +33,7 @@ class SpekSwa extends Model
         'spek1',
         'spek2',
         'namaKasi',
-        'jbtnKasi'
+        'jbtnKasi',
+        'userId', // Ensure this is fillable
     ];
 }

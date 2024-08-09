@@ -55,7 +55,7 @@
             </button>
             <div class="dropdown-container">
                 <a href="/laksanaSwa">Secara Swakelola</a>
-                <a href="#">Melalui Pembelian Langsung</a>
+                <a href="/suratPerintah">Melalui Pembelian Langsung</a>
                 <a href="/laksanaBenang">Melalui Pembelian Penawaran</a>
                 <a href="/laksanaLelang">Melalui Lelang</a>
             </div>

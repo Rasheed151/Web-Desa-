@@ -155,15 +155,15 @@
     <div class="row">
         @php
             $cards = [
-                ['title' => 'Jadwal Pelaksanaan Pekerjaan', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
-                ['title' => 'KAK', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
-                ['title' => 'HPS', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
-                ['title' => 'Analisa Harga Satuan', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
-                ['title' => 'Spesifikasi Teknis', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
-                ['title' => 'RKTK Bahan dan Peralatan', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
-                ['title' => 'Fakta Integritas TPK', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
-                ['title' => 'Surat Penyampaian Dokumen dari Kasi/Kaur Kepada TPK', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
-                ['title' => 'Analisa Harga Satuan', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
+                ['title' => 'Jadwal Pelaksanaan Pekerjaan', 'bg' => 'bg-primary', 'link' => 'jadwalSwa', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
+                ['title' => 'KAK', 'bg' => 'bg-primary', 'link' => 'kakSwa', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
+                ['title' => 'HPS', 'bg' => 'bg-primary', 'link' => 'example', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
+                ['title' => 'Analisa Harga Satuan', 'bg' => 'bg-primary', 'link' => 'example1', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
+                ['title' => 'Spesifikasi Teknis', 'bg' => 'bg-primary', 'link' => 'example2', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
+                ['title' => 'RKTK Bahan dan Peralatan', 'bg' => 'bg-primary', 'link' => 'example3', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
+                ['title' => 'Fakta Integritas TPK', 'bg' => 'bg-primary', 'link' => 'example4', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
+                ['title' => 'Surat Penyampaian Dokumen dari Kasi/Kaur Kepada TPK', 'bg' => 'bg-primary', 'link' => 'example5', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
+                ['title' => 'Analisa Harga Satuan', 'bg' => 'bg-primary', 'link' => 'example', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
             ];
         @endphp
 

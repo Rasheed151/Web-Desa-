@@ -29,7 +29,10 @@ return new class extends Migration
             $table->bigInteger('sbesar'); // Sebesar Rp.
             $table->string('jnsKontrak'); // Anggota Tpk
             $table->string('wktuLaksana'); // Waktu Pelaksanaan Pekerjaan (1 hari)
-            $table->timestamps(); // Created at and updated at timestamps
+            $table->unsignedBigInteger('userId'); // Updated column type
+            $table->timestamps();
+    
+            $table->foreign('userId')->references('id')->on('users')->onDelete('cascade'); // Add foreign key constraint
         });
     }
 

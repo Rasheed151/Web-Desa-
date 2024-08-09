@@ -155,13 +155,13 @@
     <div class="row">
         @php
             $cards = [
-                ['title' => 'Surat Permintaan Penawaran', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Surat Permintaan Penawaran'],
-                ['title' => 'Surat Penawaran Penyedia', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Surat Penawaran Penyedia'],
-                ['title' => 'Surat Pernyataan Kebenaran Usaha', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Surat Pernyataan Kebenaran Usaha'],
-                ['title' => 'Surat Perjanjin', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Surat Perjanjin'],
-                ['title' => 'BA Hasil Evaluasi Penawaran', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'BA Hasil Evaluasi Penawaran'],
-                ['title' => 'BA Hasil Negosiasi', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'BA Hasil Negosiasi'],
-                ['title' => 'Penawaran Pemenang', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Penawaran Pemenang'],
+                ['title' => 'Surat Permintaan Penawaran', 'bg' => 'bg-primary', 'link' => 'example', 'desc' => 'Surat Permintaan Penawaran'],
+                ['title' => 'Surat Penawaran Penyedia', 'bg' => 'bg-primary', 'link' => 'example1', 'desc' => 'Surat Penawaran Penyedia'],
+                ['title' => 'Surat Pernyataan Kebenaran Usaha', 'bg' => 'bg-primary', 'link' => 'example2', 'desc' => 'Surat Pernyataan Kebenaran Usaha'],
+                ['title' => 'Surat Perjanjin', 'bg' => 'bg-primary', 'link' => 'example3', 'desc' => 'Surat Perjanjin'],
+                ['title' => 'BA Hasil Evaluasi Penawaran', 'bg' => 'bg-primary', 'link' => 'example4', 'desc' => 'BA Hasil Evaluasi Penawaran'],
+                ['title' => 'BA Hasil Negosiasi', 'bg' => 'bg-primary', 'link' => 'example5', 'desc' => 'BA Hasil Negosiasi'],
+                ['title' => 'Penawaran Pemenang', 'bg' => 'bg-primary', 'link' => 'example', 'desc' => 'Penawaran Pemenang'],
             ];
         @endphp
 

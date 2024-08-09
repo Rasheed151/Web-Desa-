@@ -34,7 +34,8 @@ class Rktk extends Model
         'namaKasi',
         'jbtnKasi',
         'noDpa',
-        'tgglDpa'
+        'tgglDpa',
+        'userId', // Ensure this is fillable
     ];
 
     // Kolom yang di-cast ke tipe data tertentu

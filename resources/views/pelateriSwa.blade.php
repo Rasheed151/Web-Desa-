@@ -155,11 +155,10 @@
     <div class="row">
         @php
             $cards = [
-                ['title' => 'Berita Acara Serah Terima Pekerjaan Dan TPK Kepada Kasi/Kaur', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Pengumuman Lelang'],
-                ['title' => 'Laporan Pemeriksaan Hasil Pengadaan Oleh TPK', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Undangan Lelang'],
-                ['title' => 'Berita Acara Serah Terima Pekerjaan Dari Kasi/Kaur Kepada Kepala Desa', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Surat Penawaran Penyedia'],
-                
-            ];
+                ['title' => 'Berita Acara Serah Terima Pekerjaan Dan TPK Kepada Kasi/Kaur', 'bg' => 'bg-primary', 'link' => 'example', 'desc' => 'Pengumuman Lelang'],
+                ['title' => 'Laporan Pemeriksaan Hasil Pengadaan Oleh TPK', 'bg' => 'bg-primary', 'link' => 'example1', 'desc' => 'Undangan Lelang'],
+                ['title' => 'Berita Acara Serah Terima Pekerjaan Dari Kasi/Kaur Kepada Kepala Desa', 'bg' => 'bg-primary', 'link' => 'example2', 'desc' => 'Surat Penawaran Penyedia'],
+                    ];
         @endphp
 
         @foreach ($cards as $card)

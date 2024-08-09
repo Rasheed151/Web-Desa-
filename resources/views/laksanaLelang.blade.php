@@ -155,10 +155,10 @@
     <div class="row">
         @php
             $cards = [
-                ['title' => 'Pengumuman Lelang', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Pengumuman Lelang'],
-                ['title' => 'Undangan Lelang', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Undangan Lelang'],
-                ['title' => 'Surat Penawaran Penyedia', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Surat Penawaran Penyedia'],
-                ['title' => 'Daftar Kuantitas Dan Harga', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Daftar Kuantitas Dan Harga'],
+                ['title' => 'Pengumuman Lelang', 'bg' => 'bg-primary', 'link' => 'example', 'desc' => 'Pengumuman Lelang'],
+                ['title' => 'Undangan Lelang', 'bg' => 'bg-primary', 'link' => 'example1', 'desc' => 'Undangan Lelang'],
+                ['title' => 'Surat Penawaran Penyedia', 'bg' => 'bg-primary', 'link' => 'example2', 'desc' => 'Surat Penawaran Penyedia'],
+                ['title' => 'Daftar Kuantitas Dan Harga', 'bg' => 'bg-primary', 'link' => 'example3', 'desc' => 'Daftar Kuantitas Dan Harga'],
             ];
         @endphp
 
