@@ -38,12 +38,8 @@ class HpsPenyedia extends Model
         'satuan',
         'hrgSatuan',
         'jmlhHarga',
-        'jenis'
+        'jenis',
+        'userId'
     ];
-    protected $casts = [
-        'volume' => 'decimal:2',
-        'koefisien' => 'decimal:2',
-        'hrgSatuan' => 'decimal:2',
-        'jmlhHarga' => 'decimal:2'
-    ];
+
 }

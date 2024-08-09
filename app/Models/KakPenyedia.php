@@ -12,7 +12,7 @@ class KakPenyedia extends Model
     protected $table = 'kak_penyedia';
 
     // Tentukan primary key
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'id'; 
 
     // Tentukan apakah primary key auto-increment atau tidak
     public $incrementing = true;
@@ -37,9 +37,8 @@ class KakPenyedia extends Model
         'tgglMulai',
         'jangkaWaktu',
         'biayaKegiatan',
-        'sebesarRp'
+        'sebesarRp',
+        'userId'
     ];
-    protected $casts = [
-        'sebesarRp' => 'decimal:2'
-    ];
+
 }

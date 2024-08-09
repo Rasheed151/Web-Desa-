@@ -22,13 +22,16 @@ return new class extends Migration
             $table->string('namaBarjas'); // Nama Barang/Jasa
             $table->text('spesifikasi'); // Spesifikasi
             $table->string('kode'); // Kode
-            $table->decimal('koefisien', 10, 2); // Koefisien
-            $table->decimal('volume', 10, 2); // Volume
+            $table->integer('koefisien'); // Koefisien
+            $table->integer('volume'); // Volume
             $table->string('satuan'); // Satuan
-            $table->decimal('hargaSatuan', 15, 2); // Harga Satuan Rp
-            $table->decimal('jmlhHarga', 15, 2); // Jumlah Harga Rp
+            $table->integer('hargaSatuan'); // Harga Satuan Rp
+            $table->integer('jmlhHarga'); // Jumlah Harga Rp
             $table->string('jenis'); // Jenis
+            $table->unsignedBigInteger('userId'); // Jenis
             $table->timestamps(); // Created at and updated at timestamps
+
+            $table->foreign('userId')->references('id')->on('users')->onDelete('cascade'); // Add foreign key constraint
         });
     }
 

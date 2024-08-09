@@ -8,26 +8,29 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
-     */
+     */ 
     public function up(): void
     {
         Schema::create('kak_penyedia', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('no'); // Nomor
+            $table->integer('noKeg'); // Nomor
             $table->text('ltrBelakang'); // Latar Belakang
-            $table->string('penerimaManfaat'); // Penerima Manfaat
-            $table->string('caraMelaksanakan'); // Cara Melaksanakan
+            $table->string('nerimaManfaat'); // Penerima Manfaat
+            $table->string('caraLaksana'); // Cara Melaksanakan
             $table->string('ketuaTpk'); // Ketua TPK
             $table->string('sekTpk'); // Sekretaris TPK
-            $table->string('anggotaTpk'); // Anggota TPK
-            $table->string('kasi'); // Kasi/Kaur
-            $table->string('namaKasi'); // Nama Kasi/Kaur
+            $table->string('angTpk'); // Anggota TPK
+            $table->string('namaKasi'); // Kasi/Kaur
+            $table->string('jbtnKasi'); // Nama Kasi/Kaur
             $table->string('diLokasi'); // Di Lokasi/Diserahterimakan
             $table->date('tgglMulai'); // Tanggal Bulan Tahun Mulai
             $table->string('jangkaWaktu'); // Jangka Waktu Pelaksanaan
             $table->string('biayaKegiatan'); // Kegiatan
-            $table->decimal('sebesarRp', 15, 2); // Kegiatan Sebesar
+            $table->integer('sebesarRp'); // Kegiatan Sebesar
+            $table->unsignedBigInteger('userId'); // Kegiatan Sebesar
             $table->timestamps(); // Created at and updated at timestamps
+
+            $table->foreign('userId')->references('id')->on('users')->onDelete('cascade'); // Add foreign key constraint
         });
     }
 

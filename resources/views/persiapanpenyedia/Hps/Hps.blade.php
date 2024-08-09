@@ -77,7 +77,7 @@
 @section('content')
 <div class="satu">
     <div class="title">
-        <h1>Jadwal Pelaksanaan</h1>
+        <h1>HPS</h1>
     </div>
 </div>
 
@@ -86,36 +86,38 @@
         <thead>
             <tr>
                 <th>No.</th>
-                <th>Kegiatan</th>
-                <th>Ketua TPK</th>
-                <th>Waktu</th>
-                <th>Kepala Seksi</th>
-                <th>Lokasi</th>
+                <th>Latar Belakang</th>
+                <th>Penerima Manfaat</th>
+                <th>Cara Melaksanakan</th>
+                <th>Diserahterimakan</th>
+                <th>Jangka Waktu</th>
+                <th>Biaya Kegiatan</th>
                 <th>Aksi</th>
             </tr>
         </thead>
         <tbody>
-            @if(isset($jadwal) && count($jadwal) > 0)
-                @foreach ($jadwal as $data)
+            @if(isset($hpsSedia) && count($hpsSedia) > 0)
+                @foreach ($hpsSedia as $data)
                     <tr>
-                        <td>{{ $data->no }}</td>
-                        <td>{{ $data->namaKegiatan }}</td>
-                        <td>{{ $data->ketuaTpk }}</td>
-                        <td>{{ $data->jmlhWaktu }}</td>
-                        <td>{{ $data->namaKasi }}</td>
-                        <td>{{ $data->lokasi }}</td>
+                        <td>{{ $data->noKeg }}</td>
+                        <td>{{ $data->ltrBelakang }}</td>
+                        <td>{{ $data->nerimaManfaat }}</td>
+                        <td>{{ $data->caraLaksana }}</td>
+                        <td>{{ $data->dilokasi }}</td>
+                        <td>{{ $data->jangkaWaktu }}</td>
+                        <td>{{ $data->biayaKegiatan }}</td>
                         <td>
-                            <a href="{{ route('jadwalSedia.show', $data->id) }}" class="btn">
+                            <a href="{{ route('hpsSedia.show', $data->id) }}" class="btn">
                                 <img src="/img/info.png" alt="Info" style="width:24px; height:24px; border: none; background: none;">
                             </a>
 
                             <!-- Edit Button -->
-                            <a href="{{ route('jadwalSedia.edit', $data->id) }}" class="btn">
+                            <a href="{{ route('hpsSedia.edit', $data->id) }}" class="btn">
                             <img src="/img/edit.png" alt="Edit" style="width:24px; height:24px; border: none; background: none;">
                             </a>
 
                             <!-- Delete Button -->
-                            <form action="{{ route('jadwalSedia.destroy', $data->id) }}" method="POST" style="display:inline;">
+                            <form action="{{ route('hpsSedia.destroy', $data->id) }}" method="POST" style="display:inline;">
                             @csrf
                             @method('DELETE')
                                 <button type="submit" style="background: none; border: none; padding: 0;">
@@ -128,12 +130,12 @@
                 @endforeach
             @else
                 <tr>
-                    <td colspan="11" class="no-data">Tidak ada data PKA</td>
+                    <td colspan="11" class="no-data">Tidak ada data HPS</td>
                 </tr>
             @endif
         </tbody>
     </table>
-    <a href="{{ route('jadwalSedia.create') }}" class="btn-primary">Tambahkan Data</a>
+    <a href="{{ route('hpsSedia.create') }}" class="btn-primary">Tambahkan Data</a>
 </div>
 @endsection
 @section('script')
