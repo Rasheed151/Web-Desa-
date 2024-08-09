@@ -155,10 +155,10 @@
     <div class="row">
         @php
             $cards = [
-                ['title' => 'BAST Pekerjaan Melalui Penyedia Dari TPK Kepada Kasi/kaur', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'BAST Pekerjaan Melalui Penyedia Dari TPK Kepada Kasi/kaur'],
-                ['title' => 'Laporan Pemeriksaan Hasil Pengadaan Oleh TPK', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Laporan Pemeriksaan Hasil Pengadaan Oleh TPK'],
-                ['title' => 'BAST Dari Penyedia Kepada TPK/Kasi/Kaur', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'BAST Dari Penyedia Kepada TPK/Kasi/Kaur'],
-                ['title' => 'BAST Dari Kasi/Kaur Kepada Kepala Desa', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'BAST Dari Kasi/Kaur Kepada Kepala Desa'],
+                ['title' => 'BAST Pekerjaan Melalui Penyedia Dari TPK Kepada Kasi/kaur', 'bg' => 'bg-primary', 'link' => 'example', 'desc' => 'BAST Pekerjaan Melalui Penyedia Dari TPK Kepada Kasi/kaur'],
+                ['title' => 'Laporan Pemeriksaan Hasil Pengadaan Oleh TPK', 'bg' => 'bg-primary', 'link' => 'example1', 'desc' => 'Laporan Pemeriksaan Hasil Pengadaan Oleh TPK'],
+                ['title' => 'BAST Dari Penyedia Kepada TPK/Kasi/Kaur', 'bg' => 'bg-primary', 'link' => 'example2', 'desc' => 'BAST Dari Penyedia Kepada TPK/Kasi/Kaur'],
+                ['title' => 'BAST Dari Kasi/Kaur Kepada Kepala Desa', 'bg' => 'bg-primary', 'link' => 'example3', 'desc' => 'BAST Dari Kasi/Kaur Kepada Kepala Desa'],
             ];
         @endphp
 

@@ -36,7 +36,8 @@ class AhsSwa extends Model
         'koefisien',
         'hrgSatuan',
         'jmlhHarga',
-        'jenis'
+        'jenis',
+        'userId', // Ensure this is fillable
     ];
     protected $casts = [
         'koefisien' => 'decimal:2',

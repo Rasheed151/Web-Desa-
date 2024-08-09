@@ -1,23 +1,29 @@
 <?php
 
-use App\Http\Controllers\JdwlLaksanaController;
+
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PkaController;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\DataUmumController;
-use App\Http\Controllers\DataAparatController;
-use App\Http\Controllers\TpkController;
-use App\Http\Controllers\PenyediaController;
-use App\Http\Controllers\BeritaAcaraController;
 use App\Http\Controllers\RkpController;
-use App\Http\Controllers\PengumumanController;
-use App\Http\Controllers\Auth\LoginController;
-use App\Http\Controllers\profilController;
 use App\Http\Controllers\tesController;
+use App\Http\Controllers\TpkController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\KakSwaController;
+use App\Http\Controllers\profilController;
+use App\Http\Controllers\DataUmumController;
+use App\Http\Controllers\PenyediaController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\DataAparatController;
+use App\Http\Controllers\PengumumanController;
+use App\Http\Controllers\BeritaAcaraController;
+use App\Http\Controllers\CatatanHasilController;
+use App\Http\Controllers\SuratPerintahController;
 use App\Http\Controllers\JdwlLaksanaPenyediaController;
 use App\Http\Controllers\KakPenyediaController;
 use App\Http\Controllers\HpsPenyediaController;
 use App\Http\Controllers\AhsPenyediaController;
+use App\Http\Controllers\JadwalPelaksanaanSwaController;
+use App\Http\Controllers\AmankanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,7 +38,7 @@ use App\Http\Controllers\AhsPenyediaController;
 
 Route::group(['middleware' => 'auth'], function () {
     // Home route
-    Route::get('/home', [HomeController::class, 'index'])->name('home');
+    Route::resource('home', profilController::class);
 
     // Route resource
     Route::resource('tes', tesController::class);
@@ -45,10 +51,22 @@ Route::group(['middleware' => 'auth'], function () {
     Route::resource('beritaAcara', BeritaAcaraController::class);
     Route::resource('rkp', RkpController::class);
     Route::resource('pengumuman', PengumumanController::class);
-    Route::resource('jadwalSedia', JdwlLaksanaPenyediaController::class);
-    Route::resource('kakSedia', KakPenyediaController::class);
-    Route::resource('hpsSedia', HpsPenyediaController::class);
-    Route::resource('ahsSedia', AhsPenyediaController::class);
+    Route::resource('jadwal', JdwlLaksanaPenyediaController::class);
+    Route::resource('jadwalSwa', JadwalPelaksanaanSwaController::class);
+    Route::resource('kakSwa', KakSwaController::class);
+    Route::resource('suratPerintah', SuratPerintahController::class);
+    Route::resource('jadwal', JdwlLaksanaPenyediaController::class);
+    Route::resource('CatatanHasilSwa', CatatanHasilController::class);
+    Route::resource('Example', CatatanHasilController::class,);
+    Route::get('/example', [AmankanController::class, 'index']);
+Route::get('/example1', [AmankanController::class, 'jadwal']);
+Route::get('/example2', [AmankanController::class, 'beritaAcara']);
+Route::get('/example3', [AmankanController::class, 'pengumuman']);
+Route::get('/example4', [AmankanController::class, 'rkps']);
+Route::get('/example5', [AmankanController::class, 'catatanHasil']);
+Route::resource('kakSedia', KakPenyediaController::class);
+Route::resource('hpsSedia', HpsPenyediaController::class);
+Route::resource('ahsSedia', AhsPenyediaController::class);
 
     // Static routes
     Route::get('/siapswa', function () {
@@ -87,3 +105,5 @@ Route::group(['middleware' => 'guest'], function () {
 });
 
 Route::post('logout', [LoginController::class, 'logout'])->name('logout');
+
+

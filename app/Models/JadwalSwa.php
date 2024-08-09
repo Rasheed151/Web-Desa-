@@ -49,5 +49,6 @@ class JadwalSwa extends Model
         'jdwlKerja16',
         'jdwlKerja17',
         'jdwlKerja18',
+        'userId', // Ensure this is fillable
     ];
 }

@@ -155,10 +155,10 @@
     <div class="row">
         @php
             $cards = [
-                ['title' => 'Catatan Hasil Pembahasan Kegiatan', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Catatan Hasil Pembahasan Kegiatan'],
-                ['title' => 'Laporan Kegiatan Pelaksanaan Pekerjaan', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
-                ['title' => 'Laporan Hasil Pelaksanaan Kegiatan', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
-                ['title' => 'Pengumuman Hasil Kegiatan Pengadaan Secara SwaKelola', 'bg' => 'bg-primary', 'link' => '#', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
+                ['title' => 'Catatan Hasil Pembahasan Kegiatan', 'bg' => 'bg-primary', 'link' => 'CatatanHasilSwa', 'desc' => 'Catatan Hasil Pembahasan Kegiatan'],
+                ['title' => 'Laporan Kegiatan Pelaksanaan Pekerjaan', 'bg' => 'bg-primary', 'link' => 'example', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
+                ['title' => 'Laporan Hasil Pelaksanaan Kegiatan', 'bg' => 'bg-primary', 'link' => 'example1', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
+                ['title' => 'Pengumuman Hasil Kegiatan Pengadaan Secara SwaKelola', 'bg' => 'bg-primary', 'link' => 'example2', 'desc' => 'Persiapan Pengadaan Secara Swakelola'],
             ];
         @endphp
 

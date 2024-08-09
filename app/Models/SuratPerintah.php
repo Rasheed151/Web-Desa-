@@ -39,7 +39,8 @@ class SuratPerintah extends Model
         'kegiatan',
         'sbsr',
         'jnsKontrak',
-        'wktuLaksana'
+        'wktuLaksana',
+        'userId', // Ensure this is fillable
     ];
 
     protected $cast = [

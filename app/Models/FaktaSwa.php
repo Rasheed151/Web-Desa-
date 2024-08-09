@@ -28,7 +28,8 @@ class FaktaSwa extends Model
         'nama',
         'alamat',
         'atasNama',
-        'noIdentitas'
+        'noIdentitas',
+        'userId', // Ensure this is fillable
     ];
 
     // Kolom yang di-cast ke tipe data tertentu
